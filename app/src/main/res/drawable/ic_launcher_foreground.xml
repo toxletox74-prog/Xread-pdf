@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Page au coin replié ambré, traversée par un faisceau de scan qui déborde de la feuille -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Ombre portée -->
+    <path
+        android:fillColor="#33000000"
+        android:pathData="M43,32 L64,32 L72,40 L72,77 Q72,80 69,80 L43,80 Q40,80 40,77 L40,35 Q40,32 43,32 Z" />
+    <!-- Page -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M41,30 L62,30 L70,38 L70,75 Q70,78 67,78 L41,78 Q38,78 38,75 L38,33 Q38,30 41,30 Z" />
+    <!-- Coin replié -->
+    <path
+        android:fillColor="#FFB300"
+        android:pathData="M62,30 L62,36 Q62,38 64,38 L70,38 Z" />
+    <!-- Lignes de texte -->
+    <path
+        android:fillColor="#C5CAE9"
+        android:pathData="M43,42h14v2.5h-14z M43,48h22v2.5h-22z M43,62h22v2.5h-22z M43,68h15v2.5h-15z" />
+    <!-- Halo du faisceau -->
+    <path
+        android:fillColor="#59FFC107"
+        android:pathData="M38,53h32v7h-32z" />
+    <!-- Faisceau -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M29,55.5h50v2h-50z" />
+    <!-- Extrémités lumineuses -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M29,55.5h3v2h-3z M76,55.5h3v2h-3z" />
+</vector>
