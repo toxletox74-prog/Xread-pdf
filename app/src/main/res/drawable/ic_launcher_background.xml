@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Xread PDF — arrière-plan : ciel violet nuit + étoiles -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aapt="http://schemas.android.com/aapt"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <path android:pathData="M0,0h108v108h-108z">
-        <aapt:attr name="android:fillColor">
-            <gradient
-                android:type="linear"
-                android:startX="0" android:startY="0"
-                android:endX="108" android:endY="108"
-                android:startColor="#1A237E"
-                android:endColor="#00897B" />
-        </aapt:attr>
-    </path>
+    <path android:fillColor="#2A1E3D" android:pathData="M0,0h108v108h-108z"/>
+    <path android:fillColor="#FFF6EE" android:pathData="M26.4,30a1.6,1.6 0 1,0 3.2,0a1.6,1.6 0 1,0 -3.2,0z"/>
+    <path android:fillColor="#FFF6EE" android:pathData="M78.4,32a1.6,1.6 0 1,0 3.2,0a1.6,1.6 0 1,0 -3.2,0z"/>
+    <path android:fillColor="#FFF6EE" android:pathData="M76.4,80a1.6,1.6 0 1,0 3.2,0a1.6,1.6 0 1,0 -3.2,0z"/>
+    <path android:fillColor="#FFF6EE" android:fillAlpha="0.7" android:pathData="M28.8,74a1.2,1.2 0 1,0 2.4,0a1.2,1.2 0 1,0 -2.4,0z"/>
 </vector>

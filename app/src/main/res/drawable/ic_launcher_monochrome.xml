@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Version monochrome (icônes thématiques Android 13+) -->
+<!-- Xread PDF — silhouette pour les icônes à thème (Android 13+) ; hublot évidé -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <path
-        android:fillColor="#FFFFFF"
-        android:fillType="evenOdd"
-        android:pathData="M41,30 L62,30 L70,38 L70,75 Q70,78 67,78 L41,78 Q38,78 38,75 L38,33 Q38,30 41,30 Z M43,42h14v2.5h-14z M43,48h22v2.5h-22z M43,62h22v2.5h-22z M43,68h15v2.5h-15z M29,55.5h50v2h-50z" />
+    <group
+        android:pivotX="54"
+        android:pivotY="51.5"
+        android:scaleX="0.75"
+        android:scaleY="0.75"
+        android:translateY="2.5">
+        <path android:fillColor="#FFFFFFFF" android:pathData="M44,79Q54,102 64,79Z"/>
+        <path android:fillColor="#FFFFFFFF" android:pathData="M38,60L27,80L38,76Z"/>
+        <path android:fillColor="#FFFFFFFF" android:pathData="M70,60L81,80L70,76Z"/>
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:fillType="evenOdd"
+            android:pathData="M54,14C66,24 70,40 70,58V76H38V58C38,40 42,24 54,14ZM48.5,40a5.5,5.5 0 1,0 11,0a5.5,5.5 0 1,0 -11,0z"/>
+    </group>
 </vector>
