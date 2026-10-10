@@ -22,3 +22,15 @@ for m in re.finditer(r'<node[^>]*>', x):
 PY
 )"
 adb shell dumpsys activity activities | grep -E "mResumedActivity|topResumedActivity" | head -3 | while read l; do echo "::warning title=ACT::$l"; done
+adb exec-out screencap -p > shot.png
+echo "::warning title=SHOT::$(python3 - <<'PY' | enc
+from PIL import Image
+im=Image.open('shot.png').convert('RGB'); W,H=im.size
+print('size',W,H)
+for i in range(12):
+    y0=int(H*i/12); y1=int(H*(i+1)/12)
+    band=im.crop((0,y0,W,y1)).resize((8,1))
+    print(f'{i:2d}', ' '.join('#%02x%02x%02x'%band.getpixel((x,0)) for x in range(8)))
+PY
+)"
+echo "::warning title=VIEWS::$(adb shell dumpsys activity top | sed -n '/View Hierarchy/,/Looper/p' | head -40 | enc)"
