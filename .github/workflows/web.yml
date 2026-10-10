@@ -1,0 +1,43 @@
+name: Web app (iPhone)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "web/**"
+      - ".github/workflows/web.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  test-et-publication:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Test de l'export PDF (positions, rotations, CropBox, ordre des pages)
+        run: |
+          pip install -q pypdf pypdfium2 pillow
+          mkdir -p /tmp/ex
+          python3 ios/Tests/export_check.py gen /tmp/ex
+          node web/test/export-check.mjs /tmp/ex
+          python3 ios/Tests/export_check.py check /tmp/ex
+
+      - name: Publier sur GitHub Pages (branche gh-pages)
+        run: |
+          mkdir -p /tmp/site
+          cp -R web/. /tmp/site/
+          rm -rf /tmp/site/test
+          sed -i "s/__BUILD__/${GITHUB_SHA::8}/" /tmp/site/sw.js
+          touch /tmp/site/.nojekyll
+          cd /tmp/site
+          git init -q && git checkout -q -b gh-pages
+          git -c user.name="github-actions" -c user.email="github-actions@users.noreply.github.com" add -A
+          git -c user.name="github-actions" -c user.email="github-actions@users.noreply.github.com" commit -qm "Web app ${GITHUB_SHA::8}"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" gh-pages
