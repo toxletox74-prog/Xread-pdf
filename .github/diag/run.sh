@@ -44,7 +44,7 @@ adb shell run-as com.csa.xreadpdf ls -la files/pdfs files/signatures >> $R 2>&1
 adb exec-out run-as com.csa.xreadpdf cat files/pdfs/Test.pdf > out1.pdf
 adb exec-out run-as com.csa.xreadpdf cat "files/pdfs/Test - modifié.pdf" > out2.pdf
 for f in out1 out2; do
-  pdfinfo $f.pdf 2>&1 | grep -E "Pages|Page size|Producer" >> $R
+  pdfinfo -l 2 $f.pdf 2>&1 | grep -E "Pages|rot" >> $R
   pdftoppm -r 30 -png $f.pdf $f >/dev/null 2>&1
 done
 python3 - >> $R <<'PY'
@@ -65,6 +65,7 @@ adb logcat -d | grep -E " E (AndroidRuntime|xreadpdf)|PdfBox|tom_roush" | head -
 python3 - <<'PY'
 s = open("report.txt").read()
 enc = lambda t: t.replace("%", "%25").replace("\r", "").replace("\n", "%0A")
-for i in range(0, min(len(s), 6 * 20000), 20000):
-    print(f"::warning title=RAPPORT {i//20000+1}::" + enc(s[i:i+20000]))
+parts = [s[i:i+3500] for i in range(0, len(s), 3500)][-8:]
+for k, t in enumerate(parts):
+    print(f"::warning title=RAPPORT {k+1}::" + enc(t))
 PY
