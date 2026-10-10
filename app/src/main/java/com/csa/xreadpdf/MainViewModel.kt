@@ -89,6 +89,7 @@ class MainViewModel(private val app: Application) : AndroidViewModel(app) {
     // ---- Éditeur ----
 
     fun edit(file: File, tool: Tool, returnTo: Screen) = viewModelScope.launch {
+        launch(Dispatchers.IO) { PdfExporter.warmUp(app) }
         runCatching { PdfDoc.open(file) }
             .onSuccess { doc ->
                 if (doc.pageCount == 0) {

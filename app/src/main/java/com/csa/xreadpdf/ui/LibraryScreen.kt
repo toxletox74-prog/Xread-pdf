@@ -106,7 +106,6 @@ fun LibraryScreen(
     val shown = remember(files, query) {
         if (query.isBlank()) files else files.filter { it.nameWithoutExtension.contains(query.trim(), ignoreCase = true) }
     }
-    val full = GridItemSpan(Int.MAX_VALUE)
 
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
@@ -120,7 +119,7 @@ fun LibraryScreen(
             horizontalArrangement = Arrangement.spacedBy(14.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp),
         ) {
-            item(span = { full }) {
+            item(span = { GridItemSpan(maxLineSpan) }) {
                 Header(
                     modifier = Modifier.bleed(Gutter),
                     signatureCount = signatureCount,
@@ -130,7 +129,7 @@ fun LibraryScreen(
                 )
             }
             if (files.isNotEmpty()) {
-                item(span = { full }) {
+                item(span = { GridItemSpan(maxLineSpan) }) {
                     Column(verticalArrangement = Arrangement.spacedBy(14.dp)) {
                         OutlinedTextField(
                             value = query,
@@ -169,9 +168,9 @@ fun LibraryScreen(
                 }
             }
             if (files.isEmpty()) {
-                item(span = { full }) { EmptyState() }
+                item(span = { GridItemSpan(maxLineSpan) }) { EmptyState() }
             } else if (shown.isEmpty()) {
-                item(span = { full }) {
+                item(span = { GridItemSpan(maxLineSpan) }) {
                     Text(
                         "Aucun document ne correspond à « $query ».",
                         style = MaterialTheme.typography.bodyMedium,
@@ -192,7 +191,7 @@ fun LibraryScreen(
                     onDelete = { deleting = file },
                 )
             }
-            item(span = { full }) { Spacer(Modifier.windowInsetsBottomHeight(WindowInsets.navigationBars)) }
+            item(span = { GridItemSpan(maxLineSpan) }) { Spacer(Modifier.windowInsetsBottomHeight(WindowInsets.navigationBars)) }
         }
     }
 

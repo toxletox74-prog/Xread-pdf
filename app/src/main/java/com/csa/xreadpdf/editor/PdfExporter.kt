@@ -21,6 +21,17 @@ object PdfExporter {
 
     private val font get() = PDType1Font.HELVETICA
 
+    /**
+     * À la première utilisation, PdfBox indexe les polices du système (plusieurs secondes).
+     * Appelé en tâche de fond à l'ouverture de l'éditeur pour que l'enregistrement soit rapide.
+     */
+    fun warmUp(context: Context) {
+        runCatching {
+            PDFBoxResourceLoader.init(context.applicationContext)
+            font.encode("é")
+        }
+    }
+
     fun export(context: Context, source: File, pages: List<EditPage>, dest: File) {
         PDFBoxResourceLoader.init(context.applicationContext)
         PDDocument.load(source, MemoryUsageSetting.setupMixed(48L * 1024 * 1024)).use { doc ->
