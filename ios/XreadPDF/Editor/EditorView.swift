@@ -251,7 +251,9 @@ private struct ToolBar: View {
                     .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
-                .accessibilityAddTraits(active ? .isSelected : [])
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel(tool.label)
+                .accessibilityAddTraits(active ? [.isSelected, .isButton] : .isButton)
             }
         }
         .padding(.horizontal, 4)

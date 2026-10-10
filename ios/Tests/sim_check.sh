@@ -36,3 +36,18 @@ for i in range(len(pdf)):
     p.render(scale=1).to_pil().save(f"shots/export-p{i+1}.png")
 PY
 xcrun simctl spawn $UDID log show --last 3m --predicate 'process == "XreadPDF"' --style compact 2>/dev/null | grep -iE "error|fault|crash" | head -40 >> $OUT/sim.txt
+
+# Test d'interface au doigt (installation propre)
+xcrun simctl uninstall $UDID com.csa.xreadpdf
+SHOTS_ABS=$(cd $OUT && pwd)
+TEST_RUNNER_SHOTS_DIR=$SHOTS_ABS xcodebuild test -project XreadPDF.xcodeproj -scheme XreadPDF \
+  -destination "id=$UDID" -derivedDataPath build-sim CODE_SIGNING_ALLOWED=NO > $OUT/uitest.log 2>&1
+echo "uitest=$?" >> $OUT/sim.txt
+grep -E "error:|failed|passed|XCTAssert|Test Case" $OUT/uitest.log | tail -30 >> $OUT/sim.txt
+DATA=$(xcrun simctl get_app_container $UDID com.csa.xreadpdf data)
+ls -la "$DATA/Documents" >> $OUT/sim.txt 2>&1
+cp "$DATA/Documents/Exemple - modifié.pdf" $OUT/ui-export.pdf 2>> $OUT/sim.txt
+python3 -c "
+import pypdfium2 as pdfium
+pdf = pdfium.PdfDocument('$OUT/ui-export.pdf'); pdf[0].render(scale=1).to_pil().save('$OUT/ui-export-p1.png')
+" >> $OUT/sim.txt 2>&1

@@ -24,3 +24,24 @@ targets:
         TARGETED_DEVICE_FAMILY: "1,2"
         CODE_SIGN_STYLE: Automatic
         ENABLE_PREVIEWS: NO
+  XreadPDFUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: UITests
+    dependencies:
+      - target: XreadPDF
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.csa.xreadpdf.uitests
+        TEST_TARGET_NAME: XreadPDF
+        CODE_SIGN_STYLE: Automatic
+schemes:
+  XreadPDF:
+    build:
+      targets:
+        XreadPDF: all
+    test:
+      targets:
+        - XreadPDFUITests
