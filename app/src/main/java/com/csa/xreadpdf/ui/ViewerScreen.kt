@@ -9,7 +9,9 @@ import androidx.compose.foundation.gestures.calculateZoom
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -20,7 +22,9 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.FitScreen
+import androidx.compose.material.icons.filled.Gesture
 import androidx.compose.material.icons.filled.SaveAlt
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.CircularProgressIndicator
@@ -51,6 +55,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.PointerEventPass
 import androidx.compose.ui.input.pointer.pointerInput
@@ -93,7 +98,10 @@ fun ViewerScreen(
     onBack: () -> Unit,
     onShare: () -> Unit,
     onSave: () -> Unit,
+    onEdit: () -> Unit,
+    onSign: () -> Unit,
 ) {
+    StatusBarIcons(lightIcons = false)
     val zoom = remember(file) { ZoomState() }
     val docResult by produceState<Result<PdfDoc>?>(null, file) {
         val result = runCatching { PdfDoc.open(file) }
@@ -109,7 +117,23 @@ fun ViewerScreen(
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Retour")
                     }
                 },
-                title = { Text(file.nameWithoutExtension, maxLines = 1, overflow = TextOverflow.Ellipsis) },
+                title = {
+                    Column {
+                        Text(
+                            file.nameWithoutExtension,
+                            style = MaterialTheme.typography.titleMedium,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                        docResult?.getOrNull()?.let { d ->
+                            Text(
+                                if (d.pageCount > 1) "${d.pageCount} pages" else "1 page",
+                                style = MaterialTheme.typography.labelMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
+                    }
+                },
                 actions = {
                     if (zoom.scale > 1f) {
                         IconButton(onClick = zoom::reset) {
@@ -121,9 +145,6 @@ fun ViewerScreen(
                             Icon(Icons.Filled.SaveAlt, contentDescription = "Enregistrer dans Mes PDF")
                         }
                     }
-                    IconButton(onClick = onShare) {
-                        Icon(Icons.Filled.Share, contentDescription = "Partager")
-                    }
                 },
             )
         },
@@ -133,13 +154,21 @@ fun ViewerScreen(
             Modifier
                 .padding(padding)
                 .fillMaxSize()
-                .background(MaterialTheme.colorScheme.surfaceContainerHighest),
+                .background(MaterialTheme.colorScheme.surfaceContainerHigh),
         ) {
             val result = docResult
             val doc = result?.getOrNull()
             when {
                 result == null -> CircularProgressIndicator(Modifier.align(Alignment.Center))
-                doc != null -> PdfPages(doc, zoom)
+                doc != null -> {
+                    PdfPages(doc, zoom)
+                    ActionBar(
+                        onEdit = onEdit,
+                        onSign = onSign,
+                        onShare = onShare,
+                        modifier = Modifier.align(Alignment.BottomCenter).padding(bottom = 20.dp),
+                    )
+                }
                 else -> Text(
                     if (result.exceptionOrNull() is SecurityException)
                         "Ce PDF est protégé par mot de passe : non pris en charge."
@@ -196,7 +225,7 @@ private fun PdfPages(doc: PdfDoc, zoom: ZoomState) {
                     translationX = zoom.offset.x
                     translationY = zoom.offset.y
                 },
-            contentPadding = PaddingValues(12.dp),
+            contentPadding = PaddingValues(start = 12.dp, end = 12.dp, top = 12.dp, bottom = 108.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
             items(doc.pageCount) { index ->
@@ -207,7 +236,7 @@ private fun PdfPages(doc: PdfDoc, zoom: ZoomState) {
         Surface(
             shape = RoundedCornerShape(50),
             color = MaterialTheme.colorScheme.inverseSurface.copy(alpha = 0.85f),
-            modifier = Modifier.align(Alignment.BottomCenter).padding(16.dp),
+            modifier = Modifier.align(Alignment.TopCenter).padding(12.dp),
         ) {
             Text(
                 "$currentPage / ${doc.pageCount}",
@@ -229,7 +258,7 @@ private fun PdfPage(doc: PdfDoc, index: Int, ratio: Float, renderWidth: Int) {
         Modifier
             .fillMaxWidth()
             .aspectRatio(ratio)
-            .shadow(2.dp)
+            .shadow(3.dp, RoundedCornerShape(3.dp))
             .background(Color.White),
         contentAlignment = Alignment.Center,
     ) {
@@ -238,6 +267,43 @@ private fun PdfPage(doc: PdfDoc, index: Int, ratio: Float, renderWidth: Int) {
             Image(b, contentDescription = "Page ${index + 1}", contentScale = ContentScale.FillBounds, modifier = Modifier.fillMaxSize())
         } else {
             CircularProgressIndicator(Modifier.size(24.dp), strokeWidth = 2.dp)
+        }
+    }
+}
+
+/** Barre d'actions flottante aux couleurs de la marque. */
+@Composable
+private fun ActionBar(onEdit: () -> Unit, onSign: () -> Unit, onShare: () -> Unit, modifier: Modifier = Modifier) {
+    Surface(
+        modifier = modifier,
+        shape = RoundedCornerShape(28.dp),
+        color = Brand.Night,
+        contentColor = Brand.Cream,
+        shadowElevation = 8.dp,
+    ) {
+        Row(Modifier.padding(horizontal = 8.dp, vertical = 6.dp), verticalAlignment = Alignment.CenterVertically) {
+            BarAction("Modifier", Icons.Filled.Edit, onEdit)
+            BarAction("Signer", Icons.Filled.Gesture, onSign, accent = true)
+            BarAction("Partager", Icons.Filled.Share, onShare)
+        }
+    }
+}
+
+@Composable
+private fun BarAction(label: String, icon: ImageVector, onClick: () -> Unit, accent: Boolean = false) {
+    Surface(
+        onClick = onClick,
+        shape = RoundedCornerShape(22.dp),
+        color = if (accent) Brand.Coral else Color.Transparent,
+        contentColor = if (accent) Brand.Ink else Brand.Cream,
+    ) {
+        Row(
+            Modifier.padding(horizontal = 16.dp, vertical = 12.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            Icon(icon, contentDescription = null, modifier = Modifier.size(20.dp))
+            Text(label, style = MaterialTheme.typography.labelLarge)
         }
     }
 }

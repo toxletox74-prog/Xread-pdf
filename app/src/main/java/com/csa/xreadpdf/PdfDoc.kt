@@ -2,6 +2,7 @@ package com.csa.xreadpdf
 
 import android.graphics.Bitmap
 import android.graphics.Color
+import android.graphics.Matrix
 import android.graphics.pdf.PdfRenderer
 import android.os.ParcelFileDescriptor
 import kotlinx.coroutines.CoroutineScope
@@ -15,18 +16,27 @@ import java.io.File
  * Enveloppe autour de PdfRenderer (non thread-safe) : tous les accès passent
  * par un dispatcher à parallélisme 1, ce qui sérialise rendu et fermeture.
  */
+/** Taille d'une page en points PDF, telle qu'affichée (CropBox + /Rotate). */
+data class PageSize(val width: Float, val height: Float)
+
 class PdfDoc private constructor(
     private val pfd: ParcelFileDescriptor,
     private val renderer: PdfRenderer,
-    /** Ratio largeur / hauteur de chaque page. */
-    val pageRatios: List<Float>,
+    val pageSizes: List<PageSize>,
 ) {
     @Volatile private var closed = false
 
-    val pageCount: Int get() = pageRatios.size
+    /** Ratio largeur / hauteur de chaque page. */
+    val pageRatios: List<Float> = pageSizes.map { (it.width / it.height).coerceIn(0.1f, 10f) }
 
-    suspend fun render(index: Int, widthPx: Int): Bitmap? = withContext(renderDispatcher) {
-        if (closed) null else renderPage(renderer, index, widthPx)
+    val pageCount: Int get() = pageSizes.size
+
+    /** Rendu de la page [index] ; [widthPx] = largeur avant [rotation] (horaire, multiple de 90°). */
+    suspend fun render(index: Int, widthPx: Int, rotation: Int = 0): Bitmap? = withContext(renderDispatcher) {
+        if (closed || index !in pageSizes.indices) return@withContext null
+        val bmp = renderPage(renderer, index, widthPx)
+        if (rotation % 360 == 0) bmp
+        else Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, Matrix().apply { postRotate(rotation.toFloat()) }, true)
     }
 
     fun close() {
@@ -47,15 +57,15 @@ class PdfDoc private constructor(
             val pfd = ParcelFileDescriptor.open(file, ParcelFileDescriptor.MODE_READ_ONLY)
             try {
                 val renderer = PdfRenderer(pfd)
-                val ratios = List(renderer.pageCount) { i ->
+                val sizes = List(renderer.pageCount) { i ->
                     val page = renderer.openPage(i)
                     try {
-                        (page.width.toFloat() / page.height).coerceIn(0.1f, 10f)
+                        PageSize(page.width.toFloat().coerceAtLeast(1f), page.height.toFloat().coerceAtLeast(1f))
                     } finally {
                         page.close()
                     }
                 }
-                PdfDoc(pfd, renderer, ratios)
+                PdfDoc(pfd, renderer, sizes)
             } catch (e: Exception) {
                 pfd.close()
                 throw e

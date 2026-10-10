@@ -1,8 +1,6 @@
 package com.csa.xreadpdf
 
 import android.app.Activity
-import android.content.Context
-import android.content.ContextWrapper
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -14,6 +12,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.IntentSenderRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.togetherWith
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -22,9 +25,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.content.IntentCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.csa.xreadpdf.editor.Tool
+import com.csa.xreadpdf.ui.EditorScreen
 import com.csa.xreadpdf.ui.LibraryScreen
+import com.csa.xreadpdf.ui.SignaturesScreen
 import com.csa.xreadpdf.ui.ViewerScreen
 import com.csa.xreadpdf.ui.XreadPdfTheme
+import com.csa.xreadpdf.ui.findActivity
 import com.google.mlkit.vision.documentscanner.GmsDocumentScannerOptions
 import com.google.mlkit.vision.documentscanner.GmsDocumentScanning
 import com.google.mlkit.vision.documentscanner.GmsDocumentScanningResult
@@ -60,6 +67,7 @@ class MainActivity : ComponentActivity() {
 private fun App(vm: MainViewModel) {
     val context = LocalContext.current
     val files by vm.files.collectAsStateWithLifecycle()
+    val signatures by vm.signatures.collectAsStateWithLifecycle()
     val snackbar = remember { SnackbarHostState() }
 
     LaunchedEffect(Unit) { vm.messages.collect { snackbar.showSnackbar(it) } }
@@ -97,33 +105,59 @@ private fun App(vm: MainViewModel) {
             .onFailure { vm.message("Aucune application pour partager") }
     }
 
-    when (val screen = vm.screen) {
-        Screen.Library -> LibraryScreen(
-            files = files,
-            snackbar = snackbar,
-            onScan = ::startScan,
-            onOpenExternal = { openLauncher.launch(arrayOf("application/pdf")) },
-            onOpen = vm::open,
-            onShare = ::share,
-            onRename = vm::rename,
-            onDelete = vm::delete,
-        )
-        is Screen.Viewer -> {
-            BackHandler(onBack = vm::back)
-            ViewerScreen(
-                file = screen.file,
-                inLibrary = vm.isInLibrary(screen.file),
+    AnimatedContent(
+        targetState = vm.screen,
+        transitionSpec = { fadeIn(tween(220)) togetherWith fadeOut(tween(160)) },
+        contentKey = { it::class },
+        label = "screen",
+    ) { screen ->
+        when (screen) {
+            Screen.Library -> LibraryScreen(
+                files = files,
+                signatureCount = signatures.size,
                 snackbar = snackbar,
-                onBack = vm::back,
-                onShare = { share(screen.file) },
-                onSave = { vm.saveToLibrary(screen.file) },
+                onScan = ::startScan,
+                onOpenExternal = { openLauncher.launch(arrayOf("application/pdf")) },
+                onSignatures = vm::showSignatures,
+                onOpen = vm::open,
+                onEdit = { vm.edit(it, Tool.SELECT, Screen.Library) },
+                onSign = { vm.edit(it, Tool.SIGNATURE, Screen.Library) },
+                onShare = ::share,
+                onRename = vm::rename,
+                onDelete = vm::delete,
             )
+            is Screen.Viewer -> {
+                BackHandler(onBack = vm::back)
+                ViewerScreen(
+                    file = screen.file,
+                    inLibrary = vm.isInLibrary(screen.file),
+                    snackbar = snackbar,
+                    onBack = vm::back,
+                    onShare = { share(screen.file) },
+                    onSave = { vm.saveToLibrary(screen.file) },
+                    onEdit = { vm.edit(screen.file, Tool.SELECT, screen) },
+                    onSign = { vm.edit(screen.file, Tool.SIGNATURE, screen) },
+                )
+            }
+            is Screen.Editor -> EditorScreen(
+                s = screen.session,
+                signatures = signatures,
+                inLibrary = vm.isInLibrary(screen.session.file),
+                snackbar = snackbar,
+                onClose = vm::closeEditor,
+                onSave = vm::saveEdits,
+                onNewSignature = { vm.addSignature(it) },
+                onMessage = vm::message,
+            )
+            Screen.Signatures -> {
+                BackHandler(onBack = vm::back)
+                SignaturesScreen(
+                    signatures = signatures,
+                    onBack = vm::back,
+                    onAdd = { vm.addSignature(it) },
+                    onDelete = { vm.deleteSignature(it) },
+                )
+            }
         }
     }
-}
-
-private tailrec fun Context.findActivity(): Activity? = when (this) {
-    is Activity -> this
-    is ContextWrapper -> baseContext.findActivity()
-    else -> null
 }

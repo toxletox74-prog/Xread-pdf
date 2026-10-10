@@ -12,8 +12,8 @@ android {
         applicationId = "com.csa.xreadpdf"
         minSdk = 26
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1"
     }
 
     buildTypes {
@@ -57,4 +57,7 @@ dependencies {
 
     // Scanner de documents Google (caméra, détection des bords, recadrage, filtres, export PDF)
     implementation("com.google.android.gms:play-services-mlkit-document-scanner:16.0.0-beta1")
+
+    // Écriture PDF (annotations, signatures, pages) — portage Android d'Apache PDFBox
+    implementation("com.tom-roush:pdfbox-android:2.0.27.0")
 }

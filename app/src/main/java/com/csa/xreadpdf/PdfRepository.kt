@@ -48,6 +48,28 @@ class PdfRepository(private val context: Context) {
         dest
     }
 
+    /**
+     * Enregistre une version modifiée : [write] produit le PDF dans un fichier temporaire, qui
+     * remplace ensuite l'original (s'il est dans « Mes PDF » et que [asCopy] est faux) ou devient
+     * une copie dans « Mes PDF ».
+     */
+    suspend fun saveEdited(source: File, asCopy: Boolean, write: (File) -> Unit): File = withContext(Dispatchers.IO) {
+        val inLib = isInLibrary(source)
+        val tmp = File(libraryDir, ".edit-${System.nanoTime()}.part")
+        try {
+            write(tmp)
+            val dest = when {
+                inLib && !asCopy -> source
+                inLib -> uniqueFile(libraryDir, source.nameWithoutExtension + " - modifié")
+                else -> uniqueFile(libraryDir, source.nameWithoutExtension)
+            }
+            if (!tmp.renameTo(dest)) tmp.copyTo(dest, overwrite = true)
+            dest
+        } finally {
+            tmp.delete()
+        }
+    }
+
     /** Renvoie le nouveau fichier, ou null si le nom est déjà pris / renommage impossible. */
     fun rename(file: File, newName: String): File? {
         val dest = File(libraryDir, sanitize(newName) + ".pdf")
