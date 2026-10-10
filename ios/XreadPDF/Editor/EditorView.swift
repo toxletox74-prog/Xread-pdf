@@ -276,8 +276,10 @@ private struct ToolOptions: View {
                             chip("Modifier le texte", "pencil") { session.openEditText(t) }
                         }
                         chip("Supprimer", "trash", destructive: true) { session.deleteSelected() }
-                        Text("Poignée ● pour agrandir").font(.caption).foregroundStyle(Brand.secondaryText)
-                        Spacer()
+                        if sel.asText == nil {
+                            Text("Poignée ● pour agrandir").font(.caption).foregroundStyle(Brand.secondaryText).lineLimit(2)
+                        }
+                        Spacer(minLength: 0)
                     }
                 } else {
                     hint("Touchez un texte ou une signature pour le déplacer. Pincez pour zoomer.")
@@ -354,6 +356,7 @@ private struct ToolOptions: View {
     private func chip(_ label: String, _ icon: String, destructive: Bool = false, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             Label(label, systemImage: icon).font(.subheadline)
+                .lineLimit(1).fixedSize()
                 .padding(.horizontal, 12).padding(.vertical, 8)
                 .background(Capsule().strokeBorder(Brand.outline))
                 .foregroundStyle(destructive ? Color.red : Color.primary)
