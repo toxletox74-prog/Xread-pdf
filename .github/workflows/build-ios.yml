@@ -1,0 +1,23 @@
+name: Build iOS
+
+on:
+  push:
+    paths:
+      - "ios/**"
+      - ".github/workflows/build-ios.yml"
+  workflow_dispatch:
+
+jobs:
+  export-check:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test de l'export PDF (positions, rotations, CropBox)
+        run: |
+          pip3 install --break-system-packages -q pypdf pypdfium2 pillow
+          mkdir -p /tmp/ex
+          python3 ios/Tests/export_check.py gen /tmp/ex
+          swiftc -O -o /tmp/ex/check ios/XreadPDF/Editor/Model.swift ios/XreadPDF/Editor/PdfExporter.swift ios/Tests/export_check.swift
+          /tmp/ex/check /tmp/ex
+          python3 ios/Tests/export_check.py check /tmp/ex | tee /tmp/ex/result.txt
+          echo "::warning title=EXPORT::$(python3 -c 'print(open("/tmp/ex/result.txt").read().replace("%","%25").replace("\n","%0A"))')"

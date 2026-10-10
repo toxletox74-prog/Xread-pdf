@@ -1,7 +1,15 @@
+# Android
 .gradle/
 build/
-/local.properties
+local.properties
 .idea/
 *.iml
+/android/captures
+
+# iOS (le projet Xcode est généré par XcodeGen à partir de ios/project.yml)
+ios/*.xcodeproj
+DerivedData/
+*.xcuserstate
+xcuserdata/
+
 .DS_Store
-/captures
