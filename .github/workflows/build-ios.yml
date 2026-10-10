@@ -19,7 +19,7 @@ jobs:
           {
             pip3 install --break-system-packages -q pypdf pypdfium2 pillow
             python3 ios/Tests/export_check.py gen /tmp/ex
-            swiftc -O -o /tmp/ex/check ios/XreadPDF/Editor/Model.swift ios/XreadPDF/Editor/PdfExporter.swift ios/Tests/export_check.swift
+            swiftc -O -o /tmp/ex/check ios/XreadPDF/Editor/Model.swift ios/XreadPDF/Editor/PdfExporter.swift ios/Tests/main.swift
             /tmp/ex/check /tmp/ex
             python3 ios/Tests/export_check.py check /tmp/ex
             echo "STATUS=$?"
