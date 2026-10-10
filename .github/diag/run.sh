@@ -1,36 +1,70 @@
 #!/bin/bash
-# Lance l'app sur l'émulateur et remonte logcat + arbre d'UI en annotations GitHub
-APK=app/build/outputs/apk/debug/app-debug.apk
-adb install -r "$APK"
+# Parcours complet sur émulateur ; rapport remonté en annotations GitHub
+R=report.txt; : > $R
+log() { echo "$*" >> $R; }
+ui() { python3 .github/diag/ui.py "$@"; }
+step() { sleep "${2:-2}"; log "== $1 :: $(ui texts)"; }
+SIZE=$(adb shell wm size | grep -o '[0-9]*x[0-9]*' | tail -1); W=${SIZE%x*}; H=${SIZE#*x}; log "écran $W x $H"
+adb install -r app/build/outputs/apk/debug/app-debug.apk >/dev/null
+python3 - <<'PY'
+from reportlab.pdfgen import canvas
+c = canvas.Canvas("test.pdf", pagesize=(595, 842))
+for i in range(2):
+    c.setFont("Helvetica", 28); c.drawString(72, 760, f"Document de test - page {i+1}")
+    c.setFillGray(0.85); c.rect(72, 300, 450, 380, fill=1, stroke=0); c.showPage()
+c.save()
+PY
+adb push test.pdf /data/local/tmp/test.pdf >/dev/null
+adb shell run-as com.csa.xreadpdf sh -c "'mkdir -p files/pdfs && cp /data/local/tmp/test.pdf files/pdfs/Test.pdf'"
 adb logcat -c
-adb shell am start -W -n com.csa.xreadpdf/.MainActivity
-sleep 12
-adb shell uiautomator dump /sdcard/ui.xml >/dev/null 2>&1
-adb pull /sdcard/ui.xml ui.xml >/dev/null 2>&1
-adb logcat -d > logcat.txt
-enc() { python3 -c 'import sys; s=sys.stdin.read()[:60000]; print(s.replace("%","%25").replace("\r","").replace("\n","%0A"))'; }
-echo "::warning title=CRASH::$(grep -A40 -E 'FATAL EXCEPTION|AndroidRuntime' logcat.txt | head -80 | enc)"
-echo "::warning title=APPLOG::$(grep -iE 'xreadpdf|compose|System.err' logcat.txt | grep -vE 'GoogleApiManager|chatty' | head -80 | enc)"
-echo "::warning title=UI::$(python3 - <<'PY' | enc
-import re
-x=open('ui.xml').read() if __import__('os').path.exists('ui.xml') else ''
-print('pkg:', set(re.findall(r'package="([^"]*)"', x)))
-for m in re.finditer(r'<node[^>]*>', x):
-    n=m.group(0)
-    t=re.search(r' text="([^"]*)"',n).group(1); d=re.search(r'content-desc="([^"]*)"',n).group(1); b=re.search(r'bounds="([^"]*)"',n).group(1)
-    if t or d: print(repr(t), repr(d), b)
-PY
-)"
-adb shell dumpsys activity activities | grep -E "mResumedActivity|topResumedActivity" | head -3 | while read l; do echo "::warning title=ACT::$l"; done
-adb exec-out screencap -p > shot.png
-echo "::warning title=SHOT::$(python3 - <<'PY' | enc
+adb shell am start -W -n com.csa.xreadpdf/.MainActivity >/dev/null
+step "ACCUEIL" 6
+log "$(ui tap Test)"; step "VISIONNEUSE" 3
+log "$(ui tap Modifier)"; step "EDITEUR" 3
+log "$(ui tap Stylo)"; sleep 1
+adb shell input swipe $((W*25/100)) $((H*40/100)) $((W*75/100)) $((H*45/100)) 600
+step "APRES TRAIT" 1
+log "$(ui tap Texte)"; sleep 1
+adb shell input tap $((W*30/100)) $((H*30/100)); step "DIALOGUE TEXTE" 2
+adb shell input text "Bonjour%sCed"; sleep 1
+log "$(ui tap OK)"; step "APRES TEXTE" 2
+log "$(ui tap Organiser)"; step "PAGES" 2
+log "$(ui tap Pivoter)"; sleep 1; adb shell input keyevent 4; step "APRES ROTATION" 2
+log "$(ui tap Enregistrer)"; step "DIALOGUE ENREGISTRER" 2
+log "$(ui tap Remplacer)"; step "APRES ENREGISTREMENT" 6
+log "$(ui tap Signer)"; step "SIGNER (pad attendu)" 3
+adb shell input swipe $((W*30/100)) $((H*45/100)) $((W*45/100)) $((H*40/100)) 300
+adb shell input swipe $((W*45/100)) $((H*40/100)) $((W*70/100)) $((H*47/100)) 300
+log "$(ui tap Enregistrer last)"; step "APRES PAD" 2
+adb shell input tap $((W*50/100)) $((H*55/100)); step "APRES POSE SIGNATURE" 2
+log "$(ui tap Enregistrer)"; step "DIALOGUE 2" 2
+log "$(ui tap 'Créer une copie')"; step "APRES COPIE" 6
+adb shell input keyevent 4; step "RETOUR ACCUEIL" 3
+adb shell run-as com.csa.xreadpdf ls -la files/pdfs files/signatures >> $R 2>&1
+adb exec-out run-as com.csa.xreadpdf cat files/pdfs/Test.pdf > out1.pdf
+adb exec-out run-as com.csa.xreadpdf cat "files/pdfs/Test - modifié.pdf" > out2.pdf
+for f in out1 out2; do
+  pdfinfo $f.pdf 2>&1 | grep -E "Pages|Page size|Producer" >> $R
+  pdftoppm -r 30 -png $f.pdf $f >/dev/null 2>&1
+done
+python3 - >> $R <<'PY'
+import glob
 from PIL import Image
-im=Image.open('shot.png').convert('RGB'); W,H=im.size
-print('size',W,H)
-for i in range(12):
-    y0=int(H*i/12); y1=int(H*(i+1)/12)
-    band=im.crop((0,y0,W,y1)).resize((8,1))
-    print(f'{i:2d}', ' '.join('#%02x%02x%02x'%band.getpixel((x,0)) for x in range(8)))
+for p in sorted(glob.glob("out*-*.png")):
+    im = Image.open(p).convert("RGB"); W, H = im.size
+    px = im.load(); cnt = {}
+    for y in range(H):
+        for x in range(W):
+            r, g, b = px[x, y]
+            k = "noir" if r < 60 and g < 60 and b < 60 else "bleu" if b > 150 and r < 80 else "rouge" if r > 150 and g < 80 else None
+            if k: cnt[k] = cnt.get(k, 0) + 1
+    print(p, im.size, cnt)
 PY
-)"
-echo "::warning title=VIEWS::$(adb shell dumpsys activity top | sed -n '/View Hierarchy/,/Looper/p' | head -40 | enc)"
+adb logcat -d | grep -A30 -E "FATAL EXCEPTION" | head -60 >> $R
+adb logcat -d | grep -E " E (AndroidRuntime|xreadpdf)|PdfBox|tom_roush" | head -20 >> $R
+python3 - <<'PY'
+s = open("report.txt").read()
+enc = lambda t: t.replace("%", "%25").replace("\r", "").replace("\n", "%0A")
+for i in range(0, min(len(s), 6 * 20000), 20000):
+    print(f"::warning title=RAPPORT {i//20000+1}::" + enc(s[i:i+20000]))
+PY
