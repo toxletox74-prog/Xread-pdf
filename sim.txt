@@ -1,0 +1,68 @@
+Simulateur DC4CD8B3-4457-4153-9087-A0D7A2F9BFD9
+com.csa.xreadpdf: 5028
+com.csa.xreadpdf: 5958
+com.csa.xreadpdf: 6470
+com.csa.xreadpdf: 6708
+com.csa.xreadpdf: 7192
+com.csa.xreadpdf: 7787
+total 56
+drwxr-xr-x  4 runner  staff    128 Oct 10 09:03 .
+drwxr-xr-x@ 7 runner  staff    224 Oct 10 09:02 ..
+-rw-r--r--  1 runner  staff  14273 Oct 10 09:03 Exemple - modifié.pdf
+-rw-r--r--  1 runner  staff   8370 Oct 10 09:02 Exemple.pdf
+page 1 taille (595.0, 842.0)
+page 2 taille (842.0, 595.0)
+2026-10-10 09:02:33.194 Df XreadPDF[5028:4c9a] [com.apple.dt.xctest:Default] Registering for test daemon availability notify post.
+2026-10-10 09:02:33.195 Df XreadPDF[5028:4c9a] [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-10-10 09:02:33.196 Df XreadPDF[5028:4c9a] [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-10-10 09:02:33.196 Df XreadPDF[5028:4c9a] [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-10-10 09:02:33.244 Df XreadPDF[5028:4c9a] [com.apple.BacklightServices:scenes] 0x600000c03150 setDelegate:<0x600000c02d00 _UIBacklightEnvironment> hasDelegate:YES for environment:sceneID:com.csa.xreadpdf-default
+2026-10-10 09:02:33.250 Df XreadPDF[5028:4c9a] [com.apple.UIKit:KeyWindow] Setting default evaluation strategy for UIUserInterfaceIdiomPhone to LastOneWins
+2026-10-10 09:02:33.250 Df XreadPDF[5028:4c9a] [com.apple.UIKit:KeyWindow] Scene target of keyboard event deferring environment did change: 1; scene: UIWindowScene: 0x104708780; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Acom.csa.xreadpdf-default
+2026-10-10 09:02:33.250 Df XreadPDF[5028:4c9a] [com.apple.UIKit:KeyWindow] Scene became target of keyboard event deferring environment: UIWindowScene: 0x104708780; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Acom.csa.xreadpdf-default
+2026-10-10 09:02:33.250 Df XreadPDF[5028:4c9a] [com.apple.UIKit:KeyWindow] Setting default evaluation strategy for UIUserInterfaceIdiomPhone to SystemShellManaged
+2026-10-10 09:02:33.303 Df XreadPDF[5028:4c9a] [com.apple.UIKit:KeyWindow] Window did become application key: UIWindow: 0x10470a180; contextId: 0x8B9EA64C; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Acom.csa.xreadpdf-default
+2026-10-10 09:02:33.306 Df XreadPDF[5028:4ca3] [com.apple.BackBoard:EventDelivery] policyStatus:<BKSHIDEventDeliveryPolicyObserver: 0x6000021075c0; token: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Acom.csa.xreadpdf-default; status: ancestor> was:target
+2026-10-10 09:02:33.307 Df XreadPDF[5028:4c9a] [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:com.csa.xreadpdf-default  persistentID: AD57C077-F120-484C-BB39-4775B1E51CA9
+2026-10-10 09:02:33.591 Df XreadPDF[5028:4c9a] [com.apple.network:activity] Create activity from XPC object <nw_activity 50:1 [F9573DA2-C1F8-465D-8FCE-4BCDDDBDB5C0] (reporting strategy default)>
+2026-10-10 09:02:33.591 Df XreadPDF[5028:4c9a] [com.apple.network:activity] Create activity from XPC object <nw_activity 50:2 [8DA30EAA-DD56-46D8-9868-17AF4C417F4F] (reporting strategy default)>
+2026-10-10 09:02:33.591 Df XreadPDF[5028:4c9a] [com.apple.network:activity] Set activity <nw_activity 50:1 [F9573DA2-C1F8-465D-8FCE-4BCDDDBDB5C0] (reporting strategy default)> as the global parent
+2026-10-10 09:02:33.592 Df XreadPDF[5028:4c9a] [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:com.csa.xreadpdf-default  persistentID: AD57C077-F120-484C-BB39-4775B1E51CA9
+2026-10-10 09:02:33.715 Df XreadPDF[5028:4c9a] [com.apple.UIKit:KeyWindow] Scene became target of keyboard event deferring environment: UIWindowScene: 0x104708780; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Acom.csa.xreadpdf-default
+2026-10-10 09:02:33.750 Df XreadPDF[5028:4c9a] [PrototypeTools:domain] Not observing PTDefaults on customer install.
+2026-10-10 09:02:33.762 Df XreadPDF[5028:4c9a] [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:com.csa.xreadpdf-default  persistentID: AD57C077-F120-484C-BB39-4775B1E51CA9
+2026-10-10 09:02:33.766 Df XreadPDF[5028:4c9a] [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:com.csa.xreadpdf-default  persistentID: AD57C077-F120-484C-BB39-4775B1E51CA9
+2026-10-10 09:02:33.766 Df XreadPDF[5028:4c9a] [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:com.csa.xreadpdf-default  persistentID: AD57C077-F120-484C-BB39-4775B1E51CA9
+2026-10-10 09:02:33.810 Df XreadPDF[5028:4c9a] [com.apple.network:activity] <nw_activity 50:1 [F9573DA2-C1F8-465D-8FCE-4BCDDDBDB5C0] (global parent) (reporting strategy default) complete (reason success)> complete with reason 2 (success), duration 1227ms
+2026-10-10 09:02:33.810 Df XreadPDF[5028:4c9a] [com.apple.network:activity] <nw_activity 50:2 [8DA30EAA-DD56-46D8-9868-17AF4C417F4F] (reporting strategy default) complete (reason success)> complete with reason 2 (success), duration 1227ms
+2026-10-10 09:02:33.810 Df XreadPDF[5028:4c9a] [com.apple.network:activity] Unsetting the global parent activity <nw_activity 50:1 [F9573DA2-C1F8-465D-8FCE-4BCDDDBDB5C0] (global parent) (reporting strategy default) complete (reason success)>
+2026-10-10 09:02:54.671 Df XreadPDF[5958:559c] [com.apple.dt.xctest:Default] Registering for test daemon availability notify post.
+2026-10-10 09:02:54.671 Df XreadPDF[5958:559c] [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-10-10 09:02:54.671 Df XreadPDF[5958:559c] [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-10-10 09:02:54.672 Df XreadPDF[5958:559c] [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-10-10 09:02:54.697 Df XreadPDF[5958:559c] [com.apple.BacklightServices:scenes] 0x600000c0c510 setDelegate:<0x600000c160a0 _UIBacklightEnvironment> hasDelegate:YES for environment:sceneID:com.csa.xreadpdf-default
+2026-10-10 09:02:54.701 Df XreadPDF[5958:559c] [com.apple.UIKit:KeyWindow] Setting default evaluation strategy for UIUserInterfaceIdiomPhone to LastOneWins
+2026-10-10 09:02:54.701 Df XreadPDF[5958:559c] [com.apple.UIKit:KeyWindow] Scene target of keyboard event deferring environment did change: 1; scene: UIWindowScene: 0x10530ad90; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Acom.csa.xreadpdf-default
+2026-10-10 09:02:54.701 Df XreadPDF[5958:559c] [com.apple.UIKit:KeyWindow] Scene became target of keyboard event deferring environment: UIWindowScene: 0x10530ad90; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Acom.csa.xreadpdf-default
+2026-10-10 09:02:54.701 Df XreadPDF[5958:559c] [com.apple.UIKit:KeyWindow] Setting default evaluation strategy for UIUserInterfaceIdiomPhone to SystemShellManaged
+2026-10-10 09:02:54.736 Df XreadPDF[5958:559c] [com.apple.UIKit:KeyWindow] Window did become application key: UIWindow: 0x105108270; contextId: 0xAA457589; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Acom.csa.xreadpdf-default
+2026-10-10 09:02:54.737 Df XreadPDF[5958:55a0] [com.apple.BackBoard:EventDelivery] policyStatus:<BKSHIDEventDeliveryPolicyObserver: 0x600002101360; token: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Acom.csa.xreadpdf-default; status: ancestor> was:target
+2026-10-10 09:02:54.738 Df XreadPDF[5958:559c] [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:com.csa.xreadpdf-default  persistentID: AD57C077-F120-484C-BB39-4775B1E51CA9
+2026-10-10 09:02:54.975 Df XreadPDF[5958:559c] [PrototypeTools:domain] Not observing PTDefaults on customer install.
+2026-10-10 09:02:55.009 Df XreadPDF[5958:559c] [com.apple.network:activity] Create activity from XPC object <nw_activity 50:1 [09982D9E-3BEB-4177-962E-C0F4A11C64C9] (reporting strategy default)>
+2026-10-10 09:02:55.009 Df XreadPDF[5958:559c] [com.apple.network:activity] Create activity from XPC object <nw_activity 50:2 [3E5081FE-DDA6-4B07-BF7C-9A4FF72E142D] (reporting strategy default)>
+2026-10-10 09:02:55.009 Df XreadPDF[5958:559c] [com.apple.network:activity] Set activity <nw_activity 50:1 [09982D9E-3BEB-4177-962E-C0F4A11C64C9] (reporting strategy default)> as the global parent
+uitest=0
+Ignoring --strip-bitcode because --sign was not passed
+Ignoring --strip-bitcode because --sign was not passed
+Test Case '-[XreadPDFUITests.FlowTests testEditSignAndSave]' started.
+Test Case '-[XreadPDFUITests.FlowTests testEditSignAndSave]' passed (30.478 seconds).
+Test Suite 'FlowTests' passed at 2026-10-10 09:05:54.615.
+Test Suite 'XreadPDFUITests.xctest' passed at 2026-10-10 09:05:54.616.
+Test Suite 'All tests' passed at 2026-10-10 09:05:54.616.
+total 56
+drwxr-xr-x  4 runner  staff    128 Oct 10 09:05 .
+drwxr-xr-x@ 7 runner  staff    224 Oct 10 09:05 ..
+-rw-r--r--  1 runner  staff  15405 Oct 10 09:05 Exemple - modifié.pdf
+-rw-r--r--  1 runner  staff   8370 Oct 10 09:05 Exemple.pdf
+build=0
