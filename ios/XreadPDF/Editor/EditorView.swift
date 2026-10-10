@@ -77,9 +77,9 @@ struct EditorView: View {
             }
             Spacer(minLength: 4)
             Button(action: session.undo) { Image(systemName: "arrow.uturn.backward").frame(width: 40, height: 44) }
-                .disabled(!session.canUndo).accessibilityLabel("Annuler")
+                .disabled(!session.canUndo).accessibilityLabel("Annuler").accessibilityIdentifier("undo")
             Button(action: session.redo) { Image(systemName: "arrow.uturn.forward").frame(width: 40, height: 44) }
-                .disabled(!session.canRedo).accessibilityLabel("Rétablir")
+                .disabled(!session.canRedo).accessibilityLabel("Rétablir").accessibilityIdentifier("redo")
             Button {
                 if inLibrary { confirmSave = true } else { onSave(true) }
             } label: {
@@ -89,6 +89,7 @@ struct EditorView: View {
                     .foregroundStyle(.white)
             }
             .disabled(!session.dirty || session.saving)
+            .accessibilityIdentifier("save")
         }
         .padding(.horizontal, 8)
         .padding(.vertical, 4)
@@ -253,6 +254,7 @@ private struct ToolBar: View {
                 .buttonStyle(.plain)
                 .accessibilityElement(children: .ignore)
                 .accessibilityLabel(tool.label)
+                .accessibilityIdentifier("tool-\(tool.rawValue)")
                 .accessibilityAddTraits(active ? [.isSelected, .isButton] : .isButton)
             }
         }
@@ -331,7 +333,7 @@ private struct ToolOptions: View {
                                     .overlay(RoundedRectangle(cornerRadius: 14).strokeBorder(active ? Brand.coral : Brand.outline, lineWidth: active ? 2.5 : 1))
                             }
                             .buttonStyle(.plain)
-                            .accessibilityLabel("Signature")
+                            .accessibilityLabel("Choisir cette signature")
                         }
                         if !signatures.isEmpty { hint("Touchez la page à l'endroit où signer") }
                     }
