@@ -76,3 +76,20 @@ struct ColorDot: View {
         .accessibilityAddTraits(selected ? .isSelected : [])
     }
 }
+
+/// Rectangle aux coins inférieurs arrondis (en-tête de l'accueil).
+struct BottomRounded: Shape {
+    var radius: CGFloat
+    func path(in r: CGRect) -> Path {
+        var p = Path()
+        let rad = min(radius, r.height / 2, r.width / 2)
+        p.move(to: CGPoint(x: r.minX, y: r.minY))
+        p.addLine(to: CGPoint(x: r.maxX, y: r.minY))
+        p.addLine(to: CGPoint(x: r.maxX, y: r.maxY - rad))
+        p.addArc(center: CGPoint(x: r.maxX - rad, y: r.maxY - rad), radius: rad, startAngle: .degrees(0), endAngle: .degrees(90), clockwise: false)
+        p.addLine(to: CGPoint(x: r.minX + rad, y: r.maxY))
+        p.addArc(center: CGPoint(x: r.minX + rad, y: r.maxY - rad), radius: rad, startAngle: .degrees(90), endAngle: .degrees(180), clockwise: false)
+        p.closeSubpath()
+        return p
+    }
+}

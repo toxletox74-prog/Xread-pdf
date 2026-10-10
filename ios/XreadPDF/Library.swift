@@ -83,13 +83,11 @@ final class Library: ObservableObject {
         return dest
     }
 
-    /// Enregistre une version modifiée : [write] produit le PDF dans un fichier temporaire, qui
-    /// remplace l'original (s'il est dans la bibliothèque et que asCopy est faux) ou devient une copie.
-    func saveEdited(source: URL, asCopy: Bool, write: (URL) throws -> Void) throws -> URL {
+    /// Place un PDF modifié (fichier temporaire [tmp]) : il remplace l'original (s'il est dans la
+    /// bibliothèque et que asCopy est faux) ou devient une copie dans la bibliothèque.
+    func placeEdited(_ tmp: URL, source: URL, asCopy: Bool) throws -> URL {
         let fm = FileManager.default
-        let tmp = fm.temporaryDirectory.appendingPathComponent("edit-\(UUID().uuidString).pdf")
         defer { try? fm.removeItem(at: tmp) }
-        try write(tmp)
         let inLib = isInLibrary(source)
         let dest: URL
         if inLib && !asCopy {

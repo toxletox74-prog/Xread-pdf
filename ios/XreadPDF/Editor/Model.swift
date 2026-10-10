@@ -81,6 +81,8 @@ enum Annot: Equatable, Identifiable {
         }
     }
 
+    var asText: TextAnnot? { if case .text(let t) = self { return t } else { return nil } }
+
     /// Élément posé (texte, signature) : ancre haut-gauche et rotation.
     var isPlaced: Bool { if case .ink = self { return false } else { return true } }
 
