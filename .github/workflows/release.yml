@@ -1,0 +1,86 @@
+name: Release
+
+# Publier une version : pousser un tag « vX.Y.Z » (ex. git tag v1.2.0 && git push origin v1.2.0)
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag de la version (ex. v1.2.0)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: android
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.9"
+      - run: gradle assembleDebug --no-daemon
+      - run: cp app/build/outputs/apk/debug/app-debug.apk ../Xread-PDF.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: apk
+          path: Xread-PDF.apk
+
+  ipa:
+    runs-on: macos-15
+    defaults:
+      run:
+        working-directory: ios
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          brew install xcodegen >/dev/null
+          xcodegen generate
+          xcodebuild -project XreadPDF.xcodeproj -scheme XreadPDF -configuration Release \
+            -sdk iphoneos -destination 'generic/platform=iOS' -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" build -quiet
+          mkdir -p Payload && cp -R build/Build/Products/Release-iphoneos/XreadPDF.app Payload/
+          zip -qr ../Xread-PDF-iOS-non-signee.ipa Payload
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ipa
+          path: Xread-PDF-iOS-non-signee.ipa
+
+  publier:
+    needs: [apk, ipa]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          merge-multiple: true
+          path: dist
+      - name: Créer la release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.inputs.tag || github.ref_name }}
+        run: |
+          cat > notes.md <<NOTES
+          ## Installer
+
+          **iPhone / iPad** — ouvrir https://toxletox74-prog.github.io/Xread-pdf/ dans Safari, puis *Partager → Sur l'écran d'accueil*. Gratuit, sans expiration, hors ligne.
+
+          **Android** — télécharger **Xread-PDF.apk** ci-dessous et l'ouvrir sur le téléphone (Android 8.0+).
+
+          *Xread-PDF-iOS-non-signee.ipa* : version iOS native, à installer avec une signature Apple (Sideloadly ou compte développeur).
+
+          ## Fonctions
+          Scanner (recadrage 4 coins, filtre document) · Signer · Annoter (stylo, surligneur, texte, gomme) · Organiser les pages · Partager · Hors ligne, documents stockés sur l'appareil.
+          NOTES
+          gh release view "$TAG" >/dev/null 2>&1 && gh release delete "$TAG" --yes
+          gh release create "$TAG" dist/Xread-PDF.apk dist/Xread-PDF-iOS-non-signee.ipa \
+            --title "Xread PDF ${TAG#v}" --notes-file notes.md --latest
