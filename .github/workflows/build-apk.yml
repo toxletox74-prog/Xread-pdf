@@ -26,8 +26,21 @@ jobs:
         with:
           gradle-version: "8.9"
 
+      - name: Clé de signature fixe
+        env:
+          KEYSTORE_B64: ${{ secrets.XREADPDF_KEYSTORE }}
+        run: |
+          if [ -n "$KEYSTORE_B64" ]; then
+            echo "$KEYSTORE_B64" | tr -d ' \r\n' | base64 -d > "$RUNNER_TEMP/xreadpdf.jks"
+            echo "XREADPDF_KEYSTORE_FILE=$RUNNER_TEMP/xreadpdf.jks" >> "$GITHUB_ENV"
+          else
+            echo "::warning::Secret XREADPDF_KEYSTORE absent : APK signé avec une clé aléatoire (ne s'installera pas par-dessus une version précédente)"
+          fi
+
       - name: Compiler l'APK
         run: gradle assembleDebug --no-daemon
+        env:
+          XREADPDF_KEY_PASSWORD: ${{ secrets.XREADPDF_KEY_PASSWORD }}
 
       - uses: actions/upload-artifact@v4
         with:

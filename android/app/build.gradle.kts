@@ -16,7 +16,24 @@ android {
         versionName = "1.2"
     }
 
+    // Clé de signature fixe (secrets GitHub XREADPDF_KEYSTORE / XREADPDF_KEY_PASSWORD) :
+    // indispensable pour que chaque nouvelle version s'installe par-dessus la précédente.
+    val fixedKeystore = System.getenv("XREADPDF_KEYSTORE_FILE")?.let { file(it) }?.takeIf { it.exists() }
+    signingConfigs {
+        if (fixedKeystore != null) {
+            create("fixe") {
+                storeFile = fixedKeystore
+                storePassword = System.getenv("XREADPDF_KEY_PASSWORD")
+                keyAlias = "xreadpdf"
+                keyPassword = System.getenv("XREADPDF_KEY_PASSWORD")
+            }
+        }
+    }
+
     buildTypes {
+        debug {
+            if (fixedKeystore != null) signingConfig = signingConfigs.getByName("fixe")
+        }
         release {
             isMinifyEnabled = true
             isShrinkResources = true
