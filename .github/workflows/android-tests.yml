@@ -68,10 +68,11 @@ jobs:
           except Exception:
               log = []
           steps = [l for l in log if "XreadTest" in l]
-          crash = [l for l in log if "AndroidRuntime" in l][:40]
+          crash = [l.split("AndroidRuntime:", 1)[-1] for l in log if "AndroidRuntime" in l and ("Exception" in l or "Error" in l or "Caused by" in l or "com.csa" in l or "FATAL" in l or "Process:" in l)][:30]
           out += ["", "--- dernières étapes ---"] + steps[-25:] + ["", "--- plantages ---"] + crash
           open("summary.log", "w").write("\n".join(out) or "aucun résultat")
           PY
           cat summary.log
-          python3 ../.github/annotate.py RESUME summary.log
+          head -c 3400 summary.log > s1.log
+          python3 ../.github/annotate.py RESUME s1.log
           ! grep -q "TESTS_FAILED" test.log
