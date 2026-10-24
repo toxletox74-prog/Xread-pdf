@@ -2,7 +2,11 @@ package com.csa.xreadpdf
 
 import android.content.Context
 import androidx.compose.ui.test.ExperimentalTestApi
+import androidx.compose.ui.test.hasAnyDescendant
 import androidx.compose.ui.test.hasContentDescription
+import androidx.compose.ui.test.hasScrollAction
+import androidx.compose.ui.test.onAllNodes
+import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createEmptyComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
@@ -105,7 +109,12 @@ class UiTest {
 
             // Outils PDF
             rule.onNodeWithContentDescription("Outils PDF").performClick()
+            waitText("Extraire des pages")
+            rule.onAllNodes(hasScrollAction() and hasAnyDescendant(hasText("Extraire des pages"))).onFirst()
+                .performScrollToNode(hasText("Compresser"))
             waitText("Compresser")
+            rule.onAllNodes(hasScrollAction() and hasAnyDescendant(hasText("Extraire des pages"))).onFirst()
+                .performScrollToNode(hasText("Numéros de page"))
             rule.onNodeWithText("Numéros de page").performClick()
             waitText("En bas au centre")
             rule.onNodeWithText("Ajouter").performClick()
