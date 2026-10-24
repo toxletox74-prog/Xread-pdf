@@ -2,6 +2,29 @@ package com.csa.xreadpdf.ui
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.material.icons.filled.Approval
+import androidx.compose.material.icons.filled.Category
+import androidx.compose.material.icons.filled.CropSquare
+import androidx.compose.material.icons.filled.EditNote
+import androidx.compose.material.icons.filled.HorizontalRule
+import androidx.compose.material.icons.filled.NorthEast
+import androidx.compose.material.icons.filled.RadioButtonUnchecked
+import androidx.compose.ui.geometry.CornerRadius
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.text.font.FontWeight
+import com.csa.xreadpdf.editor.NOTE_BORDER
+import com.csa.xreadpdf.editor.NOTE_FILL
+import com.csa.xreadpdf.editor.NOTE_PAD
+import com.csa.xreadpdf.editor.NOTE_TEXT
+import com.csa.xreadpdf.editor.NoteAnnot
+import com.csa.xreadpdf.editor.STAMPS
+import com.csa.xreadpdf.editor.ShapeAnnot
+import com.csa.xreadpdf.editor.ShapeKind
+import com.csa.xreadpdf.editor.StampAnnot
+import com.csa.xreadpdf.editor.arrowHead
+import com.csa.xreadpdf.editor.stampFont
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -149,10 +172,15 @@ private const val K = 4f
 /** Mise en page des textes, en points (partagée par le dessin et les tests de toucher). */
 private class ComposeTextSizer(private val measurer: TextMeasurer) : TextSizer {
     private val density = Density(K, 1f)
-    fun layout(a: TextAnnot): TextLayoutResult =
-        measurer.measure(a.text, TextStyle(color = Color(a.color), fontSize = a.size.sp), density = density)
-    override fun size(a: TextAnnot): Pt {
-        val l = layout(a)
+    fun layout(a: TextAnnot): TextLayoutResult = layoutRaw(a.text, a.size, a.color)
+    fun layoutRaw(text: String, size: Float, color: Int, bold: Boolean = false): TextLayoutResult =
+        measurer.measure(
+            text,
+            TextStyle(color = Color(color), fontSize = size.sp, fontWeight = if (bold) FontWeight.Bold else FontWeight.Normal),
+            density = density,
+        )
+    override fun measure(text: String, fontSize: Float, bold: Boolean): Pt {
+        val l = layoutRaw(text, fontSize, 0xFF000000.toInt(), bold)
         return Pt(l.size.width / K, l.size.height / K)
     }
 }
@@ -260,6 +288,15 @@ fun EditorScreen(
             initial = d.initial,
             onDismiss = { s.textDialog = null },
             onConfirm = s::confirmText,
+        )
+    }
+
+    s.noteDialog?.let { d ->
+        NoteDialogUi(
+            editing = d.editId != null,
+            initial = d.initial,
+            onDismiss = { s.noteDialog = null },
+            onConfirm = { s.confirmNote(it, sizer) },
         )
     }
 
@@ -459,6 +496,60 @@ private fun DrawScope.drawAnnot(a: Annot, sizer: ComposeTextSizer) {
             translate(a.x, a.y)
             rotate(-a.rotation.toFloat(), pivot = Offset.Zero)
         }) { drawSignature(a.sig, a.width) }
+        is ShapeAnnot -> drawShape(a)
+        is StampAnnot -> withTransform({
+            translate(a.x, a.y)
+            rotate(-a.rotation.toFloat(), pivot = Offset.Zero)
+        }) {
+            val fs = stampFont(a.height)
+            drawRoundRect(
+                Color(a.color),
+                size = Size(a.width, a.height),
+                cornerRadius = CornerRadius(fs * 0.35f),
+                style = Stroke(fs * 0.14f),
+            )
+            val l = sizer.layoutRaw(a.text, fs, a.color, bold = true)
+            val tw = l.size.width / K
+            val th = l.size.height / K
+            val fit = minOf(1f, (a.width - fs * 1.1f) / tw.coerceAtLeast(0.01f))
+            withTransform({
+                translate((a.width - tw * fit) / 2f, (a.height - th * fit) / 2f)
+                scale(fit / K, fit / K, pivot = Offset.Zero)
+            }) { drawText(l) }
+        }
+        is NoteAnnot -> withTransform({
+            translate(a.x, a.y)
+            rotate(-a.rotation.toFloat(), pivot = Offset.Zero)
+        }) {
+            val rad = CornerRadius(a.size * 0.3f)
+            drawRoundRect(Color(NOTE_FILL), size = Size(a.width, a.height), cornerRadius = rad)
+            drawRoundRect(Color(NOTE_BORDER), size = Size(a.width, a.height), cornerRadius = rad, style = Stroke(0.8f))
+            val pad = NOTE_PAD * a.size
+            withTransform({
+                translate(pad, pad)
+                scale(1f / K, 1f / K, pivot = Offset.Zero)
+            }) { drawText(sizer.layoutRaw(a.text, a.size, NOTE_TEXT)) }
+        }
+    }
+}
+
+private fun DrawScope.drawShape(a: ShapeAnnot) {
+    val c = Color(a.color)
+    val stroke = Stroke(a.width, cap = StrokeCap.Round, join = StrokeJoin.Round)
+    val tl = Offset(minOf(a.a.x, a.b.x), minOf(a.a.y, a.b.y))
+    val sz = Size(kotlin.math.abs(a.b.x - a.a.x), kotlin.math.abs(a.b.y - a.a.y))
+    when (a.kind) {
+        ShapeKind.RECT -> drawRect(c, tl, sz, style = stroke)
+        ShapeKind.ELLIPSE -> drawOval(c, tl, sz, style = stroke)
+        ShapeKind.LINE -> drawLine(c, Offset(a.a.x, a.a.y), Offset(a.b.x, a.b.y), a.width, StrokeCap.Round)
+        ShapeKind.ARROW -> {
+            val (l, r) = arrowHead(a.a, a.b, a.width)
+            val path = Path().apply {
+                moveTo(a.a.x, a.a.y); lineTo(a.b.x, a.b.y)
+                moveTo(l.x, l.y); lineTo(a.b.x, a.b.y); lineTo(r.x, r.y)
+            }
+            drawPath(path, c, style = stroke)
+        }
     }
 }
 
@@ -541,6 +632,34 @@ private suspend fun AwaitPointerEventScope.handleGesture(
             if (sig == null) s.padOpen = true else s.placeSignature(p0, sig)
         }
 
+        Tool.SHAPE -> {
+            down.consume()
+            val id = s.newId()
+            val kind = s.shapeKind
+            val color = s.shapeColor
+            val width = s.shapeWidth
+            var end = p0
+            s.beginGesture()
+            val ok = trackDrag(down.id) { o ->
+                end = pt(o)
+                s.live(s.mapAnnots { l -> l.filterNot { it.id == id } + ShapeAnnot(id, kind, p0, end, color, width) })
+            }
+            if (ok && dist(p0, end) >= 3f) s.endGesture() else s.cancelGesture()
+        }
+
+        Tool.STAMP -> {
+            val up = waitForUpOrCancellation() ?: return
+            up.consume()
+            s.placeStamp(p0, sizer)
+        }
+
+        Tool.NOTE -> {
+            val up = waitForUpOrCancellation() ?: return
+            up.consume()
+            val hit = s.hitPlaced(p0, tol, sizer)
+            if (hit is NoteAnnot) s.openEditNote(hit) else s.openNewNote(p0)
+        }
+
         Tool.SELECT -> {
             val previous = s.annot(s.selected) as? Placed
             val onHandle = previous != null &&
@@ -570,6 +689,7 @@ private suspend fun AwaitPointerEventScope.handleGesture(
                 else -> {
                     s.cancelGesture()
                     if (wasSelected && !onHandle && target is TextAnnot) s.openEditText(target)
+                    if (wasSelected && !onHandle && target is NoteAnnot) s.openEditNote(target)
                 }
             }
         }
@@ -583,6 +703,14 @@ private fun resize(a: Placed, box: Pt, p: Pt): Placed {
     return when (a) {
         is SignAnnot -> a.copy(width = (a.width * f).coerceIn(16f, 2000f))
         is TextAnnot -> a.copy(size = (a.size * f).coerceIn(4f, 160f))
+        is StampAnnot -> {
+            val k = f.coerceIn(20f / a.height, 300f / a.height)
+            a.copy(width = a.width * k, height = a.height * k)
+        }
+        is NoteAnnot -> {
+            val k = f.coerceIn(5f / a.size, 60f / a.size)
+            a.copy(width = a.width * k, height = a.height * k, size = a.size * k)
+        }
     }
 }
 
@@ -722,17 +850,20 @@ private val TOOLS = listOf(
     ToolDef(Tool.HIGHLIGHTER, Icons.Filled.BorderColor),
     ToolDef(Tool.TEXT, Icons.Filled.TextFields),
     ToolDef(Tool.SIGNATURE, Icons.Filled.Gesture),
+    ToolDef(Tool.SHAPE, Icons.Filled.Category),
+    ToolDef(Tool.STAMP, Icons.Filled.Approval),
+    ToolDef(Tool.NOTE, Icons.Filled.EditNote),
     ToolDef(Tool.ERASER, Icons.Filled.CleaningServices),
 )
 
 @Composable
 private fun ToolBar(s: EditorSession, signatures: List<Signature>) {
-    Row(Modifier.fillMaxWidth().padding(horizontal = 4.dp, vertical = 6.dp)) {
+    Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()).padding(horizontal = 4.dp, vertical = 6.dp)) {
         TOOLS.forEach { def ->
             val active = s.tool == def.tool
             Column(
                 Modifier
-                    .weight(1f)
+                    .width(66.dp)
                     .clip(RoundedCornerShape(16.dp))
                     .clickable {
                         s.tool = def.tool
@@ -773,13 +904,20 @@ private fun ToolOptions(s: EditorSession, signatures: List<Signature>, sizer: Co
             Tool.SELECT -> {
                 val sel = s.annot(s.selected) as? Placed
                 if (sel == null) {
-                    Hint("Touchez un texte ou une signature pour le déplacer. Pincez pour zoomer.")
+                    Hint("Touchez un texte, une signature, un tampon ou une note pour le déplacer. Pincez pour zoomer.")
                 } else {
                     Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
                         if (sel is TextAnnot) {
                             AssistChip(
                                 onClick = { s.openEditText(sel) },
                                 label = { Text("Modifier le texte") },
+                                leadingIcon = { Icon(Icons.Filled.Edit, contentDescription = null, modifier = Modifier.size(18.dp)) },
+                            )
+                        }
+                        if (sel is NoteAnnot) {
+                            AssistChip(
+                                onClick = { s.openEditNote(sel) },
+                                label = { Text("Modifier la note") },
                                 leadingIcon = { Icon(Icons.Filled.Edit, contentDescription = null, modifier = Modifier.size(18.dp)) },
                             )
                         }
@@ -856,7 +994,49 @@ private fun ToolOptions(s: EditorSession, signatures: List<Signature>, sizer: Co
                     item { Hint("Touchez la page à l'endroit où signer") }
                 }
             }
-            Tool.ERASER -> Hint("Glissez sur un trait, un texte ou une signature pour l'effacer.")
+            Tool.SHAPE -> LazyRow(horizontalArrangement = Arrangement.spacedBy(4.dp), verticalAlignment = Alignment.CenterVertically) {
+                items(ShapeKind.entries.toList()) { k ->
+                    val icon = when (k) {
+                        ShapeKind.RECT -> Icons.Filled.CropSquare
+                        ShapeKind.ELLIPSE -> Icons.Filled.RadioButtonUnchecked
+                        ShapeKind.LINE -> Icons.Filled.HorizontalRule
+                        ShapeKind.ARROW -> Icons.Filled.NorthEast
+                    }
+                    Box(
+                        Modifier
+                            .size(40.dp)
+                            .clip(CircleShape)
+                            .background(if (s.shapeKind == k) MaterialTheme.colorScheme.secondaryContainer else Color.Transparent)
+                            .clickable { s.shapeKind = k },
+                        contentAlignment = Alignment.Center,
+                    ) { Icon(icon, contentDescription = k.label, modifier = Modifier.size(22.dp)) }
+                }
+                item { Spacer(Modifier.width(8.dp)) }
+                items(PEN_COLORS) { c -> ColorDot(Color(c), c == s.shapeColor, { s.shapeColor = c }, size = 26.dp) }
+                item { Spacer(Modifier.width(8.dp)) }
+                items(PEN_WIDTHS) { w -> WidthChoice(w, s.shapeWidth == w, Color(s.shapeColor)) { s.shapeWidth = w } }
+            }
+            Tool.STAMP -> LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+                items(STAMPS) { st ->
+                    val active = s.stamp == st
+                    Surface(
+                        onClick = { s.stamp = st },
+                        shape = RoundedCornerShape(10.dp),
+                        color = if (active) Color(st.color).copy(alpha = 0.14f) else Color.Transparent,
+                        border = androidx.compose.foundation.BorderStroke(if (active) 2.dp else 1.dp, Color(st.color)),
+                    ) {
+                        Text(
+                            st.text,
+                            color = Color(st.color),
+                            style = MaterialTheme.typography.labelLarge,
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
+                        )
+                    }
+                }
+            }
+            Tool.NOTE -> Hint("Touchez la page pour ajouter une note (post-it). Touchez une note pour la modifier.")
+            Tool.ERASER -> Hint("Glissez sur un élément (trait, forme, texte, tampon, note…) pour l'effacer.")
         }
     }
 }
@@ -932,6 +1112,30 @@ private fun TextDialogUi(editing: Boolean, initial: String, onDismiss: () -> Uni
                     AssistChip(onClick = { insert("Lu et approuvé") }, label = { Text("Lu et approuvé") })
                 }
             }
+        },
+        confirmButton = { TextButton(onClick = { onConfirm(value.text) }) { Text("OK") } },
+        dismissButton = { TextButton(onClick = onDismiss) { Text("Annuler") } },
+    )
+}
+
+@Composable
+private fun NoteDialogUi(editing: Boolean, initial: String, onDismiss: () -> Unit, onConfirm: (String) -> Unit) {
+    var value by remember { mutableStateOf(TextFieldValue(initial, TextRange(initial.length))) }
+    val focus = remember { FocusRequester() }
+    LaunchedEffect(Unit) { focus.requestFocus() }
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        icon = { Icon(Icons.Filled.EditNote, contentDescription = null) },
+        title = { Text(if (editing) "Modifier la note" else "Nouvelle note") },
+        text = {
+            OutlinedTextField(
+                value = value,
+                onValueChange = { value = it },
+                minLines = 3,
+                maxLines = 8,
+                label = { Text("Commentaire") },
+                modifier = Modifier.fillMaxWidth().focusRequester(focus),
+            )
         },
         confirmButton = { TextButton(onClick = { onConfirm(value.text) }) { Text("OK") } },
         dismissButton = { TextButton(onClick = onDismiss) { Text("Annuler") } },

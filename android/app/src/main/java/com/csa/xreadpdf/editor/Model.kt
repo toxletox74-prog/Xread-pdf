@@ -84,6 +84,69 @@ data class SignAnnot(
     override fun at(x: Float, y: Float) = copy(x = x, y = y)
 }
 
+enum class ShapeKind(val label: String) { RECT("Rectangle"), ELLIPSE("Cercle"), LINE("Ligne"), ARROW("Flèche") }
+
+/** Forme tracée de [a] à [b] (coordonnées de page). */
+data class ShapeAnnot(
+    override val id: Long,
+    val kind: ShapeKind,
+    val a: Pt,
+    val b: Pt,
+    val color: Int,
+    val width: Float,
+) : Annot
+
+/** Tampon (« PAYÉ », « APPROUVÉ »…) : cadre de [width]×[height] points, texte en gras ajusté au cadre. */
+data class StampAnnot(
+    override val id: Long,
+    val text: String,
+    val color: Int,
+    override val x: Float,
+    override val y: Float,
+    val width: Float,
+    val height: Float,
+    override val rotation: Int,
+) : Placed {
+    override fun at(x: Float, y: Float) = copy(x = x, y = y)
+}
+
+/** Note (post-it) : fond jaune, texte de [size] points, cadre de [width]×[height] points. */
+data class NoteAnnot(
+    override val id: Long,
+    val text: String,
+    override val x: Float,
+    override val y: Float,
+    val width: Float,
+    val height: Float,
+    val size: Float,
+    override val rotation: Int,
+) : Placed {
+    override fun at(x: Float, y: Float) = copy(x = x, y = y)
+}
+
+const val NOTE_FILL = 0xFFFFF1A6.toInt()
+const val NOTE_BORDER = 0xFFE3BF2B.toInt()
+const val NOTE_TEXT = 0xFF3A3000.toInt()
+/** Marge intérieure d'une note, en fraction de la taille du texte. */
+const val NOTE_PAD = 0.7f
+const val NOTE_SIZE = 10f
+
+data class StampDef(val text: String, val color: Int)
+
+val STAMPS = listOf(
+    StampDef("PAYÉ", 0xFF188038.toInt()),
+    StampDef("APPROUVÉ", 0xFF188038.toInt()),
+    StampDef("REÇU", 0xFF1F4FD8.toInt()),
+    StampDef("COPIE", 0xFF1F4FD8.toInt()),
+    StampDef("REFUSÉ", 0xFFD93025.toInt()),
+    StampDef("URGENT", 0xFFD93025.toInt()),
+    StampDef("CONFIDENTIEL", 0xFFD93025.toInt()),
+    StampDef("BROUILLON", 0xFF5F6368.toInt()),
+)
+
+/** Taille de police d'un tampon de hauteur [h]. */
+fun stampFont(h: Float) = h / 1.9f
+
 data class EditPage(
     /** Index de la page dans le PDF source. */
     val src: Int,
@@ -133,7 +196,7 @@ inline fun smoothPath(
     }
 }
 
-private fun distToSegment(p: Pt, a: Pt, b: Pt): Float {
+fun distToSegment(p: Pt, a: Pt, b: Pt): Float {
     val dx = b.x - a.x
     val dy = b.y - a.y
     val len2 = dx * dx + dy * dy
@@ -147,6 +210,33 @@ fun InkAnnot.hit(p: Pt, tol: Float): Boolean {
     if (points.size == 1) return dist(p, points[0]) <= r
     for (i in 0 until points.size - 1) if (distToSegment(p, points[i], points[i + 1]) <= r) return true
     return false
+}
+
+fun ShapeAnnot.hit(p: Pt, tol: Float): Boolean {
+    val r = width / 2f + tol
+    return when (kind) {
+        ShapeKind.LINE, ShapeKind.ARROW -> distToSegment(p, a, b) <= r
+        ShapeKind.RECT, ShapeKind.ELLIPSE -> {
+            val l = minOf(a.x, b.x) - r
+            val t = minOf(a.y, b.y) - r
+            val rr = maxOf(a.x, b.x) + r
+            val bb = maxOf(a.y, b.y) + r
+            p.x in l..rr && p.y in t..bb
+        }
+    }
+}
+
+/** Les deux segments de la pointe de flèche (en coordonnées de page). */
+fun arrowHead(a: Pt, b: Pt, width: Float): Pair<Pt, Pt> {
+    val len = dist(a, b).coerceAtLeast(0.01f)
+    val ux = (b.x - a.x) / len
+    val uy = (b.y - a.y) / len
+    val head = maxOf(width * 4.5f, 9f).coerceAtMost(len * 0.6f)
+    val c = kotlin.math.cos(Math.toRadians(28.0)).toFloat()
+    val s = kotlin.math.sin(Math.toRadians(28.0)).toFloat()
+    val l = Pt(b.x - head * (ux * c - uy * s), b.y - head * (uy * c + ux * s))
+    val r = Pt(b.x - head * (ux * c + uy * s), b.y - head * (uy * c - ux * s))
+    return l to r
 }
 
 val PEN_COLORS = listOf(0xFF1A1A1F.toInt(), 0xFF1F4FD8.toInt(), 0xFFD93025.toInt(), 0xFF188038.toInt())

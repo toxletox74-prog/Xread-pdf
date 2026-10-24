@@ -78,4 +78,10 @@ dependencies {
 
     // Écriture PDF (annotations, signatures, pages) — portage Android d'Apache PDFBox
     implementation("com.tom-roush:pdfbox-android:2.0.27.0")
+
+    // OCR sur l'appareil (texte des scans cherchable) — modèle fourni par les services Google Play
+    implementation("com.google.android.gms:play-services-mlkit-text-recognition:19.0.1")
+
+    // Verrouillage de l'app par empreinte / code de l'appareil
+    implementation("androidx.biometric:biometric:1.1.0")
 }

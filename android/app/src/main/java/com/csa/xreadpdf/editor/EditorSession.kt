@@ -15,6 +15,9 @@ enum class Tool(val label: String) {
     HIGHLIGHTER("Surligner"),
     TEXT("Texte"),
     SIGNATURE("Signature"),
+    SHAPE("Formes"),
+    STAMP("Tampon"),
+    NOTE("Note"),
     ERASER("Gomme"),
 }
 
@@ -22,7 +25,13 @@ enum class Tool(val label: String) {
 data class TextDialog(val editId: Long?, val at: Pt, val initial: String)
 
 /** Mesure d'un texte en points (fournie par l'UI, qui seule sait mettre en page). */
-fun interface TextSizer { fun size(a: TextAnnot): Pt }
+interface TextSizer {
+    fun measure(text: String, fontSize: Float, bold: Boolean = false): Pt
+    fun size(a: TextAnnot): Pt = measure(a.text, a.size)
+}
+
+/** Saisie d'une note : création (editId null) ou modification. */
+data class NoteDialog(val editId: Long?, val at: Pt, val initial: String)
 
 /**
  * État d'une séance d'édition, conservé par le ViewModel (survit à la rotation de l'écran).
@@ -59,6 +68,11 @@ class EditorSession(
     var textColor by mutableIntStateOf(PEN_COLORS[0])
     var textSize by mutableFloatStateOf(TEXT_SIZES[1])
     var signature by mutableStateOf<Signature?>(null)
+    var shapeKind by mutableStateOf(ShapeKind.RECT)
+    var shapeColor by mutableIntStateOf(PEN_COLORS[2])
+    var shapeWidth by mutableFloatStateOf(PEN_WIDTHS[1])
+    var stamp by mutableStateOf(STAMPS[0])
+    var noteDialog by mutableStateOf<NoteDialog?>(null)
 
     var selected by mutableStateOf<Long?>(null)
     var textDialog by mutableStateOf<TextDialog?>(null)
@@ -142,6 +156,8 @@ class EditorSession(
     fun boxSize(a: Placed, sizer: TextSizer): Pt = when (a) {
         is TextAnnot -> sizer.size(a)
         is SignAnnot -> Pt(a.width, a.height)
+        is StampAnnot -> Pt(a.width, a.height)
+        is NoteAnnot -> Pt(a.width, a.height)
     }
 
     /** Élément posé sous le point [p] (le plus haut d'abord). */
@@ -156,6 +172,7 @@ class EditorSession(
         page.annots.filter { a ->
             when (a) {
                 is InkAnnot -> a.hit(p, tol)
+                is ShapeAnnot -> a.hit(p, tol)
                 is Placed -> {
                     val l = a.toLocal(p)
                     val s = boxSize(a, sizer)
@@ -183,6 +200,53 @@ class EditorSession(
             }
         } else if (clean.isNotBlank()) {
             val a = TextAnnot(newId(), clean, d.at.x, d.at.y, textSize, textColor, page.rotation)
+            commit(mapAnnots { it + a })
+            tool = Tool.SELECT
+            selected = a.id
+        }
+    }
+
+    // ---- Tampon ----
+
+    /** Pose le tampon choisi centré sur [at]. */
+    fun placeStamp(at: Pt, sizer: TextSizer) {
+        val p = page
+        val size = (minOf(p.width, p.height) * 0.045f).coerceIn(12f, 40f)
+        val t = sizer.measure(stamp.text, size, bold = true)
+        val w = t.x + size * 1.4f
+        val h = size * 1.9f
+        val anchor = at - Pt(w / 2f, h / 2f).rotate(-p.rotation)
+        val a = StampAnnot(newId(), stamp.text, stamp.color, anchor.x, anchor.y, w, h, p.rotation)
+        commit(mapAnnots { it + a })
+        tool = Tool.SELECT
+        selected = a.id
+    }
+
+    // ---- Note ----
+
+    fun openNewNote(at: Pt) { noteDialog = NoteDialog(null, at, "") }
+    fun openEditNote(a: NoteAnnot) { noteDialog = NoteDialog(a.id, Pt(a.x, a.y), a.text) }
+
+    fun confirmNote(text: String, sizer: TextSizer) {
+        val d = noteDialog ?: return
+        noteDialog = null
+        val clean = text.trim()
+        val existing = annot(d.editId) as? NoteAnnot
+        fun box(size: Float): Pt {
+            val m = sizer.measure(clean, size)
+            return Pt(m.x + 2 * NOTE_PAD * size, m.y + 2 * NOTE_PAD * size)
+        }
+        if (existing != null) {
+            if (clean.isEmpty()) {
+                commit(mapAnnots { l -> l.filterNot { it.id == existing.id } })
+                selected = null
+            } else {
+                val b = box(existing.size)
+                commit(replace(existing.copy(text = clean, width = b.x, height = b.y)))
+            }
+        } else if (clean.isNotEmpty()) {
+            val b = box(NOTE_SIZE)
+            val a = NoteAnnot(newId(), clean, d.at.x, d.at.y, b.x, b.y, NOTE_SIZE, page.rotation)
             commit(mapAnnots { it + a })
             tool = Tool.SELECT
             selected = a.id

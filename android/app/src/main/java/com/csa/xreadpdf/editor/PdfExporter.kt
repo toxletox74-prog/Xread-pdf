@@ -20,6 +20,7 @@ import java.io.File
 object PdfExporter {
 
     private val font get() = PDType1Font.HELVETICA
+    private val bold get() = PDType1Font.HELVETICA_BOLD
 
     /**
      * À la première utilisation, PdfBox indexe les polices du système (plusieurs secondes).
@@ -100,6 +101,15 @@ object PdfExporter {
                         val k = a.width
                         stroke(cs, a.sig.color, a.sig.width * k, a.sig.strokes.map { s -> s.map { Pt(it.x * k, -it.y * k) } })
                     }
+                    is ShapeAnnot -> drawShape(cs, a, top)
+                    is StampAnnot -> {
+                        cs.transform(Matrix.getRotateInstance(Math.toRadians(a.rotation.toDouble()), a.x, top - a.y))
+                        drawStamp(cs, a)
+                    }
+                    is NoteAnnot -> {
+                        cs.transform(Matrix.getRotateInstance(Math.toRadians(a.rotation.toDouble()), a.x, top - a.y))
+                        drawNote(cs, a)
+                    }
                 }
                 cs.restoreGraphicsState()
             }
@@ -131,6 +141,101 @@ object PdfExporter {
         cs.stroke()
     }
 
+    private fun drawShape(cs: PDPageContentStream, a: ShapeAnnot, top: Float) {
+        fun f(p: Pt) = Pt(p.x, top - p.y)
+        val p1 = f(a.a)
+        val p2 = f(a.b)
+        cs.setStrokingColor(r(a.color), g(a.color), b(a.color))
+        cs.setLineWidth(a.width)
+        cs.setLineCapStyle(1)
+        cs.setLineJoinStyle(1)
+        when (a.kind) {
+            ShapeKind.RECT -> {
+                cs.addRect(minOf(p1.x, p2.x), minOf(p1.y, p2.y), kotlin.math.abs(p2.x - p1.x), kotlin.math.abs(p2.y - p1.y))
+                cs.stroke()
+            }
+            ShapeKind.ELLIPSE -> {
+                ellipse(cs, (p1.x + p2.x) / 2f, (p1.y + p2.y) / 2f, kotlin.math.abs(p2.x - p1.x) / 2f, kotlin.math.abs(p2.y - p1.y) / 2f)
+                cs.stroke()
+            }
+            ShapeKind.LINE, ShapeKind.ARROW -> {
+                cs.moveTo(p1.x, p1.y)
+                cs.lineTo(p2.x, p2.y)
+                if (a.kind == ShapeKind.ARROW) {
+                    val (l, rr) = arrowHead(a.a, a.b, a.width)
+                    val fl = f(l)
+                    val fr = f(rr)
+                    cs.moveTo(fl.x, fl.y)
+                    cs.lineTo(p2.x, p2.y)
+                    cs.lineTo(fr.x, fr.y)
+                }
+                cs.stroke()
+            }
+        }
+    }
+
+    private fun ellipse(cs: PDPageContentStream, cx: Float, cy: Float, rx: Float, ry: Float) {
+        val k = 0.5523f
+        cs.moveTo(cx + rx, cy)
+        cs.curveTo(cx + rx, cy + ry * k, cx + rx * k, cy + ry, cx, cy + ry)
+        cs.curveTo(cx - rx * k, cy + ry, cx - rx, cy + ry * k, cx - rx, cy)
+        cs.curveTo(cx - rx, cy - ry * k, cx - rx * k, cy - ry, cx, cy - ry)
+        cs.curveTo(cx + rx * k, cy - ry, cx + rx, cy - ry * k, cx + rx, cy)
+        cs.closePath()
+    }
+
+    /** Rectangle arrondi ; repère local y vers le haut, coin haut-gauche en (0, 0). */
+    private fun roundRect(cs: PDPageContentStream, w: Float, h: Float, rad: Float) {
+        val k = 0.5523f * rad
+        cs.moveTo(rad, 0f)
+        cs.lineTo(w - rad, 0f)
+        cs.curveTo(w - rad + k, 0f, w, -rad + k, w, -rad)
+        cs.lineTo(w, -h + rad)
+        cs.curveTo(w, -h + rad - k, w - rad + k, -h, w - rad, -h)
+        cs.lineTo(rad, -h)
+        cs.curveTo(rad - k, -h, 0f, -h + rad - k, 0f, -h + rad)
+        cs.lineTo(0f, -rad)
+        cs.curveTo(0f, -rad + k, rad - k, 0f, rad, 0f)
+        cs.closePath()
+    }
+
+    private fun drawStamp(cs: PDPageContentStream, a: StampAnnot) {
+        val size = stampFont(a.height)
+        val lw = size * 0.14f
+        cs.setStrokingColor(r(a.color), g(a.color), b(a.color))
+        cs.setNonStrokingColor(r(a.color), g(a.color), b(a.color))
+        cs.setLineWidth(lw)
+        roundRect(cs, a.width, a.height, size * 0.35f)
+        cs.stroke()
+        val label = encodable(a.text, bold)
+        val unit = bold.getStringWidth(label) / 1000f
+        val fs = minOf(size, (a.width - size * 1.1f) / unit.coerceAtLeast(0.01f))
+        val tw = unit * fs
+        cs.beginText()
+        cs.setFont(bold, fs)
+        cs.newLineAtOffset((a.width - tw) / 2f, -a.height / 2f - fs * 0.35f)
+        cs.showText(label)
+        cs.endText()
+    }
+
+    private fun drawNote(cs: PDPageContentStream, a: NoteAnnot) {
+        cs.setNonStrokingColor(r(NOTE_FILL), g(NOTE_FILL), b(NOTE_FILL))
+        cs.setStrokingColor(r(NOTE_BORDER), g(NOTE_BORDER), b(NOTE_BORDER))
+        cs.setLineWidth(0.8f)
+        roundRect(cs, a.width, a.height, a.size * 0.3f)
+        cs.fillAndStroke()
+        val pad = NOTE_PAD * a.size
+        cs.setNonStrokingColor(r(NOTE_TEXT), g(NOTE_TEXT), b(NOTE_TEXT))
+        cs.beginText()
+        cs.setFont(font, a.size)
+        cs.newLineAtOffset(pad, -pad - TextMetrics.ASCENT * a.size)
+        a.text.split('\n').forEachIndexed { i, line ->
+            if (i > 0) cs.newLineAtOffset(0f, -TextMetrics.LINE * a.size)
+            cs.showText(encodable(line))
+        }
+        cs.endText()
+    }
+
     private fun drawText(cs: PDPageContentStream, a: TextAnnot) {
         cs.setNonStrokingColor(r(a.color), g(a.color), b(a.color))
         cs.beginText()
@@ -144,10 +249,10 @@ object PdfExporter {
     }
 
     /** Helvetica (WinAnsi) couvre le français ; tout caractère hors jeu devient « ? ». */
-    private fun encodable(s: String): String = buildString {
+    private fun encodable(s: String, f: PDType1Font = font): String = buildString {
         for (ch in s) {
             val c = if (ch == '\t') " " else ch.toString()
-            append(if (runCatching { font.encode(c) }.isSuccess) c else "?")
+            append(if (runCatching { f.encode(c) }.isSuccess) c else "?")
         }
     }
 
