@@ -1,0 +1,65 @@
+name: Tests Android (émulateur)
+
+on:
+  push:
+    branches-ignore: [main]
+    paths:
+      - "android/**"
+      - ".github/workflows/android-tests.yml"
+  workflow_dispatch:
+
+jobs:
+  emulateur:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: android
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.9"
+      - name: Activer KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Compiler les tests
+        run: gradle assembleDebug assembleDebugAndroidTest --no-daemon -q
+      - name: Lancer les tests sur l'émulateur
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          disable-animations: true
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          working-directory: android
+          script: gradle connectedDebugAndroidTest --no-daemon > test.log 2>&1 || (echo TESTS_FAILED >> test.log); adb logcat -d -s XreadTest:I AndroidRuntime:E TestRunner:E > logcat.log || true
+      - name: Résultats
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import glob, re, xml.etree.ElementTree as ET
+          out = []
+          for f in glob.glob("app/build/outputs/androidTest-results/connected/**/*.xml", recursive=True):
+              root = ET.parse(f).getroot()
+              for tc in root.iter("testcase"):
+                  name = tc.get("classname", "").split(".")[-1] + "." + tc.get("name", "")
+                  fail = tc.find("failure")
+                  out.append(("ÉCHEC " if fail is not None else "OK    ") + name)
+                  if fail is not None:
+                      out.append((fail.text or "")[:2500])
+          open("results.log", "w").write("\n".join(out) or "aucun résultat")
+          PY
+          cat results.log
+          tail -c 6000 test.log > test-tail.log || true
+          python3 ../.github/annotate.py RESULTATS results.log
+          python3 ../.github/annotate.py LOGCAT logcat.log || true
+          python3 ../.github/annotate.py GRADLE test-tail.log || true
+          ! grep -q "TESTS_FAILED" test.log

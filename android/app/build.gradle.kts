@@ -12,8 +12,9 @@ android {
         applicationId = "com.csa.xreadpdf"
         minSdk = 26
         targetSdk = 35
-        versionCode = 3
-        versionName = "1.2"
+        versionCode = 4
+        versionName = "1.3"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     // Clé de signature fixe (secrets GitHub XREADPDF_KEYSTORE / XREADPDF_KEY_PASSWORD) :
@@ -84,4 +85,12 @@ dependencies {
 
     // Verrouillage de l'app par empreinte / code de l'appareil
     implementation("androidx.biometric:biometric:1.1.0")
+
+    // Tests sur émulateur (CI)
+    androidTestImplementation(composeBom)
+    androidTestImplementation("androidx.test:core:1.6.1")
+    androidTestImplementation("androidx.test:runner:1.6.2")
+    androidTestImplementation("androidx.test.ext:junit:1.2.1")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+    debugImplementation("androidx.compose.ui:ui-test-manifest")
 }
