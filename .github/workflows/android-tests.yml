@@ -30,7 +30,13 @@ jobs:
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
       - name: Compiler les tests
-        run: gradle assembleDebug assembleDebugAndroidTest --no-daemon -q
+        run: |
+          set +e
+          gradle assembleDebug assembleDebugAndroidTest --no-daemon > build.log 2>&1
+          STATUS=$?
+          grep -E "^e: |What went wrong|FAILURE" -A3 build.log | head -120 > errors.log
+          [ -s errors.log ] && python3 ../.github/annotate.py BUILD errors.log
+          exit $STATUS
       - name: Lancer les tests sur l'émulateur
         uses: reactivecircus/android-emulator-runner@v2
         with:
