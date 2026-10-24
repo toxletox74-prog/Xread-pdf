@@ -1,5 +1,8 @@
 name: Tests Android (émulateur)
 
+permissions:
+  contents: write
+
 on:
   push:
     branches-ignore: [main]
@@ -74,5 +77,13 @@ jobs:
           PY
           cat summary.log
           head -c 3400 summary.log > s1.log
-          python3 ../.github/annotate.py RESUME s1.log
+          python3 ../.github/annotate.py RESUME s1.log || true
+          # Rapport complet publié dans la branche « ci-results » (lisible sans l'interface web)
+          mkdir -p /tmp/ci && cp summary.log /tmp/ci/ && cp logcat.log /tmp/ci/ 2>/dev/null || true
+          tail -c 20000 test.log > /tmp/ci/test-tail.log 2>/dev/null || true
+          cp -r app/build/outputs/androidTest-results/connected /tmp/ci/xml 2>/dev/null || true
+          cd /tmp/ci && git init -q && git checkout -q -b ci-results && git add -A \
+            && git -c user.name=ci -c user.email=ci@users.noreply.github.com commit -qm "Résultats $GITHUB_SHA" \
+            && git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" ci-results || true
+          cd "$GITHUB_WORKSPACE/android"
           ! grep -q "TESTS_FAILED" test.log
