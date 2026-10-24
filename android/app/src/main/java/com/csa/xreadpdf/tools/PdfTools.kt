@@ -174,7 +174,8 @@ object PdfTools {
                 for (name in res.xObjectNames.toList()) {
                     val x = runCatching { res.getXObject(name) }.getOrNull() as? PDImageXObject ?: continue
                     val key = x.cosObject
-                    done[key]?.let { res.put(name, it); continue }
+                    val already = done[key]
+                    if (already != null) { res.put(name, already); continue }
                     if (x.softMask != null || x.isStencil || x.bitsPerComponent == 1) continue
                     if (x.width * x.height < 250 * 250) continue
                     val bmp = runCatching { x.image }.getOrNull() ?: continue
