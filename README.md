@@ -25,6 +25,7 @@
 | ✍️ **Signer** | Dessinez votre signature une fois, posez-la sur n'importe quel PDF, déplacez-la et ajustez sa taille. |
 | 🖊️ **Annoter** | Stylo, surligneur, texte (« Date du jour », « Lu et approuvé »), gomme, annuler / rétablir, zoom. |
 | 📄 **Organiser** | Pivoter, déplacer, supprimer des pages. Enregistrer par-dessus l'original ou en copie. |
+| 💾 **Enregistrer où vous voulez** | Après un scan, choisissez le nom et l'emplacement : « Mes PDF » dans l'app, ou Téléchargements, Documents, carte SD, Drive… « Enregistrer sous… » pour tout PDF (Android). |
 | 📤 **Partager** | Mail, WhatsApp, Drive, AirDrop… directement depuis l'app. |
 | 🔒 **Local** | Aucun serveur : les PDF ne quittent pas votre téléphone, sauf si vous les partagez. |
 

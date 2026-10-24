@@ -26,6 +26,7 @@ import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.FitScreen
 import androidx.compose.material.icons.filled.Gesture
 import androidx.compose.material.icons.filled.SaveAlt
+import androidx.compose.material.icons.filled.SaveAs
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -98,6 +99,7 @@ fun ViewerScreen(
     onBack: () -> Unit,
     onShare: () -> Unit,
     onSave: () -> Unit,
+    onSaveAs: () -> Unit,
     onEdit: () -> Unit,
     onSign: () -> Unit,
 ) {
@@ -139,6 +141,9 @@ fun ViewerScreen(
                         IconButton(onClick = zoom::reset) {
                             Icon(Icons.Filled.FitScreen, contentDescription = "Réinitialiser le zoom")
                         }
+                    }
+                    IconButton(onClick = onSaveAs) {
+                        Icon(Icons.Filled.SaveAs, contentDescription = "Enregistrer sous…")
                     }
                     if (!inLibrary) {
                         IconButton(onClick = onSave) {

@@ -21,6 +21,7 @@ import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.content.IntentCompat
@@ -28,6 +29,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.csa.xreadpdf.editor.Tool
 import com.csa.xreadpdf.ui.EditorScreen
 import com.csa.xreadpdf.ui.LibraryScreen
+import com.csa.xreadpdf.ui.ScanSaveDialog
 import com.csa.xreadpdf.ui.SignaturesScreen
 import com.csa.xreadpdf.ui.ViewerScreen
 import com.csa.xreadpdf.ui.XreadPdfTheme
@@ -92,6 +94,15 @@ private fun App(vm: MainViewModel) {
     val openLauncher = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
         uri?.let(vm::openExternal)
     }
+    // Sélecteur d'emplacement Android (Téléchargements, Documents, carte SD, Drive…)
+    val saveAsLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.CreateDocument("application/pdf")
+    ) { uri -> vm.onExportDestination(uri) }
+
+    fun launchSaveAs(suggestedName: String) {
+        runCatching { saveAsLauncher.launch(suggestedName) }
+            .onFailure { vm.cancelExport(); vm.message("Aucun gestionnaire de fichiers disponible") }
+    }
 
     fun startScan() {
         val activity = context.findActivity() ?: return
@@ -123,6 +134,7 @@ private fun App(vm: MainViewModel) {
                 onEdit = { vm.edit(it, Tool.SELECT, Screen.Library) },
                 onSign = { vm.edit(it, Tool.SIGNATURE, Screen.Library) },
                 onShare = ::share,
+                onSaveAs = { launchSaveAs(vm.prepareExport(it)) },
                 onRename = vm::rename,
                 onDelete = vm::delete,
             )
@@ -135,6 +147,7 @@ private fun App(vm: MainViewModel) {
                     onBack = vm::back,
                     onShare = { share(screen.file) },
                     onSave = { vm.saveToLibrary(screen.file) },
+                    onSaveAs = { launchSaveAs(vm.prepareExport(screen.file)) },
                     onEdit = { vm.edit(screen.file, Tool.SELECT, screen) },
                     onSign = { vm.edit(screen.file, Tool.SIGNATURE, screen) },
                 )
@@ -158,6 +171,19 @@ private fun App(vm: MainViewModel) {
                     onDelete = { vm.deleteSignature(it) },
                 )
             }
+        }
+    }
+
+    vm.pendingScan?.let { p ->
+        key(p.file) {
+            ScanSaveDialog(
+                defaultName = p.defaultName,
+                initialToFolder = vm.scanToFolderDefault,
+                initialKeepCopy = vm.scanKeepCopyDefault,
+                onSaveInApp = vm::saveScanInApp,
+                onChooseLocation = { name, keep -> launchSaveAs(vm.prepareScanExport(name, keep)) },
+                onDiscard = vm::discardScan,
+            )
         }
     }
 }

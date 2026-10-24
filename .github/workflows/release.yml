@@ -79,7 +79,7 @@ jobs:
           *Xread-PDF-iOS-non-signee.ipa* : version iOS native, à installer avec une signature Apple (Sideloadly ou compte développeur).
 
           ## Fonctions
-          Scanner (recadrage 4 coins, filtre document) · Signer · Annoter (stylo, surligneur, texte, gomme) · Organiser les pages · Partager · Hors ligne, documents stockés sur l'appareil.
+          Scanner (recadrage 4 coins, filtre document) · Choisir où enregistrer le PDF (Android) · Signer · Annoter (stylo, surligneur, texte, gomme) · Organiser les pages · Partager · Hors ligne, documents stockés sur l'appareil.
           NOTES
           gh release view "$TAG" >/dev/null 2>&1 && gh release delete "$TAG" --yes
           gh release create "$TAG" dist/Xread-PDF.apk dist/Xread-PDF-iOS-non-signee.ipa \

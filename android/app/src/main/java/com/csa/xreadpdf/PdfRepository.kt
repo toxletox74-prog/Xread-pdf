@@ -17,11 +17,13 @@ import java.util.Locale
  * Stockage :
  *  - filesDir/pdfs : la bibliothèque "Mes PDF" (scans et PDF enregistrés)
  *  - cacheDir/open : copie temporaire d'un PDF ouvert depuis une autre app
+ *  - cacheDir/scan : scan en attente du choix de l'emplacement
  */
 class PdfRepository(private val context: Context) {
 
     val libraryDir: File = File(context.filesDir, "pdfs").apply { mkdirs() }
     private val openDir: File = File(context.cacheDir, "open").apply { mkdirs() }
+    private val scanDir: File = File(context.cacheDir, "scan").apply { mkdirs() }
 
     fun list(): List<File> =
         libraryDir.listFiles { f -> f.isFile && f.extension.equals("pdf", ignoreCase = true) }
@@ -31,9 +33,42 @@ class PdfRepository(private val context: Context) {
     fun isInLibrary(file: File): Boolean =
         file.parentFile?.canonicalPath == libraryDir.canonicalPath
 
-    suspend fun saveScan(uri: Uri): File = withContext(Dispatchers.IO) {
-        val name = "Scan " + SimpleDateFormat("yyyy-MM-dd HH-mm-ss", Locale.FRANCE).format(Date())
-        copy(uri, uniqueFile(libraryDir, name))
+    fun defaultScanName(): String =
+        "Scan " + SimpleDateFormat("yyyy-MM-dd HH-mm", Locale.FRANCE).format(Date())
+
+    /** Nom de fichier proposé au sélecteur d'emplacement. */
+    fun fileName(name: String): String = sanitize(name) + ".pdf"
+
+    /** Met le PDF produit par le scanner en attente (cacheDir/scan) le temps de choisir où l'enregistrer. */
+    suspend fun stageScan(uri: Uri): File = withContext(Dispatchers.IO) {
+        scanDir.listFiles()?.forEach { it.delete() }
+        copy(uri, File(scanDir, "scan-${System.currentTimeMillis()}.pdf"))
+    }
+
+    /** Range un scan en attente dans « Mes PDF » sous le nom choisi. */
+    suspend fun keepInLibrary(staged: File, name: String): File = withContext(Dispatchers.IO) {
+        val dest = uniqueFile(libraryDir, name)
+        if (!staged.renameTo(dest)) {
+            staged.copyTo(dest)
+            staged.delete()
+        }
+        dest
+    }
+
+    /** Donne au scan en attente son nom définitif (sans l'ajouter à « Mes PDF »). */
+    suspend fun nameStaged(staged: File, name: String): File = withContext(Dispatchers.IO) {
+        val dest = File(scanDir, fileName(name))
+        if (dest.canonicalPath == staged.canonicalPath || staged.renameTo(dest)) dest else staged
+    }
+
+    /** Écrit [file] à l'emplacement choisi par l'utilisateur ; renvoie le nom affiché de la destination. */
+    suspend fun exportTo(file: File, uri: Uri): String = withContext(Dispatchers.IO) {
+        val resolver = context.contentResolver
+        val out = runCatching { resolver.openOutputStream(uri, "wt") }.getOrNull()
+            ?: resolver.openOutputStream(uri)
+            ?: error("Destination inaccessible")
+        out.use { o -> file.inputStream().use { it.copyTo(o) } }
+        displayName(uri)
     }
 
     suspend fun openExternal(uri: Uri): File = withContext(Dispatchers.IO) {

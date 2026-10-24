@@ -37,6 +37,7 @@ import androidx.compose.material.icons.filled.FolderOpen
 import androidx.compose.material.icons.filled.Gesture
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.PictureAsPdf
+import androidx.compose.material.icons.filled.SaveAs
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.AlertDialog
@@ -79,6 +80,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.csa.xreadpdf.BuildConfig
 import com.csa.xreadpdf.PdfDoc
 import java.io.File
 import java.text.DateFormat
@@ -96,6 +98,7 @@ fun LibraryScreen(
     onEdit: (File) -> Unit,
     onSign: (File) -> Unit,
     onShare: (File) -> Unit,
+    onSaveAs: (File) -> Unit,
     onRename: (File, String) -> Unit,
     onDelete: (File) -> Unit,
 ) {
@@ -187,6 +190,7 @@ fun LibraryScreen(
                     onEdit = { onEdit(file) },
                     onSign = { onSign(file) },
                     onShare = { onShare(file) },
+                    onSaveAs = { onSaveAs(file) },
                     onRename = { renaming = file },
                     onDelete = { deleting = file },
                 )
@@ -249,7 +253,19 @@ private fun Header(
             BrandMark(52.dp)
             Spacer(Modifier.width(14.dp))
             Column {
-                Text("Xread PDF", style = MaterialTheme.typography.headlineSmall, color = Brand.Cream)
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text("Xread PDF", style = MaterialTheme.typography.headlineSmall, color = Brand.Cream)
+                    Text(
+                        "v${BuildConfig.VERSION_NAME}",
+                        style = MaterialTheme.typography.labelMedium,
+                        color = Brand.Ink,
+                        modifier = Modifier
+                            .padding(start = 10.dp)
+                            .clip(RoundedCornerShape(50))
+                            .background(Brand.Sun)
+                            .padding(horizontal = 8.dp, vertical = 2.dp),
+                    )
+                }
                 Text(
                     "Scanner · Modifier · Signer · Partager",
                     style = MaterialTheme.typography.bodyMedium,
@@ -324,6 +340,7 @@ private fun DocCard(
     onEdit: () -> Unit,
     onSign: () -> Unit,
     onShare: () -> Unit,
+    onSaveAs: () -> Unit,
     onRename: () -> Unit,
     onDelete: () -> Unit,
 ) {
@@ -364,6 +381,7 @@ private fun DocCard(
                         MenuEntry("Modifier", Icons.Filled.Edit) { menu = false; onEdit() }
                         MenuEntry("Signer", Icons.Filled.Gesture) { menu = false; onSign() }
                         MenuEntry("Partager", Icons.Filled.Share) { menu = false; onShare() }
+                        MenuEntry("Enregistrer sous…", Icons.Filled.SaveAs) { menu = false; onSaveAs() }
                         MenuEntry("Renommer", Icons.Filled.DriveFileRenameOutline) { menu = false; onRename() }
                         MenuEntry("Supprimer", Icons.Filled.Delete, danger = true) { menu = false; onDelete() }
                     }

@@ -2,4 +2,5 @@
 <paths>
     <files-path name="pdfs" path="pdfs/" />
     <cache-path name="open" path="open/" />
+    <cache-path name="scan" path="scan/" />
 </paths>
