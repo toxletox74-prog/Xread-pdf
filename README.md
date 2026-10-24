@@ -23,8 +23,12 @@
 |---|---|
 | 📷 **Scanner** | Photo d'un document, recadrage des 4 coins avec redressement de la perspective, filtre « Document » noir et blanc, plusieurs pages en un PDF. |
 | ✍️ **Signer** | Dessinez votre signature une fois, posez-la sur n'importe quel PDF, déplacez-la et ajustez sa taille. |
-| 🖊️ **Annoter** | Stylo, surligneur, texte (« Date du jour », « Lu et approuvé »), gomme, annuler / rétablir, zoom. |
-| 📄 **Organiser** | Pivoter, déplacer, supprimer des pages. Enregistrer par-dessus l'original ou en copie. |
+| 🖊️ **Annoter** | Stylo, surligneur, texte (« Date du jour », « Lu et approuvé »), formes et flèches, tampons (« PAYÉ », « APPROUVÉ »…), notes post-it, gomme, annuler / rétablir, zoom. |
+| 📖 **Lire** | Recherche dans le texte, aller à la page, miniatures, sommaire et signets, mode nuit, page par page, reprise à la dernière page lue, PDF protégés par mot de passe, copie du texte (Android). |
+| 🔎 **OCR** | Rend le texte d'un scan cherchable et copiable, sur l'appareil (Android). |
+| 📄 **Organiser** | Pivoter, déplacer, supprimer des pages. Fusionner, découper, extraire, insérer une page blanche ou un autre PDF, ajouter des pages scannées (Android). |
+| 🧰 **Outils** | Remplir les formulaires PDF, compresser, exporter en images, numéros de page, filigrane, protéger par mot de passe, imprimer, images → PDF (Android). |
+| 🗂️ **Classer** | Dossiers, favoris, récents, tri, sélection multiple ; verrouillage par empreinte ; sauvegarde / restauration (Android). |
 | 💾 **Enregistrer où vous voulez** | Après un scan, choisissez le nom et l'emplacement : « Mes PDF » dans l'app, ou Téléchargements, Documents, carte SD, Drive… « Enregistrer sous… » pour tout PDF (Android). |
 | 📤 **Partager** | Mail, WhatsApp, Drive, AirDrop… directement depuis l'app. |
 | 🔒 **Local** | Aucun serveur : les PDF ne quittent pas votre téléphone, sauf si vous les partagez. |

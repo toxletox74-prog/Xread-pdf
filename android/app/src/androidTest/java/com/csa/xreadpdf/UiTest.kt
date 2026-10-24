@@ -25,6 +25,10 @@ import com.tom_roush.pdfbox.pdmodel.PDPageContentStream
 import com.tom_roush.pdfbox.pdmodel.common.PDRectangle
 import com.tom_roush.pdfbox.pdmodel.font.PDType1Font
 import org.junit.BeforeClass
+import org.junit.rules.RuleChain
+import org.junit.rules.TestRule
+import org.junit.runner.Description
+import org.junit.runners.model.Statement
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -35,7 +39,29 @@ import java.io.File
 @RunWith(AndroidJUnit4::class)
 class UiTest {
 
-    @get:Rule val rule = createAndroidComposeRule<MainActivity>()
+    val rule = createAndroidComposeRule<MainActivity>()
+
+    /** Jusqu'à 3 tentatives (l'outil de test Compose a des accrocs intermittents), données remises à zéro à chaque fois. */
+    @get:Rule val chain: RuleChain = RuleChain.outerRule(RetryRule(3) { setUp() }).around(rule)
+
+    class RetryRule(private val times: Int, private val before: () -> Unit) : TestRule {
+        override fun apply(base: Statement, description: Description) = object : Statement() {
+            override fun evaluate() {
+                var last: Throwable? = null
+                for (i in 1..times) {
+                    try {
+                        before()
+                        base.evaluate()
+                        return
+                    } catch (t: Throwable) {
+                        last = t
+                        android.util.Log.i("XreadTest", "UI: tentative $i échouée : $t")
+                    }
+                }
+                throw last!!
+            }
+        }
+    }
 
     companion object {
         /** Avant le lancement de l'activité par la règle : un PDF de 3 pages dans « Mes PDF ». */
