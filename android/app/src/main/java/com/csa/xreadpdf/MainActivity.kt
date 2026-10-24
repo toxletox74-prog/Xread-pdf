@@ -272,7 +272,7 @@ private fun App(vm: MainViewModel, onUnlock: () -> Unit, canLock: () -> Boolean)
             is Screen.Viewer -> {
                 BackHandler(onBack = vm::back)
                 val file = screen.file
-                ViewerScreen(
+                key(file, screen.version) { ViewerScreen(
                     file = file,
                     inLibrary = vm.isInLibrary(file),
                     meta = library.of(file),
@@ -293,7 +293,7 @@ private fun App(vm: MainViewModel, onUnlock: () -> Unit, canLock: () -> Boolean)
                         loadOutline = { vm.outline(file) },
                         loadTexts = { vm.pageTexts(file) },
                     ),
-                )
+                ) }
             }
             is Screen.Editor -> EditorScreen(
                 s = screen.session,

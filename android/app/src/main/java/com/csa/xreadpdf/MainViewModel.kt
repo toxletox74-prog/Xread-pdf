@@ -34,7 +34,8 @@ import java.io.File
 
 sealed interface Screen {
     data object Library : Screen
-    data class Viewer(val file: File) : Screen
+    /** [version] : change à chaque ouverture, pour recharger un fichier modifié sous le même nom. */
+    data class Viewer(val file: File, val version: Long = System.nanoTime()) : Screen
     data class Editor(val session: EditorSession, val returnTo: Screen) : Screen
     data object Signatures : Screen
     data object Settings : Screen
