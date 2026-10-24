@@ -7,7 +7,7 @@ import androidx.compose.ui.test.hasContentDescription
 import androidx.compose.ui.test.hasScrollAction
 import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.hasText
-import androidx.compose.ui.test.junit4.createEmptyComposeRule
+import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onFirst
 import androidx.compose.ui.test.onNodeWithContentDescription
@@ -23,7 +23,7 @@ import com.tom_roush.pdfbox.pdmodel.PDPage
 import com.tom_roush.pdfbox.pdmodel.PDPageContentStream
 import com.tom_roush.pdfbox.pdmodel.common.PDRectangle
 import com.tom_roush.pdfbox.pdmodel.font.PDType1Font
-import org.junit.Before
+import org.junit.BeforeClass
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -34,10 +34,13 @@ import java.io.File
 @RunWith(AndroidJUnit4::class)
 class UiTest {
 
-    @get:Rule val rule = createEmptyComposeRule()
+    @get:Rule val rule = createAndroidComposeRule<MainActivity>()
 
-    @Before
-    fun setUp() {
+    companion object {
+        /** Avant le lancement de l'activité par la règle : un PDF de 3 pages dans « Mes PDF ». */
+        @JvmStatic
+        @BeforeClass
+        fun setUp() {
         val ctx: Context = ApplicationProvider.getApplicationContext()
         PDFBoxResourceLoader.init(ctx)
         File(ctx.filesDir, "library.json").delete()
@@ -56,6 +59,7 @@ class UiTest {
             }
             doc.save(File(lib, "Contrat.pdf"))
         }
+        }
     }
 
     private fun log(m: String) = android.util.Log.i("XreadTest", "UI: $m")
@@ -64,7 +68,7 @@ class UiTest {
 
     @Test
     fun libraryViewerToolsEditorSettings() {
-        ActivityScenario.launch(MainActivity::class.java).use {
+        run {
             waitText("Contrat")
             rule.onNodeWithText("Favoris").assertExistsSafely()
             rule.onAllNodesWithText("Contrat").onFirst().performClick()
