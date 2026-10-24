@@ -108,16 +108,14 @@ class UiTest {
 
             // Outils PDF
             rule.onNodeWithContentDescription("Outils PDF").performClick()
-            waitText("Extraire des pages")
-            rule.onAllNodes(hasScrollAction() and hasAnyDescendant(hasText("Extraire des pages"))).onFirst()
-                .performScrollToNode(hasText("Compresser"))
-            waitText("Compresser")
-            rule.onAllNodes(hasScrollAction() and hasAnyDescendant(hasText("Extraire des pages"))).onFirst()
-                .performScrollToNode(hasText("Numéros de page"))
-            rule.onNodeWithText("Numéros de page").performClick()
-            waitText("En bas au centre")
-            rule.onNodeWithText("Ajouter").performClick()
-            waitText("numéroté")
+            waitText("Insérer une page blanche")
+            rule.waitForIdle()
+            Thread.sleep(800)
+            rule.onNodeWithText("Insérer une page blanche").performClick()
+            waitText("Après la page n°")
+            rule.onNodeWithText("Valider").performClick()
+            waitText("modifié")
+            waitText("4 pages")
 
             // Éditeur
             rule.onNodeWithText("Modifier").performClick()
