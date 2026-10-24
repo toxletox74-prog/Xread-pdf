@@ -445,7 +445,7 @@ class MainViewModel(private val app: Application) : AndroidViewModel(app) {
     /** Heure de passage en arrière-plan (verrouillage après 1 min). */
     var backgroundAt = 0L
 
-    fun setAppLock(enabled: Boolean) {
+    fun enableAppLock(enabled: Boolean) {
         appLock = enabled
         prefs.edit().putBoolean("app_lock", enabled).apply()
     }

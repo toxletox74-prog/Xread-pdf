@@ -322,7 +322,7 @@ private fun App(vm: MainViewModel, onUnlock: () -> Unit, canLock: () -> Boolean)
                     onBack = vm::back,
                     onToggleLock = { on ->
                         if (on && !canLock()) vm.message("Configurez d'abord un verrouillage d'écran (empreinte ou code) sur le téléphone")
-                        else vm.setAppLock(on)
+                        else vm.enableAppLock(on)
                     },
                     onBackup = {
                         val name = "Xread PDF - sauvegarde " + SimpleDateFormat("yyyy-MM-dd", Locale.FRANCE).format(Date()) + ".zip"
