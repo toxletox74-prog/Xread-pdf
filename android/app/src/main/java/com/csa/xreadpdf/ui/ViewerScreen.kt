@@ -360,7 +360,8 @@ fun ViewerScreen(
                 },
             )
         },
-        snackbarHost = { SnackbarHost(snackbar) },
+        // Messages au-dessus de la barre d'actions flottante (pour ne pas la masquer)
+        snackbarHost = { SnackbarHost(snackbar, Modifier.padding(bottom = 84.dp)) },
     ) { padding ->
         Box(
             Modifier
