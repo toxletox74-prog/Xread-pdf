@@ -13,6 +13,7 @@ import androidx.compose.ui.test.onFirst
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performTextInput
 import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider
@@ -124,10 +125,10 @@ class UiTest {
             // Éditeur
             rule.onNodeWithText("Modifier").performClick()
             waitText("Formes")
-            rule.onNodeWithText("Formes").performClick()
-            rule.onNodeWithText("Tampon").performClick()
+            rule.onNodeWithText("Formes").performScrollTo().performClick()
+            rule.onNodeWithText("Tampon").performScrollTo().performClick()
             waitText("APPROUVÉ")
-            rule.onNodeWithText("Note").performClick()
+            rule.onNodeWithText("Note").performScrollTo().performClick()
             rule.onNodeWithContentDescription("Fermer").performClick()
             rule.waitForIdle()
             pressBack()
