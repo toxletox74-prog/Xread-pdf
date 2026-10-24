@@ -176,13 +176,15 @@ object PdfTools {
                     val key = x.cosObject
                     val already = done[key]
                     if (already != null) { res.put(name, already); continue }
-                    if (x.softMask != null || x.isStencil || x.bitsPerComponent == 1) continue
+                    if (x.isStencil || x.bitsPerComponent == 1) continue
                     if (x.width * x.height < 250 * 250) continue
                     val bmp = runCatching { x.image }.getOrNull() ?: continue
                     val scale = min(1f, level.maxSide.toFloat() / max(bmp.width, bmp.height))
                     val scaled = if (scale < 1f)
                         Bitmap.createScaledBitmap(bmp, (bmp.width * scale).roundToInt().coerceAtLeast(1), (bmp.height * scale).roundToInt().coerceAtLeast(1), true)
-                    else bmp
+                    else bmp.copy(Bitmap.Config.ARGB_8888, true)
+                    // Sans masque de transparence d'origine : image opaque (pas de masque ajouté inutilement)
+                    if (x.softMask == null && x.mask == null) scaled.setHasAlpha(false)
                     val jpeg = runCatching { JPEGFactory.createFromImage(doc, scaled, level.quality) }.getOrNull() ?: continue
                     done[key] = jpeg
                     res.put(name, jpeg)

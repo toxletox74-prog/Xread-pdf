@@ -79,7 +79,7 @@ class UiTest {
             waitDesc("Retirer le signet")
 
             menu("Page par page")
-            waitText("1 / 3")
+            waitText("2 / 3")
             menu("Mode nuit")
             menu("Toutes les pages")
             waitText("Toutes les pages")
@@ -89,8 +89,8 @@ class UiTest {
             menu("Sommaire et signets")
             waitText("Sommaire")
             rule.onNodeWithText("Signets (1)").performClick()
-            waitText("Page 1")
-            rule.onNodeWithText("Page 1").performClick()
+            waitText("Page 2")
+            rule.onNodeWithText("Page 2").performClick()
             rule.waitForIdle()
 
             menu("Texte de la page")

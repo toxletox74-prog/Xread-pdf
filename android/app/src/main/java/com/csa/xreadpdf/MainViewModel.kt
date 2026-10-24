@@ -312,7 +312,18 @@ class MainViewModel(private val app: Application) : AndroidViewModel(app) {
 
     fun ocr(file: File) = job("Reconnaissance du texte…") {
         val tmp = repo.tempFile("ocr")
-        val n = io { PdfTools.ocr(app, file, tmp) { i, total -> busy = "Reconnaissance du texte… page $i / $total" } }
+        val n = try {
+            io { PdfTools.ocr(app, file, tmp) { i, total -> busy = "Reconnaissance du texte… page $i / $total" } }
+        } catch (e: Exception) {
+            tmp.delete()
+            val why = generateSequence<Throwable>(e) { it.cause }.mapNotNull { it.message }.joinToString(" ")
+            message(
+                if (why.contains("download", ignoreCase = true))
+                    "Le module de reconnaissance de texte se télécharge (services Google Play). Réessayez dans une minute, en Wi-Fi."
+                else "Échec de la reconnaissance du texte : ${e.message ?: "erreur inattendue"}"
+            )
+            return@job
+        }
         if (n == 0) {
             tmp.delete()
             message("Ce PDF contient déjà du texte cherchable")

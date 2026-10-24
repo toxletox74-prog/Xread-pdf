@@ -9,6 +9,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.XreadPdf">
 
+        <!-- Télécharge le module OCR des services Google Play dès l'installation -->
+        <meta-data
+            android:name="com.google.mlkit.vision.DEPENDENCIES"
+            android:value="ocr" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
