@@ -60,12 +60,18 @@ jobs:
                   fail = tc.find("failure")
                   out.append(("ÉCHEC " if fail is not None else "OK    ") + name)
                   if fail is not None:
-                      out.append((fail.text or "")[:2500])
-          open("results.log", "w").write("\n".join(out) or "aucun résultat")
+                      lines = (fail.text or "").splitlines()
+                      keep = [l for l in lines if "com.csa" in l or not l.strip().startswith("at ")][:25]
+                      out.extend(keep)
+          try:
+              log = open("logcat.log", errors="replace").read().splitlines()
+          except Exception:
+              log = []
+          steps = [l for l in log if "XreadTest" in l]
+          crash = [l for l in log if "AndroidRuntime" in l][:40]
+          out += ["", "--- dernières étapes ---"] + steps[-25:] + ["", "--- plantages ---"] + crash
+          open("summary.log", "w").write("\n".join(out) or "aucun résultat")
           PY
-          cat results.log
-          tail -c 6000 test.log > test-tail.log || true
-          python3 ../.github/annotate.py RESULTATS results.log
-          python3 ../.github/annotate.py LOGCAT logcat.log || true
-          python3 ../.github/annotate.py GRADLE test-tail.log || true
+          cat summary.log
+          python3 ../.github/annotate.py RESUME summary.log
           ! grep -q "TESTS_FAILED" test.log

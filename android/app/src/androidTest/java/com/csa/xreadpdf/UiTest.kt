@@ -55,8 +55,9 @@ class UiTest {
         }
     }
 
-    private fun waitText(text: String) = rule.waitUntilAtLeastOneExists(hasText(text, substring = true), 8000)
-    private fun waitDesc(desc: String) = rule.waitUntilAtLeastOneExists(hasContentDescription(desc), 8000)
+    private fun log(m: String) = android.util.Log.i("XreadTest", "UI: $m")
+    private fun waitText(text: String) { log("attend texte « $text »"); rule.waitUntilAtLeastOneExists(hasText(text, substring = true), 8000) }
+    private fun waitDesc(desc: String) { log("attend icône « $desc »"); rule.waitUntilAtLeastOneExists(hasContentDescription(desc), 8000) }
 
     @Test
     fun libraryViewerToolsEditorSettings() {
@@ -131,6 +132,7 @@ class UiTest {
     }
 
     private fun menu(item: String) {
+        log("menu › $item")
         waitDesc("Plus")
         rule.onNodeWithContentDescription("Plus").performClick()
         waitText(item)
