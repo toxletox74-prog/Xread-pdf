@@ -105,6 +105,44 @@ class PdfRepository(private val context: Context) {
         }
     }
 
+    /** Nouveau fichier libre dans « Mes PDF » (nom de base, suffixe « (2) »… si déjà pris). */
+    fun newLibraryFile(base: String): File = uniqueFile(libraryDir, base)
+
+    /** Fichier temporaire de travail (cache). */
+    fun tempFile(prefix: String): File = File(scanDir, "$prefix-${System.nanoTime()}.pdf")
+
+    /** Fichier d'attente pour la fenêtre « Enregistrer » (images → PDF). */
+    fun stagedFile(): File {
+        scanDir.listFiles()?.forEach { it.delete() }
+        return File(scanDir, "staged-${System.currentTimeMillis()}.pdf")
+    }
+
+    /** Copie d'un document choisi dans une autre app (cache). */
+    suspend fun copyToCache(uri: Uri): File = withContext(Dispatchers.IO) {
+        copy(uri, File(scanDir, "in-${System.nanoTime()}.pdf"))
+    }
+
+    /** Copie déchiffrée d'un PDF protégé, affichée hors de « Mes PDF ». */
+    fun unlockedFile(source: File): File {
+        val dir = File(context.cacheDir, "unlocked").apply { mkdirs() }
+        dir.listFiles()?.forEach { it.delete() }
+        return File(dir, source.name)
+    }
+
+    /** Remplace [target] (dans « Mes PDF ») par [tmp] ; sinon range [tmp] comme nouveau document. */
+    fun replaceOrAdd(target: File, tmp: File, suffix: String): File {
+        val dest = if (isInLibrary(target)) target else uniqueFile(libraryDir, target.nameWithoutExtension + suffix)
+        if (!tmp.renameTo(dest)) { tmp.copyTo(dest, overwrite = true); tmp.delete() }
+        return dest
+    }
+
+    /** Range [tmp] dans « Mes PDF » sous un nom libre. */
+    fun addToLibrary(tmp: File, base: String): File {
+        val dest = uniqueFile(libraryDir, base)
+        if (!tmp.renameTo(dest)) { tmp.copyTo(dest); tmp.delete() }
+        return dest
+    }
+
     /** Renvoie le nouveau fichier, ou null si le nom est déjà pris / renommage impossible. */
     fun rename(file: File, newName: String): File? {
         val dest = File(libraryDir, sanitize(newName) + ".pdf")
@@ -125,6 +163,21 @@ class PdfRepository(private val context: Context) {
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         }
         return Intent.createChooser(send, "Partager le PDF")
+    }
+
+    fun shareManyIntent(files: List<File>): Intent {
+        val uris = ArrayList(files.map { FileProvider.getUriForFile(context, "${context.packageName}.fileprovider", it) })
+        val send = Intent(Intent.ACTION_SEND_MULTIPLE).apply {
+            type = "application/pdf"
+            putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris)
+            if (uris.isNotEmpty()) {
+                clipData = ClipData.newRawUri(files.first().name, uris.first()).also { c ->
+                    uris.drop(1).forEach { c.addItem(ClipData.Item(it)) }
+                }
+            }
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        }
+        return Intent.createChooser(send, "Partager ${files.size} PDF")
     }
 
     private fun copy(uri: Uri, dest: File): File {

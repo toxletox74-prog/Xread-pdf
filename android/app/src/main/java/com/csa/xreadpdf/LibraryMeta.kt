@@ -23,8 +23,10 @@ class LibraryMetaStore(context: Context) {
 
     private val file = File(context.filesDir, "library.json")
 
-    fun load(): Library = runCatching {
-        val o = JSONObject(file.readText())
+    fun load(): Library = loadFrom(file)
+
+    fun loadFrom(source: File): Library = runCatching {
+        val o = JSONObject(source.readText())
         val docs = o.optJSONObject("docs") ?: JSONObject()
         val map = docs.keys().asSequence().associateWith { k ->
             val d = docs.getJSONObject(k)
