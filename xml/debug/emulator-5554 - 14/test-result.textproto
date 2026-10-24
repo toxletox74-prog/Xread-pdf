@@ -1,0 +1,692 @@
+# 2026-10-24T19:29:37.983549241Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 13
+}
+test_status: PASSED
+test_result {
+  test_case {
+    test_class: "ToolsTest"
+    test_package: "com.csa.xreadpdf"
+    test_method: "backupRestore"
+    start_time {
+      seconds: 1792870134
+      nanos: 771000000
+    }
+    end_time {
+      seconds: 1792870135
+      nanos: 739000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-com.csa.xreadpdf.ToolsTest-backupRestore.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ToolsTest"
+    test_package: "com.csa.xreadpdf"
+    test_method: "ranges"
+    start_time {
+      seconds: 1792870135
+      nanos: 760000000
+    }
+    end_time {
+      seconds: 1792870135
+      nanos: 788000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-com.csa.xreadpdf.ToolsTest-ranges.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ToolsTest"
+    test_package: "com.csa.xreadpdf"
+    test_method: "passwords"
+    start_time {
+      seconds: 1792870135
+      nanos: 794000000
+    }
+    end_time {
+      seconds: 1792870136
+      nanos: 372000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-com.csa.xreadpdf.ToolsTest-passwords.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ToolsTest"
+    test_package: "com.csa.xreadpdf"
+    test_method: "stamps"
+    start_time {
+      seconds: 1792870136
+      nanos: 377000000
+    }
+    end_time {
+      seconds: 1792870137
+      nanos: 281000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-com.csa.xreadpdf.ToolsTest-stamps.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ToolsTest"
+    test_package: "com.csa.xreadpdf"
+    test_method: "ocrTextLayer"
+    start_time {
+      seconds: 1792870137
+      nanos: 287000000
+    }
+    end_time {
+      seconds: 1792870137
+      nanos: 392000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-com.csa.xreadpdf.ToolsTest-ocrTextLayer.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ToolsTest"
+    test_package: "com.csa.xreadpdf"
+    test_method: "editorExportNewAnnotations"
+    start_time {
+      seconds: 1792870137
+      nanos: 395000000
+    }
+    end_time {
+      seconds: 1792870137
+      nanos: 573000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-com.csa.xreadpdf.ToolsTest-editorExportNewAnnotations.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ToolsTest"
+    test_package: "com.csa.xreadpdf"
+    test_method: "forms"
+    start_time {
+      seconds: 1792870137
+      nanos: 576000000
+    }
+    end_time {
+      seconds: 1792870137
+      nanos: 703000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-com.csa.xreadpdf.ToolsTest-forms.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ToolsTest"
+    test_package: "com.csa.xreadpdf"
+    test_method: "textSearchAndOutline"
+    start_time {
+      seconds: 1792870137
+      nanos: 707000000
+    }
+    end_time {
+      seconds: 1792870137
+      nanos: 859000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-com.csa.xreadpdf.ToolsTest-textSearchAndOutline.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ToolsTest"
+    test_package: "com.csa.xreadpdf"
+    test_method: "appStartsAndShowsLibrary"
+    start_time {
+      seconds: 1792870137
+      nanos: 867000000
+    }
+    end_time {
+      seconds: 1792870149
+      nanos: 563000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-com.csa.xreadpdf.ToolsTest-appStartsAndShowsLibrary.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ToolsTest"
+    test_package: "com.csa.xreadpdf"
+    test_method: "compressAndImages"
+    start_time {
+      seconds: 1792870149
+      nanos: 572000000
+    }
+    end_time {
+      seconds: 1792870152
+      nanos: 715000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-com.csa.xreadpdf.ToolsTest-compressAndImages.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ToolsTest"
+    test_package: "com.csa.xreadpdf"
+    test_method: "ocrDoesNotCrash"
+    start_time {
+      seconds: 1792870152
+      nanos: 721000000
+    }
+    end_time {
+      seconds: 1792870153
+      nanos: 478000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-com.csa.xreadpdf.ToolsTest-ocrDoesNotCrash.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ToolsTest"
+    test_package: "com.csa.xreadpdf"
+    test_method: "pageOperations"
+    start_time {
+      seconds: 1792870153
+      nanos: 480000000
+    }
+    end_time {
+      seconds: 1792870156
+      nanos: 604000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-com.csa.xreadpdf.ToolsTest-pageOperations.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "UiTest"
+    test_package: "com.csa.xreadpdf"
+    test_method: "libraryViewerToolsEditorSettings"
+    start_time {
+      seconds: 1792870156
+      nanos: 659000000
+    }
+    end_time {
+      seconds: 1792870176
+      nanos: 484000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-com.csa.xreadpdf.UiTest-libraryViewerToolsEditorSettings.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/testlog/test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}

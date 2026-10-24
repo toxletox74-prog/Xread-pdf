@@ -1,0 +1,26 @@
+10-24 19:28:57.048  4470  4540 I TestRunner: started: ocrTextLayer(com.csa.xreadpdf.ToolsTest)
+10-24 19:28:57.052  1057  1057 D WsuServiceClient: Binding to com.google.android.apps.carrier.carrierwifi
+10-24 19:28:57.053  1057  1057 D WsuServiceClient: the specified wsu service is not installed.
+10-24 19:28:57.053  1057  1057 D SettingsSliceProvider: Stopping background worker for: content://com.android.settings.slices/action/media_volume
+10-24 19:28:57.057   523   932 D ConnectivityService: requestNetwork for uid/pid:1000/1057 activeRequest: null callbackRequest: 115 [NetworkRequest [ REQUEST id=116, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: com.android.settings UnderlyingNetworks: Null] ]] callback flags: 1 order: 2147483647
+10-24 19:28:57.061   523   768 D ConnectivityService: NetReassign [no changes] [c 0] [a 3] [i 1]
+10-24 19:28:57.066   523   761 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=116, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: com.android.settings UnderlyingNetworks: Null] ]
+10-24 19:28:57.067   523   761 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=116, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: com.android.settings UnderlyingNetworks: Null] ]
+10-24 19:28:57.072   523   761 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=116, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: com.android.settings UnderlyingNetworks: Null] ]
+10-24 19:28:57.073   523   761 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=116, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: com.android.settings UnderlyingNetworks: Null] ]
+10-24 19:28:57.073   523   768 D ConnectivityService: NetReassign [116 : null → 100] [c 0] [a 1] [i 10]
+10-24 19:28:57.096   523   932 W ScanResultUtil: Empty or null ScanResult list
+10-24 19:28:57.097   523   932 W WifiService: Attempt to retrieve WifiConfiguration with invalid scanResult List
+10-24 19:28:57.104   523   932 W ScanResultUtil: Empty or null ScanResult list
+10-24 19:28:57.104   523   932 W WifiService: Attempt to retrieve WifiConfiguration with invalid scanResult List
+10-24 19:28:57.106   523   932 W ScanResultUtil: Empty or null ScanResult list
+10-24 19:28:57.106   523   932 E WifiService: Attempt to retrieve passpoint with invalid scanResult List
+10-24 19:28:57.108   523   932 W ScanResultUtil: Empty or null ScanResult list
+10-24 19:28:57.108   523   932 W WifiService: Attempt to retrieve OsuProviders with invalid scanResult List
+10-24 19:28:57.115  1615  1874 I SP.AiAi : Scheduling job with delay of 0s for {W:b:I:l, bg}, 1 candidates
+10-24 19:28:57.125  1615  1771 I SP.AiAi : Successfully got manifest for actions-ranking-table-manifest: manifests:actions-ranking-table-211005
+10-24 19:28:57.131  1615  1771 I SP.AiAi : Successfully got manifest for text-classifier-annotator-manifest: manifests:text-classifier-annotator-272525175
+10-24 19:28:57.136  1057  4563 D CompatibilityChangeReporter: Compat change id reported: 186082280; UID 1000; state: ENABLED
+10-24 19:28:57.138  1615  3255 I AiAiTextClassifier: [ResourceDownloaderImpl]: downloadResource(): Successfully loaded embedded superpacks manifest for 'actions-ranking-table' (download version 211005), starting to download superpack.
+10-24 19:28:57.139  1615  3255 I AiAiTextClassifier: [ResourceDownloaderImpl]: downloadResource(): Successfully loaded embedded superpacks manifest for 'text-classifier-annotator' (download version 272525175), starting to download superpack.
+10-24 19:28:57.168  4470  4540 I TestRunner: finished: ocrTextLayer(com.csa.xreadpdf.ToolsTest)

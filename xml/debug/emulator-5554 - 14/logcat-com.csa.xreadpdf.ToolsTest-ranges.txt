@@ -1,0 +1,2 @@
+10-24 19:28:55.516  4470  4540 I TestRunner: started: ranges(com.csa.xreadpdf.ToolsTest)
+10-24 19:28:55.551  4470  4540 I TestRunner: finished: ranges(com.csa.xreadpdf.ToolsTest)

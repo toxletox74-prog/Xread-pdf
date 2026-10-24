@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.csa.xreadpdf.ToolsTest" tests="13" failures="0" errors="0" skipped="0" time="43.119" timestamp="2026-10-24T19:29:37" hostname="localhost">
+  <properties>
+    <property name="device" value="emulator-5554 - 14" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="backupRestore" classname="com.csa.xreadpdf.ToolsTest" time="0.931" />
+  <testcase name="ranges" classname="com.csa.xreadpdf.ToolsTest" time="0.02" />
+  <testcase name="passwords" classname="com.csa.xreadpdf.ToolsTest" time="0.58" />
+  <testcase name="stamps" classname="com.csa.xreadpdf.ToolsTest" time="0.909" />
+  <testcase name="ocrTextLayer" classname="com.csa.xreadpdf.ToolsTest" time="0.105" />
+  <testcase name="editorExportNewAnnotations" classname="com.csa.xreadpdf.ToolsTest" time="0.173" />
+  <testcase name="forms" classname="com.csa.xreadpdf.ToolsTest" time="0.13" />
+  <testcase name="textSearchAndOutline" classname="com.csa.xreadpdf.ToolsTest" time="0.16" />
+  <testcase name="appStartsAndShowsLibrary" classname="com.csa.xreadpdf.ToolsTest" time="11.695" />
+  <testcase name="compressAndImages" classname="com.csa.xreadpdf.ToolsTest" time="3.15" />
+  <testcase name="ocrDoesNotCrash" classname="com.csa.xreadpdf.ToolsTest" time="0.758" />
+  <testcase name="pageOperations" classname="com.csa.xreadpdf.ToolsTest" time="3.13" />
+  <testcase name="libraryViewerToolsEditorSettings" classname="com.csa.xreadpdf.UiTest" time="19.827" />
+</testsuite>

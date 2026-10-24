@@ -1,0 +1,475 @@
+10-24 19:29:13.261  4470  4540 I TestRunner: started: pageOperations(com.csa.xreadpdf.ToolsTest)
+10-24 19:29:13.265  1531  2276 I SP      : Scheduling job with delay of 0s for {m:b:u:l, bg}, 1 candidates
+10-24 19:29:13.270  1531  1531 I SpBackgroundTask: SuperpacksBackgroundJobService.onStartJob():23 onStartJob: android.app.job.JobParameters@319aca5
+10-24 19:29:13.270  1531  1531 I SP      : ====> Starting job {m:b:u:l, bg}
+10-24 19:29:13.276  1531  2276 I SP      : Scheduling: download registered, 0 started, 0 paused, 1 scheduled, 1 pending: dynamic_art:b1f6f47a53f7820be91b9fe247728980 * {m:b:u:l, bg}
+10-24 19:29:13.280  1531  2276 I SP      : Scheduling job with delay of 0s for {m:b:u:l, bg}, 2 candidates
+10-24 19:29:13.303  1531  2276 I SP      : Scheduling: download registered, 0 started, 0 paused, 2 scheduled, 2 pending: dynamic_art:b1f6f47a53f7820be91b9fe247728980 * {m:b:u:l, bg}, dynamic_art:305f81355a729e382ea9f374dd286d9f * {m:b:u:l, bg}
+10-24 19:29:13.304  1531  2276 I EmojiSlicingStrategy: EmojiSlicingStrategy.matchEnabledLocalesWithPackLocales():127 matchEnabledLocalesWithPackLocales() : User enabled 1 locales; returning 1 slices
+10-24 19:29:13.304  1531  2276 I SP      : Syncing emoji (2023020111) with slices: [{60932fe37d5f6d7a3e60488d8a1755c4, m:*:*:*}], metadata: false
+10-24 19:29:13.318  1531  2276 I SP      : Scheduling job with delay of 0s for {m:b:u:l, bg}, 3 candidates
+10-24 19:29:13.321  1531  2276 I SP      : Scheduling: download registered, 0 started, 0 paused, 3 scheduled, 3 pending: dynamic_art:b1f6f47a53f7820be91b9fe247728980 * {m:b:u:l, bg}, dynamic_art:305f81355a729e382ea9f374dd286d9f * {m:b:u:l, bg}, transformer_concept:2023011913_en * {m:b:u:l, bg}
+10-24 19:29:13.324  1531  2276 I SP      : Scheduling: job start ({m:b:u:l, bg}), 3 started, 0 paused, 0 scheduled, 3 pending: dynamic_art:b1f6f47a53f7820be91b9fe247728980 @ * {m:b:u:l, bg}, dynamic_art:305f81355a729e382ea9f374dd286d9f @ * {m:b:u:l, bg}, transformer_concept:2023011913_en @ * {m:b:u:l, bg}
+10-24 19:29:13.324  1531  2276 I SP      : Requesting download of URL https://www.gstatic.com/android/keyboard/dynamic_art/20220108002302/animation.zip to b1f6f47a53f7820be91b9fe247728980.zip.fetched (constraints: m:b:u:l)
+10-24 19:29:13.325  1531  2276 I SP      : Requesting download of URL https://www.gstatic.com/android/keyboard/dynamic_art/20220108002302/fonts.zip to 305f81355a729e382ea9f374dd286d9f.zip.fetched (constraints: m:b:u:l)
+10-24 19:29:13.325  1531  2276 I SP      : Requesting download of URL https://www.gstatic.com/android/keyboard/modelpack/transformer_concept/2023011913/en.zip to 2023011913_en.zip.fetched (constraints: m:b:u:l)
+10-24 19:29:13.328  1531  4906 D TrafficStats: tagSocket(139) with statsTag=0xffffffff, statsUid=-1
+10-24 19:29:13.331  1437  4810 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x45000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+10-24 19:29:13.334  1437  4812 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x45000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+10-24 19:29:13.336  1531  4906 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/ConscryptEngineSocket;->setUseSessionTickets(Z)V (max-target-q,core-platform-api, reflection, denied)
+10-24 19:29:13.336  1531  4906 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setUseSessionTickets(Z)V (max-target-q,core-platform-api, reflection, denied)
+10-24 19:29:13.336  1531  4906 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setUseSessionTickets(Z)V (max-target-q, reflection, denied)
+10-24 19:29:13.336  1531  4906 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/ConscryptEngineSocket;->setHostname(Ljava/lang/String;)V (max-target-q,core-platform-api, reflection, denied)
+10-24 19:29:13.336  1531  4906 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setHostname(Ljava/lang/String;)V (max-target-q,core-platform-api, reflection, denied)
+10-24 19:29:13.336  1531  4906 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setHostname(Ljava/lang/String;)V (max-target-q, reflection, denied)
+10-24 19:29:13.336  1531  4906 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([B)V (max-target-q,core-platform-api, reflection, denied)
+10-24 19:29:13.336  1531  4906 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setAlpnProtocols([B)V (max-target-q, reflection, denied)
+10-24 19:29:13.340  1437  4811 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x45000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+10-24 19:29:13.351  1437  4344 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+10-24 19:29:13.352  1437  4344 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+10-24 19:29:13.353  1437  4344 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+10-24 19:29:13.355  1531  2276 I SP      : Scheduling: download registered, 1 started, 0 paused, 0 scheduled, 4 pending: dynamic_art:b1f6f47a53f7820be91b9fe247728980 @ {m:b:u:l, bg}, dynamic_art:305f81355a729e382ea9f374dd286d9f @ {m:b:u:l, bg}, transformer_concept:2023011913_en @ {m:b:u:l, bg}, emoji:60932fe37d5f6d7a3e60488d8a1755c4 @ * {m:b:u:l, bg}
+10-24 19:29:13.356  1437  4344 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x45000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+10-24 19:29:13.361  1437  4811 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+10-24 19:29:13.369  1531  2276 I SP      : Requesting download of URL https://www.gstatic.com/android/keyboard/emoji/20230201113008/en_us.zip to 60932fe37d5f6d7a3e60488d8a1755c4.zip.fetched (constraints: m:b:u:l)
+10-24 19:29:13.370  1531  2276 I SP      : Successfully got manifest for content_cache-manifest: manifests:content_cache-2022112214
+10-24 19:29:13.380  1531  2276 I SP      : Successfully got manifest for delight-manifest: manifests:delight-2023020919
+10-24 19:29:13.386  4470  4540 D PdfBox-Android: AcroForm content has already been retrieved with fixes applied - original content changed because of that
+10-24 19:29:13.388  1487  1487 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.chimera.container.moduleinstall.ModuleInstallService.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService }
+10-24 19:29:13.388  1487  1487 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.chimera.container.moduleinstall.ModuleInstallService.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService }
+10-24 19:29:13.389  4470  4540 D PdfBox-Android: AcroForm content has already been retrieved with fixes applied - original content changed because of that
+10-24 19:29:13.412  4470  4540 D PdfBox-Android: AcroForm content has already been retrieved with fixes applied - original content changed because of that
+10-24 19:29:13.412  4470  4540 D PdfBox-Android: AcroForm content has already been retrieved with fixes applied - original content changed because of that
+10-24 19:29:13.413  4470  4540 D PdfBox-Android: AcroForm content has already been retrieved with fixes applied - original content changed because of that
+10-24 19:29:13.413  4470  4540 D PdfBox-Android: AcroForm content has already been retrieved with fixes applied - original content changed because of that
+10-24 19:29:13.429  2772  2994 W TimedProcessReaper: Scheduling killing of process to refresh configuration
+10-24 19:29:13.431  2772  2772 I PhenotypeBackgroundRecv: Skipping com.google.android.dialershared.directboot#com.google.android.dialer which doesn't use ProcessStable flags.
+10-24 19:29:13.455  2100  2117 V DownloadManager: Deleting /storage/emulated/0/Android/data/com.google.android.googlequicksearchbox/files/pending_blobs/odws2_en_us_2019-09-12_270573492_release_signed via provider delete
+10-24 19:29:13.465  1531  2276 I SuperDelight: SuperDelightDownloadMetadataParser.parse():185 SuperDelightDownloadMetadataParser#parse(delight): Manifest parsed with 885 packs
+10-24 19:29:13.467  1531  1556 W SP      : File ref is being finalized but wasn't closed, file: main_en_us_2022101700_1[4]
+10-24 19:29:13.467  1531  1556 W SP      : File ref is being finalized but wasn't closed, file: main_en_us_2022101700_1[4]
+10-24 19:29:13.472  1487  1497 I gle.android.gms: Background young concurrent copying GC freed 196682(10MB) AllocSpace objects, 75(2620KB) LOS objects, 44% free, 15MB/27MB, paused 47.914ms,15us total 177.280ms
+10-24 19:29:13.473  1531  1605 I SuperDelight: SuperDelightManager.lambda$syncDownloadableLanguageModels$8():568 SuperDelightManager#syncDownloadableLanguageModels(delight): [OnDevice] Syncing for version 2023020919
+10-24 19:29:13.479  1615  1615 I AiAiEcho: AppFetcherImpl onPackageChanged com.google.android.gms.
+10-24 19:29:13.480   523   552 E system_server: No package ID 7f found for resource ID 0x7f08038b.
+10-24 19:29:13.480   523   552 E system_server: No package ID 7f found for resource ID 0x7f150be5.
+10-24 19:29:13.480   523   552 E system_server: No package ID 7f found for resource ID 0x7f150be5.
+10-24 19:29:13.480   523   552 E system_server: No package ID 7f found for resource ID 0x7f150be4.
+10-24 19:29:13.480  1615  2041 I AiAiEcho: AppIndexer Package:[com.google.android.gms] UserProfile:[0] Enabled:[true].
+10-24 19:29:13.481  1615  2041 I AiAiEcho: AppFetcherImplV2 updateApps package:[com.google.android.gms], userId:[0], reason:[package is updated.].
+10-24 19:29:13.481  1531  2276 I SP      : Syncing content_cache (2022112214) with slices: [e9a5a2de48a4f8b9a658b411bcfb375d, 8722425f4121ffdea802b1066df73991, fa1da98da1212aad6fb9a8efaff48148], metadata: true
+10-24 19:29:13.487   523   552 I AppBindingService: Stopping: com.google.android.apps.messaging/com.google.android.ims.binding.SystemBindingService u0
+10-24 19:29:13.498  4825  4825 I BugleRcsEngine: [2] SystemBindingService.onCreate: SystemBindingService onCreate
+10-24 19:29:13.499  1615  1615 I AiAiEcho: AppFetcherImpl onPackageChanged com.google.android.apps.messaging.
+10-24 19:29:13.500  1615  3237 I AiAiEcho: AppIndexer Package:[com.google.android.apps.messaging] UserProfile:[0] Enabled:[true].
+10-24 19:29:13.500  1615  3237 I AiAiEcho: AppFetcherImplV2 updateApps package:[com.google.android.apps.messaging], userId:[0], reason:[package is updated.].
+10-24 19:29:13.503  4825  4873 I BugleRcsEngine: [63] bptx.run: SystemBindingService: Starting JibeService
+10-24 19:29:13.511  4825  4873 I BugleRcsEngine: [63] bsgz.b: EngineBroadcaster: Broadcasting provisioning intent rcs.intent.action.rcsSystemBinding to Bugle with extras redacted-pii:[null] from source SYSTEM_BINDING_SERVICE
+10-24 19:29:13.514  1624  1691 I MediaProvider: Scanned external_primary due to REASON_DEMAND, found 0 items in 8ms, 0 inserts 0 updates 0 deletes
+10-24 19:29:13.515   523  2514 D ConnectivityService: requestNetwork for uid/pid:10129/4825 activeRequest: null callbackRequest: 132 [NetworkRequest [ REQUEST id=133, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10129 RequestorUid: 10129 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+10-24 19:29:13.517   523   761 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=133, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10129 RequestorUid: 10129 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+10-24 19:29:13.517   523   761 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=133, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10129 RequestorUid: 10129 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+10-24 19:29:13.518   523   761 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=133, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10129 RequestorUid: 10129 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+10-24 19:29:13.522   523   768 D ConnectivityService: NetReassign [133 : null → 100] [c 0] [a 1] [i 5]
+10-24 19:29:13.522   523   761 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=133, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10129 RequestorUid: 10129 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+10-24 19:29:13.525  4825  4873 W BugleRcsEngine: [63] bpxc.w: Unable to send diagnostic log
+10-24 19:29:13.526  4470  4575 W om.csa.xreadpdf: Verification of void com.google.android.gms.internal.mlkit_vision_text_common.zzmq.configure(com.google.firebase.encoders.config.EncoderConfig) took 169.922ms (8244.94 bytecodes/s) (54520B approximate peak alloc)
+10-24 19:29:13.533   523   552 E system_server: No package ID 7f found for resource ID 0x7f080107.
+10-24 19:29:13.537   523   552 E system_server: No package ID 7f found for resource ID 0x7f150560.
+10-24 19:29:13.570  1531  2276 I SP      : Scheduling: download registered, 1 started, 0 paused, 0 scheduled, 5 pending: dynamic_art:b1f6f47a53f7820be91b9fe247728980 @ {m:b:u:l, bg}, dynamic_art:305f81355a729e382ea9f374dd286d9f @ {m:b:u:l, bg}, transformer_concept:2023011913_en @ {m:b:u:l, bg}, emoji:60932fe37d5f6d7a3e60488d8a1755c4 @ {m:b:u:l, bg}, content_cache:e9a5a2de48a4f8b9a658b411bcfb375d @ * {m:b:u:l, bg}
+10-24 19:29:13.582  1615  1615 I AiAiEcho: AppFetcherImpl onPackageChanged com.google.android.contacts.
+10-24 19:29:13.583  1615  3174 I AiAiEcho: AppIndexer Package:[com.google.android.contacts] UserProfile:[0] Enabled:[true].
+10-24 19:29:13.583  1615  3174 I AiAiEcho: AppFetcherImplV2 updateApps package:[com.google.android.contacts], userId:[0], reason:[package is updated.].
+10-24 19:29:13.589  1615  1615 I AiAiEcho: AppFetcherImpl onPackageChanged com.google.android.gms.
+10-24 19:29:13.591  1615  3236 I AiAiEcho: AppIndexer Package:[com.google.android.gms] UserProfile:[0] Enabled:[true].
+10-24 19:29:13.592  1615  3236 I AiAiEcho: AppFetcherImplV2 updateApps package:[com.google.android.gms], userId:[0], reason:[package is updated.].
+10-24 19:29:13.597  4470  4485 I om.csa.xreadpdf: Background concurrent copying GC freed 51178(14MB) AllocSpace objects, 23(56MB) LOS objects, 49% free, 11MB/23MB, paused 9.405ms,13us total 333.696ms
+10-24 19:29:13.599  1825  2128 W DynamiteModule: Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
+10-24 19:29:13.601  1531  2276 I SP      : Scheduling: download registered, 1 started, 0 paused, 0 scheduled, 6 pending: dynamic_art:b1f6f47a53f7820be91b9fe247728980 @ {m:b:u:l, bg}, dynamic_art:305f81355a729e382ea9f374dd286d9f @ {m:b:u:l, bg}, transformer_concept:2023011913_en @ {m:b:u:l, bg}, emoji:60932fe37d5f6d7a3e60488d8a1755c4 @ {m:b:u:l, bg}, content_cache:e9a5a2de48a4f8b9a658b411bcfb375d @ {m:b:u:l, bg}, content_cache:8722425f4121ffdea802b1066df73991 @ * {m:b:u:l, bg}
+10-24 19:29:13.606  1531  2276 I SP      : Scheduling: download registered, 1 started, 0 paused, 0 scheduled, 7 pending: dynamic_art:b1f6f47a53f7820be91b9fe247728980 @ {m:b:u:l, bg}, dynamic_art:305f81355a729e382ea9f374dd286d9f @ {m:b:u:l, bg}, transformer_concept:2023011913_en @ {m:b:u:l, bg}, emoji:60932fe37d5f6d7a3e60488d8a1755c4 @ {m:b:u:l, bg}, content_cache:e9a5a2de48a4f8b9a658b411bcfb375d @ {m:b:u:l, bg}, content_cache:8722425f4121ffdea802b1066df73991 @ {m:b:u:l, bg}, content_cache:fa1da98da1212aad6fb9a8efaff48148 @ * {m:b:u:l, bg}
+10-24 19:29:13.607  1531  2276 I SP      : Requesting download of URL https://www.gstatic.com/android/keyboard/modelpack/contentcache/202211221443/emoji2expr.pb to e9a5a2de48a4f8b9a658b411bcfb375d.fetched (constraints: m:b:u:l)
+10-24 19:29:13.607  1531  2276 I SP      : Requesting download of URL https://www.gstatic.com/android/keyboard/modelpack/contentcache/202211221443/text2expr.pb to 8722425f4121ffdea802b1066df73991.fetched (constraints: m:b:u:l)
+10-24 19:29:13.608  1531  2276 I SP      : Requesting download of URL https://www.gstatic.com/android/keyboard/modelpack/contentcache/202211221443/contextual_ek.pb to fa1da98da1212aad6fb9a8efaff48148.fetched (constraints: m:b:u:l)
+10-24 19:29:13.609  1531  2276 I SuperDelight: SuperDelightDownloadSlicingStrategy.getSlices():68 DownloadSlicing#getSlices() : Locale = [en_US]
+10-24 19:29:13.611  1531  2276 I SuperDelight: SuperDelightDownloadSlicingStrategy.getSlices():125 DownloadSlicing#getSlices(): result {slices=[{delight:main_en_840_2022102600_1, m:*:*:*, fg}], last batch=true, sync metadata=false}
+10-24 19:29:13.612  1531  2276 I SP      : Syncing delight (2023020919) with slices: [{main_en_840_2022102600_1, m:*:*:*, fg}], metadata: false
+10-24 19:29:13.627  1437  3037 W ProviderHelper: Unknown dynamite feature providerinstaller.dynamite
+10-24 19:29:13.637  1531  2276 I SP      : Pausing download content_cache:8722425f4121ffdea802b1066df73991, reason: PREEMPTED
+10-24 19:29:13.638  1531  2276 I SP      : Pausing download content_cache:e9a5a2de48a4f8b9a658b411bcfb375d, reason: PREEMPTED
+10-24 19:29:13.638  1531  2276 I SP      : Pausing download dynamic_art:b1f6f47a53f7820be91b9fe247728980, reason: PREEMPTED
+10-24 19:29:13.646  1531  2276 I SP      : Pausing download content_cache:fa1da98da1212aad6fb9a8efaff48148, reason: PREEMPTED
+10-24 19:29:13.646  1531  2276 I SP      : Pausing download dynamic_art:305f81355a729e382ea9f374dd286d9f, reason: PREEMPTED
+10-24 19:29:13.646  1531  2276 I SP      : Pausing download emoji:60932fe37d5f6d7a3e60488d8a1755c4, reason: PREEMPTED
+10-24 19:29:13.646  1531  2276 I SP      : Pausing download transformer_concept:2023011913_en, reason: PREEMPTED
+10-24 19:29:13.646  1531  2276 I SP      : Scheduling job with delay of 0s for {m:b:u:l, fg}, 1 candidates
+10-24 19:29:13.651  1825  2128 I DynamiteModule: Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
+10-24 19:29:13.651  1825  2128 W ProviderInstaller: Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
+10-24 19:29:13.653  4470  4574 D TransportRuntime.SQLiteEventStore: Storing event with priority=DEFAULT, name=FIREBASE_ML_SDK for destination cct
+10-24 19:29:13.673  1531  1531 I SuperpacksForegroundTaskService: SuperpacksForegroundTaskService.onStartCommand():41 SuperpacksForegroundTaskService.onStartCommand(): 1
+10-24 19:29:13.673  1825  2128 D nativeloader: Configuring clns-11 for other apk /system/framework/com.android.media.remotedisplay.jar. target_sdk_version=33, uses_libraries=ALL, library_path=/product/priv-app/PrebuiltGmsCore/lib/x86_64:/product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+10-24 19:29:13.674  1825  2128 D nativeloader: Configuring clns-12 for other apk /system/framework/com.android.location.provider.jar. target_sdk_version=33, uses_libraries=ALL, library_path=/product/priv-app/PrebuiltGmsCore/lib/x86_64:/product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+10-24 19:29:13.675  1825  2128 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+10-24 19:29:13.675  1825  2128 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+10-24 19:29:13.681  1825  2128 D nativeloader: Configuring product-clns-13 for unbundled product apk /product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk. target_sdk_version=33, uses_libraries=, library_path=/product/priv-app/PrebuiltGmsCore/lib/x86_64:/product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk!/lib/x86_64:/product/lib64:/system/product/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms:/product/lib64:/system/product/lib64
+10-24 19:29:13.685  1487  3081 I ModuleSetMgr: Download of container feature antifingerprinting is disabled.
+10-24 19:29:13.689  1531  1531 I SP      : ====> Starting job {m:b:u:l, fg}
+10-24 19:29:13.700  1825  2128 V NativeCrypto: Registering com/google/android/gms/org/conscrypt/NativeCrypto's 295 native methods...
+10-24 19:29:13.711   523   552 E system_server: No package ID 7f found for resource ID 0x7f08060c.
+10-24 19:29:13.711   523   552 E system_server: No package ID 7f found for resource ID 0x7f15043b.
+10-24 19:29:13.712  4470  4575 W om.csa.xreadpdf: Verification of void com.google.android.gms.internal.mlkit_vision_common.zzhe.configure(com.google.firebase.encoders.config.EncoderConfig) took 115.002ms (8591.11 bytecodes/s) (40496B approximate peak alloc)
+10-24 19:29:13.721  1825  2128 I ProviderInstaller: Installed default security provider GmsCore_OpenSSL
+10-24 19:29:13.731  1487  3081 I ModuleSetMgr: Download of container feature appsearch_dynamite_impl is disabled.
+10-24 19:29:13.731  1487  3081 I ModuleSetMgr: Download of container feature brella_dynamite is disabled.
+10-24 19:29:13.732  1487  3081 I ModuleSetMgr: Download of container feature cameraconnectivity_impl is disabled.
+10-24 19:29:13.733  1487  3081 I ModuleSetMgr: Download of container feature dck_management is disabled.
+10-24 19:29:13.733  1487  3081 I ModuleSetMgr: Download of container feature easyunlock is disabled.
+10-24 19:29:13.733  1487  3081 I ModuleSetMgr: Download of container feature enterprise is disabled.
+10-24 19:29:13.734  1487  3081 I ModuleSetMgr: Download of container feature enterprise_zt_mp_complete is disabled.
+10-24 19:29:13.734  1487  3081 I ModuleSetMgr: Download of container feature fast_pair is disabled.
+10-24 19:29:13.735  1487  3081 I ModuleSetMgr: Download of container feature game_platform is disabled.
+10-24 19:29:13.735  1487  3081 I ModuleSetMgr: Download of container feature games is disabled.
+10-24 19:29:13.735  1487  3081 I ModuleSetMgr: Download of container feature growth_upgradeparty is disabled.
+10-24 19:29:13.736  1487  3081 I ModuleSetMgr: Download of container feature tflite_dynamite is disabled.
+10-24 19:29:13.736  1487  3081 I ModuleSetMgr: Download of container feature homegraph is disabled.
+10-24 19:29:13.736  1487  3081 I ModuleSetMgr: Download of container feature magictether is disabled.
+10-24 19:29:13.736  1487  3081 I ModuleSetMgr: Download of container feature maps_core is disabled.
+10-24 19:29:13.737  1487  3081 I ModuleSetMgr: Download of container feature mdocstore is disabled.
+10-24 19:29:13.737  1487  3081 I ModuleSetMgr: Download of container feature mlkit.docscan.crop is disabled.
+10-24 19:29:13.738  1487  3081 I ModuleSetMgr: Download of container feature mlkit.docscan.enhance is disabled.
+10-24 19:29:13.738  1487  3081 I ModuleSetMgr: Download of container feature multipackage_debug is disabled.
+10-24 19:29:13.739  1487  3081 I ModuleSetMgr: Download of container feature payse is disabled.
+10-24 19:29:13.739  1487  3081 I ModuleSetMgr: Download of container feature permissions_debug is disabled.
+10-24 19:29:13.740  1487  3081 I ModuleSetMgr: Download of container feature play_cloud_search is disabled.
+10-24 19:29:13.740  1487  3081 I ModuleSetMgr: Download of container feature semanticlocation_debug is disabled.
+10-24 19:29:13.740  1487  3081 I ModuleSetMgr: Download of container feature tflite_delegate_edgetpu is disabled.
+10-24 19:29:13.741  1487  3081 I ModuleSetMgr: Download of container feature tflite_delegate_test is disabled.
+10-24 19:29:13.741  1487  3081 I ModuleSetMgr: Download of container feature tflite_gpu_dynamite is disabled.
+10-24 19:29:13.741  1487  3081 I ModuleSetMgr: Download of container feature userstatus_impl is disabled.
+10-24 19:29:13.742  1487  3081 I ModuleSetMgr: Download of container feature usonia_iam is disabled.
+10-24 19:29:13.742  1487  3081 I ModuleSetMgr: Download of container feature vision.face is disabled.
+10-24 19:29:13.742  1487  3081 I ModuleSetMgr: Download of container feature vision.ica is disabled.
+10-24 19:29:13.742  1487  3081 I ModuleSetMgr: Download of container feature vision.ocr is disabled.
+10-24 19:29:13.746  1487  3081 I DynamiteModule: Considering local module com.google.android.gms.cronet_dynamite:0 and remote module com.google.android.gms.cronet_dynamite:2411
+10-24 19:29:13.746  1487  3081 I DynamiteModule: Selected remote version of com.google.android.gms.cronet_dynamite, version >= 2411
+10-24 19:29:13.753  1487  3081 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000001/CronetDynamite.dm': No such file or directory
+10-24 19:29:13.775  2052  2052 I PhenotypeBackgroundRecv: Skipping com.google.android.libraries.search.device#com.google.android.tts which doesn't use ProcessStable flags.
+10-24 19:29:13.784  1825  1825 I BgTaskExecutorImpl: Starting NONEXCLUSIVE background task ZIP_DOWNLOAD_PROCESSOR.
+10-24 19:29:13.788  1825  2143 I ModelDnldProcssHelpr: #handleDownloadComplete, downloadId=2
+10-24 19:29:13.792  1825  2143 E ModelDnldProcssHelpr: pending download info for pending_hotword_model_download_info is null
+10-24 19:29:13.799  1825  2143 E ModelDnldProcssHelpr: pending download info for pending_xgoogle_hotword_model_download_info is null
+10-24 19:29:13.801  1825  2149 E DownloadManagerWrapper: Can't find downloadId=2
+10-24 19:29:13.807  1825  1853 I earchbox:search: JIT allocated 69KB for compiled code of com.google.android.apps.gsa.s.h com.google.android.apps.gsa.s.h.a(int)
+10-24 19:29:13.807  1615  1615 I AiAiEcho: AppFetcherImpl onPackageChanged com.google.android.gm.
+10-24 19:29:13.808  1615  3174 I AiAiEcho: AppIndexer Package:[com.google.android.gm] UserProfile:[0] Enabled:[true].
+10-24 19:29:13.808  1615  3174 I AiAiEcho: AppFetcherImplV2 updateApps package:[com.google.android.gm], userId:[0], reason:[package is updated.].
+10-24 19:29:13.811   523   552 I AppBindingService: Connected: com.google.android.apps.messaging/com.google.android.ims.binding.SystemBindingService u0
+10-24 19:29:13.820  4470  4574 D TransportRuntime.JobInfoScheduler: Scheduling upload for context TransportContext(cct, DEFAULT, MSRodHRwczovL2ZpcmViYXNlbG9nZ2luZy5nb29nbGVhcGlzLmNvbS92MGNjL2xvZy9iYXRjaD9mb3JtYXQ9anNvbl9wcm90bzNc) with jobId=-1455676538 in 30000ms(Backend next call timestamp 0). Attempt 1
+10-24 19:29:13.827  1825  2150 W LanguagePackUpdateContr: Querying download manager failed for ID : 2
+10-24 19:29:13.828  4470  4574 D CompatibilityChangeReporter: Compat change id reported: 194532703; UID 10192; state: ENABLED
+10-24 19:29:13.828  1531  2276 I SP      : Scheduling: download registered, 0 started, 7 paused, 1 scheduled, 8 pending: dynamic_art:b1f6f47a53f7820be91b9fe247728980 @ {m:b:u:l, bg}, dynamic_art:305f81355a729e382ea9f374dd286d9f @ {m:b:u:l, bg}, transformer_concept:2023011913_en @ {m:b:u:l, bg}, emoji:60932fe37d5f6d7a3e60488d8a1755c4 @ {m:b:u:l, bg}, content_cache:e9a5a2de48a4f8b9a658b411bcfb375d @ {m:b:u:l, bg}, content_cache:8722425f4121ffdea802b1066df73991 @ {m:b:u:l, bg}, content_cache:fa1da98da1212aad6fb9a8efaff48148 @ {m:b:u:l, bg}, delight:main_en_840_2022102600_1 * {m:b:u:l, fg}
+10-24 19:29:13.834  4470  4574 D CompatibilityChangeReporter: Compat change id reported: 253665015; UID 10192; state: ENABLED
+10-24 19:29:13.836   523  2510 D ConnectivityService: requestNetwork for uid/pid:1000/523 asUid: 10192 activeRequest: null callbackRequest: 134 [NetworkRequest [ REQUEST id=135, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+10-24 19:29:13.841   523   768 D ConnectivityService: NetReassign [135 : null → 100] [c 1] [a 0] [i 0]
+10-24 19:29:13.851   523   761 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=135, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+10-24 19:29:13.851   523   761 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=135, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+10-24 19:29:13.853   523   761 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=135, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+10-24 19:29:13.853   523   761 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=135, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+10-24 19:29:13.869  1531  2276 I SP      : Scheduling: job start ({m:b:u:l, fg}), 1 started, 7 paused, 0 scheduled, 8 pending: dynamic_art:b1f6f47a53f7820be91b9fe247728980 @ {m:b:u:l, bg}, dynamic_art:305f81355a729e382ea9f374dd286d9f @ {m:b:u:l, bg}, transformer_concept:2023011913_en @ {m:b:u:l, bg}, emoji:60932fe37d5f6d7a3e60488d8a1755c4 @ {m:b:u:l, bg}, content_cache:e9a5a2de48a4f8b9a658b411bcfb375d @ {m:b:u:l, bg}, content_cache:8722425f4121ffdea802b1066df73991 @ {m:b:u:l, bg}, content_cache:fa1da98da1212aad6fb9a8efaff48148 @ {m:b:u:l, bg}, delight:main_en_840_2022102600_1 @ * {m:b:u:l, fg}
+10-24 19:29:13.869  1531  2276 I SP      : Requesting download of URL https://dl.google.com/gboard/klp/dict/en-840/en-840_d3_2022102600_7pl011ntk-hwpe7_main.dict to main_en_840_2022102600_1.fst-decompress.fetched (constraints: m:b:u:l)
+10-24 19:29:13.869  1531  2276 I SP      : Download for dynamic_art:b1f6f47a53f7820be91b9fe247728980 was canceled
+10-24 19:29:13.870  1531  2276 I SP      : Download stopped: dynamic_art:b1f6f47a53f7820be91b9fe247728980, failed (retriable) paused, size: 0
+10-24 19:29:13.876  1531  2276 I SP      : Scheduling: download stopped, 0 started, 0 paused, 0 scheduled, 8 pending: dynamic_art:b1f6f47a53f7820be91b9fe247728980 {m:b:u:l, bg}, dynamic_art:305f81355a729e382ea9f374dd286d9f @ {m:b:u:l, bg}, transformer_concept:2023011913_en @ {m:b:u:l, bg}, emoji:60932fe37d5f6d7a3e60488d8a1755c4 @ {m:b:u:l, bg}, content_cache:e9a5a2de48a4f8b9a658b411bcfb375d @ {m:b:u:l, bg}, content_cache:8722425f4121ffdea802b1066df73991 @ {m:b:u:l, bg}, content_cache:fa1da98da1212aad6fb9a8efaff48148 @ {m:b:u:l, bg}, delight:main_en_840_2022102600_1 @ {m:b:u:l, fg}
+10-24 19:29:13.876  1531  2276 I SP      : Download for dynamic_art:305f81355a729e382ea9f374dd286d9f was canceled
+10-24 19:29:13.877  1531  2276 I SP      : Download stopped: dynamic_art:305f81355a729e382ea9f374dd286d9f, failed (retriable) paused, size: 0
+10-24 19:29:13.880  1437  1443 W .gms.persistent: Cleared Reference was only reachable from finalizer (only reported once)
+10-24 19:29:13.883  1531  2276 I SP      : Scheduling: download stopped, 0 started, 0 paused, 0 scheduled, 8 pending: dynamic_art:b1f6f47a53f7820be91b9fe247728980 {m:b:u:l, bg}, dynamic_art:305f81355a729e382ea9f374dd286d9f {m:b:u:l, bg}, transformer_concept:2023011913_en @ {m:b:u:l, bg}, emoji:60932fe37d5f6d7a3e60488d8a1755c4 @ {m:b:u:l, bg}, content_cache:e9a5a2de48a4f8b9a658b411bcfb375d @ {m:b:u:l, bg}, content_cache:8722425f4121ffdea802b1066df73991 @ {m:b:u:l, bg}, content_cache:fa1da98da1212aad6fb9a8efaff48148 @ {m:b:u:l, bg}, delight:main_en_840_2022102600_1 @ {m:b:u:l, fg}
+10-24 19:29:13.884  1531  2276 I SP      : Download for transformer_concept:2023011913_en was canceled
+10-24 19:29:13.884  1531  2276 I SP      : Download stopped: transformer_concept:2023011913_en, failed (retriable) paused, size: 0
+10-24 19:29:13.885   336  4910 I resolv  : GetAddrInfoHandler::run: {100 100 100 983140 10140 0}
+10-24 19:29:13.886  1437  1443 I .gms.persistent: Background concurrent copying GC freed 545008(21MB) AllocSpace objects, 11(2364KB) LOS objects, 49% free, 12MB/24MB, paused 80us,18us total 157.784ms
+10-24 19:29:13.893  1531  2276 I SP      : Scheduling: download stopped, 0 started, 0 paused, 0 scheduled, 8 pending: dynamic_art:b1f6f47a53f7820be91b9fe247728980 {m:b:u:l, bg}, dynamic_art:305f81355a729e382ea9f374dd286d9f {m:b:u:l, bg}, transformer_concept:2023011913_en {m:b:u:l, bg}, emoji:60932fe37d5f6d7a3e60488d8a1755c4 @ {m:b:u:l, bg}, content_cache:e9a5a2de48a4f8b9a658b411bcfb375d @ {m:b:u:l, bg}, content_cache:8722425f4121ffdea802b1066df73991 @ {m:b:u:l, bg}, content_cache:fa1da98da1212aad6fb9a8efaff48148 @ {m:b:u:l, bg}, delight:main_en_840_2022102600_1 @ {m:b:u:l, fg}
+10-24 19:29:13.894  1531  2276 I SP      : Download for emoji:60932fe37d5f6d7a3e60488d8a1755c4 was canceled
+10-24 19:29:13.894  1531  2276 I SP      : Download stopped: emoji:60932fe37d5f6d7a3e60488d8a1755c4, failed (retriable) paused, size: 0
+10-24 19:29:13.896  4470  4574 D TransportRuntime.SQLiteEventStore: Storing event with priority=VERY_LOW, name=FIREBASE_ML_SDK for destination cct
+10-24 19:29:13.900   336  4911 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+10-24 19:29:13.900   336  4911 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7fab700ce030
+10-24 19:29:13.900   336  4911 I resolv  : doQuery: rcode=0, ancount=4, return value=195
+10-24 19:29:13.901   853   962 I PermissionControllerServiceImpl: Updating user sensitive for uid 10129
+10-24 19:29:13.904  1531  2276 I SP      : Scheduling: download stopped, 0 started, 0 paused, 0 scheduled, 8 pending: dynamic_art:b1f6f47a53f7820be91b9fe247728980 {m:b:u:l, bg}, dynamic_art:305f81355a729e382ea9f374dd286d9f {m:b:u:l, bg}, transformer_concept:2023011913_en {m:b:u:l, bg}, emoji:60932fe37d5f6d7a3e60488d8a1755c4 {m:b:u:l, bg}, content_cache:e9a5a2de48a4f8b9a658b411bcfb375d @ {m:b:u:l, bg}, content_cache:8722425f4121ffdea802b1066df73991 @ {m:b:u:l, bg}, content_cache:fa1da98da1212aad6fb9a8efaff48148 @ {m:b:u:l, bg}, delight:main_en_840_2022102600_1 @ {m:b:u:l, fg}
+10-24 19:29:13.904  1531  2276 I SP      : Download for content_cache:e9a5a2de48a4f8b9a658b411bcfb375d was canceled
+10-24 19:29:13.904  1531  2276 I SP      : Download stopped: content_cache:e9a5a2de48a4f8b9a658b411bcfb375d, failed (retriable) paused, size: 0
+10-24 19:29:13.906   336  4912 I resolv  : res_nmkquery: (QUERY, IN, A)
+10-24 19:29:13.906   336  4912 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7fac000ca330
+10-24 19:29:13.906   336  4912 I resolv  : doQuery: rcode=0, ancount=4, return value=147
+10-24 19:29:13.907  1531  4909 D TrafficStats: tagSocket(138) with statsTag=0xffffffff, statsUid=-1
+10-24 19:29:13.911  4470  4574 D TransportRuntime.JobInfoScheduler: Scheduling upload for context TransportContext(cct, VERY_LOW, MSRodHRwczovL2ZpcmViYXNlbG9nZ2luZy5nb29nbGVhcGlzLmNvbS92MGNjL2xvZy9iYXRjaD9mb3JtYXQ9anNvbl9wcm90bzNc) with jobId=-1450695801 in 86400000ms(Backend next call timestamp 0). Attempt 1
+10-24 19:29:13.912  1531  2276 I SP      : Scheduling: download stopped, 0 started, 0 paused, 0 scheduled, 8 pending: dynamic_art:b1f6f47a53f7820be91b9fe247728980 {m:b:u:l, bg}, dynamic_art:305f81355a729e382ea9f374dd286d9f {m:b:u:l, bg}, transformer_concept:2023011913_en {m:b:u:l, bg}, emoji:60932fe37d5f6d7a3e60488d8a1755c4 {m:b:u:l, bg}, content_cache:e9a5a2de48a4f8b9a658b411bcfb375d {m:b:u:l, bg}, content_cache:8722425f4121ffdea802b1066df73991 @ {m:b:u:l, bg}, content_cache:fa1da98da1212aad6fb9a8efaff48148 @ {m:b:u:l, bg}, delight:main_en_840_2022102600_1 @ {m:b:u:l, fg}
+10-24 19:29:13.913  1531  2276 I SP      : Download for content_cache:8722425f4121ffdea802b1066df73991 was canceled
+10-24 19:29:13.913  1531  2276 I SP      : Download stopped: content_cache:8722425f4121ffdea802b1066df73991, failed (retriable) paused, size: 0
+10-24 19:29:13.915  1437  2067 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.phenotype.service.sync.PhenotypeConfigurator finished executing. cause:5 result: 1 elapsed_millis: 24186 uptime_millis: 24186 exec_start_elapsed_seconds: 78 [CONTEXT service_id=218 ]
+10-24 19:29:13.918   523   625 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS
+10-24 19:29:13.920  1531  4909 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/ConscryptEngineSocket;->setUseSessionTickets(Z)V (max-target-q,core-platform-api, reflection, denied)
+10-24 19:29:13.920  1531  4909 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setUseSessionTickets(Z)V (max-target-q,core-platform-api, reflection, denied)
+10-24 19:29:13.920  1531  4909 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setUseSessionTickets(Z)V (max-target-q, reflection, denied)
+10-24 19:29:13.920  1531  4909 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/ConscryptEngineSocket;->setHostname(Ljava/lang/String;)V (max-target-q,core-platform-api, reflection, denied)
+10-24 19:29:13.920  1531  4909 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setHostname(Ljava/lang/String;)V (max-target-q,core-platform-api, reflection, denied)
+10-24 19:29:13.920  1531  4909 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setHostname(Ljava/lang/String;)V (max-target-q, reflection, denied)
+10-24 19:29:13.920  1531  4909 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([B)V (max-target-q,core-platform-api, reflection, denied)
+10-24 19:29:13.920  1531  4909 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setAlpnProtocols([B)V (max-target-q, reflection, denied)
+10-24 19:29:13.923  1531  2276 I SP      : Scheduling: download stopped, 0 started, 0 paused, 0 scheduled, 8 pending: dynamic_art:b1f6f47a53f7820be91b9fe247728980 {m:b:u:l, bg}, dynamic_art:305f81355a729e382ea9f374dd286d9f {m:b:u:l, bg}, transformer_concept:2023011913_en {m:b:u:l, bg}, emoji:60932fe37d5f6d7a3e60488d8a1755c4 {m:b:u:l, bg}, content_cache:e9a5a2de48a4f8b9a658b411bcfb375d {m:b:u:l, bg}, content_cache:8722425f4121ffdea802b1066df73991 {m:b:u:l, bg}, content_cache:fa1da98da1212aad6fb9a8efaff48148 @ {m:b:u:l, bg}, delight:main_en_840_2022102600_1 @ {m:b:u:l, fg}
+10-24 19:29:13.923  1531  2276 I SP      : Download for content_cache:fa1da98da1212aad6fb9a8efaff48148 was canceled
+10-24 19:29:13.923  1531  2276 I SP      : <==== Finishing job {m:b:u:l, bg}, 652 ms. elapsed since start
+10-24 19:29:13.923  1531  2276 I SP      : Download stopped: content_cache:fa1da98da1212aad6fb9a8efaff48148, failed (retriable) paused, size: 0
+10-24 19:29:13.924   837   893 D StylusManager: Stylus InputDevice changed: 14 virtio_input_multi_touch_11
+10-24 19:29:13.927   837   893 D StylusManager: Stylus InputDevice changed: 13 virtio_input_multi_touch_10
+10-24 19:29:13.927   837   893 D StylusManager: Stylus InputDevice changed: 12 virtio_input_multi_touch_9
+10-24 19:29:13.936  1531  2650 I PhenotypeBackgroundRecv: Successfully updated snapshot for com.google.android.gms.clearcut_client#com.google.android.inputmethod.latin
+10-24 19:29:13.938  1056  1056 D CarrierSvcBindHelper: onPackageModified: com.csa.xreadpdf.test
+10-24 19:29:13.938  1056  1056 D CarrierSvcBindHelper: No carrier app for: 0
+10-24 19:29:13.942   837   893 D StylusManager: Stylus InputDevice changed: 7 virtio_input_multi_touch_4
+10-24 19:29:13.948  1531  2276 I SP      : Scheduling: download stopped, 0 started, 0 paused, 0 scheduled, 8 pending: dynamic_art:b1f6f47a53f7820be91b9fe247728980 {m:b:u:l, bg}, dynamic_art:305f81355a729e382ea9f374dd286d9f {m:b:u:l, bg}, transformer_concept:2023011913_en {m:b:u:l, bg}, emoji:60932fe37d5f6d7a3e60488d8a1755c4 {m:b:u:l, bg}, content_cache:e9a5a2de48a4f8b9a658b411bcfb375d {m:b:u:l, bg}, content_cache:8722425f4121ffdea802b1066df73991 {m:b:u:l, bg}, content_cache:fa1da98da1212aad6fb9a8efaff48148 {m:b:u:l, bg}, delight:main_en_840_2022102600_1 @ {m:b:u:l, fg}
+10-24 19:29:13.951   837   893 D StylusManager: Stylus InputDevice changed: 10 virtio_input_multi_touch_7
+10-24 19:29:13.953  1531  1531 I PhenotypeModule: PhenotypeModule.receiveBroadcast():373 onReceive() urgent = false
+10-24 19:29:13.953  1531  1531 I PhenotypeModule: PhenotypeModule.maybeFetchAndUpdate():166 maybeFetchAndUpdate: start new task to fetch
+10-24 19:29:13.955  1531  2650 I PhenotypeBackgroundRecv: Successfully updated snapshot for com.google.android.libraries.performance.primes#com.google.android.inputmethod.latin
+10-24 19:29:13.956  1531  1531 I PhenotypeModule: PhenotypeModule.receiveBroadcast():373 onReceive() urgent = false
+10-24 19:29:13.957  1531  1531 I PhenotypeBackgroundRecv: Skipping com.google.android.gms.learning#com.google.android.inputmethod.latin which doesn't use ProcessStable flags.
+10-24 19:29:13.957  1531  1531 I PhenotypeModule: PhenotypeModule.receiveBroadcast():373 onReceive() urgent = false
+10-24 19:29:13.963  1056  1387 D ImsResolver: maybeAddedImsService, packageName: com.csa.xreadpdf.test
+10-24 19:29:13.965   837   893 D StylusManager: Stylus InputDevice changed: 9 virtio_input_multi_touch_6
+10-24 19:29:13.965   853   962 I PermissionControllerServiceImpl: Updating user sensitive for uid 10192
+10-24 19:29:13.970  4470  4574 D TransportRuntime.SQLiteEventStore: Storing event with priority=VERY_LOW, name=FIREBASE_ML_SDK for destination cct
+10-24 19:29:13.979   523   625 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS
+10-24 19:29:13.989   837   893 D StylusManager: Stylus InputDevice changed: 6 virtio_input_multi_touch_3
+10-24 19:29:14.018  1487  1502 I PeopleGalProvider: Gal directories started.
+10-24 19:29:14.019  1487  1502 I PeopleGalProvider: Method 1 completed.
+10-24 19:29:14.019  1487  1502 I PeopleGalProvider: Method 1 finished successfully.
+10-24 19:29:14.040   837   893 D StylusManager: Stylus InputDevice changed: 8 virtio_input_multi_touch_5
+10-24 19:29:14.041   523   625 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS
+10-24 19:29:14.052   837   893 D StylusManager: Stylus InputDevice changed: 5 virtio_input_multi_touch_2
+10-24 19:29:14.060   853   962 I PermissionControllerServiceImpl: Updating user sensitive for uid 10193
+10-24 19:29:14.077  4470  4574 D TransportRuntime.JobInfoScheduler: Upload for context TransportContext(cct, VERY_LOW, MSRodHRwczovL2ZpcmViYXNlbG9nZ2luZy5nb29nbGVhcGlzLmNvbS92MGNjL2xvZy9iYXRjaD9mb3JtYXQ9anNvbl9wcm90bzNc) is already scheduled. Returning...
+10-24 19:29:14.090   837   893 D StylusManager: Stylus InputDevice changed: 4 virtio_input_multi_touch_1
+10-24 19:29:14.100   853   853 I SafetyLabelChangedBroadcastReceiver: received broadcast packageName: com.csa.xreadpdf, current user: UserHandle{0}, packageChangeEvent: NEW_INSTALL, intent user: UserHandle{0}
+10-24 19:29:14.109  1531  4909 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->getAlpnSelectedProtocol()[B (max-target-q,core-platform-api, reflection, denied)
+10-24 19:29:14.109  1531  4909 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->getAlpnSelectedProtocol()[B (max-target-q, reflection, denied)
+10-24 19:29:14.109  1531  4909 W putmethod.latin: Reached maximum number of hidden api access warnings.
+10-24 19:29:14.122   853   853 I SafetyLabelChangedBroadcastReceiver: received broadcast packageName: com.csa.xreadpdf.test, current user: UserHandle{0}, packageChangeEvent: NEW_INSTALL, intent user: UserHandle{0}
+10-24 19:29:14.156  1825  3056 I BlobLobber: Handling download id 1 (blob brain_en_us_201705_arm32_release_signed)
+10-24 19:29:14.204   837   893 D StylusManager: Stylus InputDevice changed: 11 virtio_input_multi_touch_8
+10-24 19:29:14.221  1437  4344 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x45000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+10-24 19:29:14.269  1437  4811 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+10-24 19:29:14.278  1437  4810 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x45000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+10-24 19:29:14.300  1437  4812 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x45000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+10-24 19:29:14.315  1437  4810 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x45000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+10-24 19:29:14.318  1437  4812 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+10-24 19:29:14.327  1437  4810 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x45000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+10-24 19:29:14.328  1825  1825 E A       : disposing SearchServiceClient after timeout []
+10-24 19:29:14.380  1437  4810 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+10-24 19:29:14.390  1437  4810 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+10-24 19:29:14.400  1437  4810 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+10-24 19:29:14.410  1487  2998 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+10-24 19:29:14.420   837   893 D StylusManager: Stylus InputDevice changed: 14 virtio_input_multi_touch_11
+10-24 19:29:14.420   837   893 D StylusManager: Stylus InputDevice changed: 13 virtio_input_multi_touch_10
+10-24 19:29:14.450   837   893 D StylusManager: Stylus InputDevice changed: 12 virtio_input_multi_touch_9
+10-24 19:29:14.486  1531  2281 I PhenotypeModule: PhenotypeModule.handlePhenotypeConfigurationUpdatesInternal():350 Latency of updating configurations from phenotype (experiment v4): 28
+10-24 19:29:14.488  1531  2281 I PhenotypeModule: PhenotypeModule.handlePhenotypeConfigurationUpdates():277 Latency of updating configurations from phenotype (ExperimentV4): 31
+10-24 19:29:14.489  1531  2281 I PhenotypeModule: PhenotypeModule.lambda$fetchAndUpdate$2():220 fetchAndUpdate() : Success, hasFlags=true, fetchStatus=2026-10-24 19:29:13{reason=2, isFullFetch=false, success=true, isEmpty=false, isDelta=false, fetchedFlagsCount=922, deletedFlagsCount=0, updatedFlagsCount=0, totalTime=536}
+10-24 19:29:14.520   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:14.537   837   893 D StylusManager: Stylus InputDevice changed: 7 virtio_input_multi_touch_4
+10-24 19:29:14.557   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:14.561   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:14.580   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:14.585   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:14.600   837   893 D StylusManager: Stylus InputDevice changed: 10 virtio_input_multi_touch_7
+10-24 19:29:14.602   837   893 D StylusManager: Stylus InputDevice changed: 9 virtio_input_multi_touch_6
+10-24 19:29:14.602   837   893 D StylusManager: Stylus InputDevice changed: 6 virtio_input_multi_touch_3
+10-24 19:29:14.651   837   893 D StylusManager: Stylus InputDevice changed: 8 virtio_input_multi_touch_5
+10-24 19:29:14.686   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:14.688  1487  1487 W gle.android.gms: Long monitor contention with owner highpool[3] (3081) at hhf hkv.c(android.content.Context, hlm, hln, java.lang.String, hey)(:com.google.android.gms@231818047@23.18.18 (190800-535401451):20) waiters=0 in hhf hkv.c(android.content.Context, hlm, hln, java.lang.String, hey) for 551ms
+10-24 19:29:14.696   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:14.699   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:14.702   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:14.706   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:14.716   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:14.735   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:14.744   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:14.751   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:14.756   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:14.766   523   615 I RoleService: Granting default roles...
+10-24 19:29:14.795  1057  4563 I WifiPickerTracker: Scanning started
+10-24 19:29:14.796  1057  4563 E WifiScanner: listener does not exist
+10-24 19:29:14.853  1487  1487 I WakefulBroadcastRcvr: Processing wakeful broadcast: com.google.android.gms.checkin.CHECKIN_START_ACTION
+10-24 19:29:14.901  2772  2772 I DialerStatusSmsFetcher: com.android.voicemail.impl.sms.StatusSmsFetcher.onReceive:106 Request SMS successfully sent [CONTEXT enable_persistent_logger=true ]
+10-24 19:29:14.905   523   552 E system_server: No package ID 7f found for resource ID 0x7f08038b.
+10-24 19:29:14.906   523   552 E system_server: No package ID 7f found for resource ID 0x7f150be5.
+10-24 19:29:14.906   523   552 E system_server: No package ID 7f found for resource ID 0x7f150be5.
+10-24 19:29:14.906   523   552 E system_server: No package ID 7f found for resource ID 0x7f150be4.
+10-24 19:29:14.907  2100  4380 V DownloadManager: Deleting /storage/emulated/0/Android/data/com.google.android.googlequicksearchbox/files/pending_blobs/brain_en_us_201705_arm32_release_signed via provider delete
+10-24 19:29:14.964  2772  2772 I PhenotypeBackgroundRecv: Skipping com.google.android.dialer.directboot#com.google.android.dialer which doesn't use ProcessStable flags.
+10-24 19:29:15.036   853  1026 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms.supervision, role: android.app.role.SYSTEM_SUPERVISION
+10-24 19:29:15.047   837   896 D EGL_emulation: app_time_stats: avg=7829.24ms min=7829.24ms max=7829.24ms count=1
+10-24 19:29:15.063   853  1026 I Role    : com.google.android.gms not qualified for android.app.role.SYSTEM_CALL_STREAMING due to missing RequiredComponent{mIntentFilterData=IntentFilterData{mAction='android.telecom.CallStreamingService', mCategories='[]', mDataScheme='null', mDataType='null'}, mMinTargetSdkVersion=1, mFlags='0', mPermission='android.permission.BIND_CALL_STREAMING_SERVICE', mQueryFlags=0, mMetaData=[]}
+10-24 19:29:15.064   853  1026 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms, role: android.app.role.SYSTEM_CALL_STREAMING
+10-24 19:29:15.065   853  1026 W Role    : Default holder doesn't have required signing certificate: com.google.android.apps.work.clouddpc:23962F4B43B9857638EA66F4D419518EAE282491ACDA4B94707BD59003C45E58
+10-24 19:29:15.168   523  2512 W system_server: Long monitor contention with owner binder:523_1A (2508) at android.content.ComponentName com.android.server.am.ActivityManagerService.startService(android.app.IApplicationThread, android.content.Intent, java.lang.String, boolean, java.lang.String, java.lang.String, int, boolean, int, java.lang.String, java.lang.String)(ActivityManagerService.java:13195) waiters=2 in boolean com.android.server.am.ActivityManagerService.unbindService(android.app.IServiceConnection) for 192ms
+10-24 19:29:15.187  1487  4822 I Checkin : [EventLogChimeraService] Opted in for usage reporting: false
+10-24 19:29:15.189  1437  4610 I Herrevad: [294] aqwl.a: updateListenState
+10-24 19:29:15.252   336   368 I netd    : tetherGetStats() -> {[]} <0.35ms>
+10-24 19:29:15.261  1056  1056 D CarrierSvcBindHelper: onPackageModified: com.google.android.youtube
+10-24 19:29:15.269  1437  4344 I Auth    : [AuthManaged, PasswordComplexityHelperImpl] Updating password complexity components state.
+10-24 19:29:15.270  1437  4344 I Auth    : [AuthManaged, PasswordComplexityHelperImpl] Disabling com.google.android.gms.auth.managed.admin.DeviceAdminReceiver
+10-24 19:29:15.273  1437  4344 I Auth    : [AuthManaged, PasswordComplexityHelperImpl] Disabling com.google.android.gms.auth.managed.ui.SetNewPasswordActivity
+10-24 19:29:15.280  1056  1056 D CarrierSvcBindHelper: No carrier app for: 0
+10-24 19:29:15.307   523   625 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS
+10-24 19:29:15.327   837   893 D StylusManager: Stylus InputDevice changed: 14 virtio_input_multi_touch_11
+10-24 19:29:15.330   837   893 D StylusManager: Stylus InputDevice changed: 13 virtio_input_multi_touch_10
+10-24 19:29:15.333   523   523 W system_server: Long monitor contention with owner binder:523_E (1934) at void com.android.server.alarm.AlarmManagerService.setImpl(int, long, long, long, android.app.PendingIntent, android.app.IAlarmListener, java.lang.String, int, android.os.WorkSource, android.app.AlarmManager$AlarmClockInfo, int, java.lang.String, android.os.Bundle, int)(AlarmManagerService.java:2373) waiters=0 in void com.android.server.alarm.AlarmManagerService$AlarmHandler.handleMessage(android.os.Message) for 129ms
+10-24 19:29:15.340   837   893 D StylusManager: Stylus InputDevice changed: 12 virtio_input_multi_touch_9
+10-24 19:29:15.344   853   962 I PermissionControllerServiceImpl: Updating user sensitive for uid 10139
+10-24 19:29:15.357   837   893 D StylusManager: Stylus InputDevice changed: 7 virtio_input_multi_touch_4
+10-24 19:29:15.359   853   962 I PermissionControllerServiceImpl: Updating user sensitive for uid 10134
+10-24 19:29:15.361  1487  3669 D TrafficStats: tagSocket(87) with statsTag=0x30001803, statsUid=-1
+10-24 19:29:15.377   523   625 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS
+10-24 19:29:15.410  1737  1737 D PhenotypeContext: Application doesn't implement PhenotypeApplication interface, falling back to globally set context. See go/phenotype-flag#process-stable-init for more info.
+10-24 19:29:15.417  1487  4821 I GmsModuleFndr: Beginning GMS chimera module scan
+10-24 19:29:15.430  1737  4931 D CompatibilityChangeReporter: Compat change id reported: 183155436; UID 10124; state: ENABLED
+10-24 19:29:15.442  1056  1056 D CarrierSvcBindHelper: onPackageModified: com.android.vending
+10-24 19:29:15.444  1056  1056 D CarrierSvcBindHelper: No carrier app for: 0
+10-24 19:29:15.455  1056  1387 D ImsResolver: maybeAddedImsService, packageName: com.google.android.youtube
+10-24 19:29:15.463   336   368 I netd    : bandwidthSetGlobalAlert(2097152) <0.19ms>
+10-24 19:29:15.471   336   368 I netd    : bandwidthRemoveInterfaceQuota(eth0) <1.32ms>
+10-24 19:29:15.475   336   368 I netd    : bandwidthSetInterfaceQuota(eth0, 9223372036854775807) <0.55ms>
+10-24 19:29:15.480  1487  4821 I ModuleSetMgr: Computing pending module set with APKs: [[AdsFdrDynamite.integ:231004600100000], [Cronetdynamite:231818190800], [Dynamiteloader:231818190000], [Dynamitemodulesa:231818190000], [Dynamitemodulesc:231818190000], [Googlecertificates:231818190000], [Mapsdynamite:231818190000], [Measurementdynamite:231818190000]]
+10-24 19:29:15.497   336   368 I netd    : bandwidthRemoveInterfaceQuota(eth0) <0.78ms>
+10-24 19:29:15.499   336   368 I netd    : bandwidthSetInterfaceQuota(eth0, 9223372036854775807) <0.55ms>
+10-24 19:29:15.512  1487  4821 I ModuleSetMgr: Download of container feature antifingerprinting is disabled.
+10-24 19:29:15.512  1487  4821 I ModuleSetMgr: Download of container feature appsearch_dynamite_impl is disabled.
+10-24 19:29:15.512  1487  4821 I ModuleSetMgr: Download of container feature brella_dynamite is disabled.
+10-24 19:29:15.512  1487  4821 I ModuleSetMgr: Download of container feature cameraconnectivity_impl is disabled.
+10-24 19:29:15.513  1487  4821 I ModuleSetMgr: Download of container feature dck_management is disabled.
+10-24 19:29:15.513  1487  4821 I ModuleSetMgr: Download of container feature easyunlock is disabled.
+10-24 19:29:15.513  1487  4821 I ModuleSetMgr: Download of container feature enterprise is disabled.
+10-24 19:29:15.513  1487  4821 I ModuleSetMgr: Download of container feature enterprise_zt_mp_complete is disabled.
+10-24 19:29:15.514  1487  4821 I ModuleSetMgr: Download of container feature fast_pair is disabled.
+10-24 19:29:15.516  1487  4821 I ModuleSetMgr: Download of container feature game_platform is disabled.
+10-24 19:29:15.516  1487  4821 I ModuleSetMgr: Download of container feature games is disabled.
+10-24 19:29:15.516  1487  4821 I ModuleSetMgr: Download of container feature growth_upgradeparty is disabled.
+10-24 19:29:15.516  1487  4821 I ModuleSetMgr: Download of container feature tflite_dynamite is disabled.
+10-24 19:29:15.517  1487  4821 I ModuleSetMgr: Download of container feature homegraph is disabled.
+10-24 19:29:15.517  1487  4821 I ModuleSetMgr: Download of container feature magictether is disabled.
+10-24 19:29:15.517  1487  4821 I ModuleSetMgr: Download of container feature maps_core is disabled.
+10-24 19:29:15.518  1487  4821 I ModuleSetMgr: Download of container feature mlkit.docscan.crop is disabled.
+10-24 19:29:15.518  1487  4821 I ModuleSetMgr: Download of container feature mlkit.docscan.enhance is disabled.
+10-24 19:29:15.524  1487  4821 I ModuleSetMgr: Download of container feature multipackage_debug is disabled.
+10-24 19:29:15.524  1487  4821 I ModuleSetMgr: Download of container feature payse is disabled.
+10-24 19:29:15.524  1487  4821 I ModuleSetMgr: Download of container feature permissions_debug is disabled.
+10-24 19:29:15.525  1487  4821 I ModuleSetMgr: Download of container feature play_cloud_search is disabled.
+10-24 19:29:15.525  1487  4821 I ModuleSetMgr: Download of container feature semanticlocation_debug is disabled.
+10-24 19:29:15.527  1487  4821 I ModuleSetMgr: Download of container feature tflite_delegate_edgetpu is disabled.
+10-24 19:29:15.527  1487  4821 I ModuleSetMgr: Download of container feature tflite_delegate_test is disabled.
+10-24 19:29:15.527  1487  4821 I ModuleSetMgr: Download of container feature tflite_gpu_dynamite is disabled.
+10-24 19:29:15.527  1487  4821 I ModuleSetMgr: Download of container feature userstatus_impl is disabled.
+10-24 19:29:15.527  1487  4821 I ModuleSetMgr: Download of container feature usonia_iam is disabled.
+10-24 19:29:15.531  1487  4821 I ModuleSetMgr: Download of container feature vision.face is disabled.
+10-24 19:29:15.531  1487  4821 I ModuleSetMgr: Download of container feature vision.ica is disabled.
+10-24 19:29:15.531  1487  4821 I ModuleSetMgr: Download of container feature vision.ocr is disabled.
+10-24 19:29:15.540  1056  1387 D ImsResolver: maybeAddedImsService, packageName: com.android.vending
+10-24 19:29:15.544   523   836 D NetworkStatsObservers: Unregistering RequestInfo from pid/uid:523/1000(android) for DataUsageRequest [ requestId=13, networkTemplate=NetworkTemplate: matchRule=MOBILE, matchSubscriberIds=[310260...], matchWifiNetworkKeys=[], metered=YES, defaultNetwork=NO, thresholdInBytes=3431177 ] accessLevel:3
+10-24 19:29:15.546   523   759 D NetworkStatsObservers: Registering observer for RequestInfo from pid/uid:523/1000(android) for DataUsageRequest [ requestId=14, networkTemplate=NetworkTemplate: matchRule=MOBILE, matchSubscriberIds=[310260...], matchWifiNetworkKeys=[], metered=YES, defaultNetwork=NO, thresholdInBytes=3427946 ] accessLevel:3
+10-24 19:29:15.547  1487  4921 I AccountSeedingPrefetchI: AccountSeedingPrefetchInit intent operation started. [CONTEXT service_id=42 ]
+10-24 19:29:15.553  1487  1487 W gle.android.gms: Long monitor contention with owner lowpool[2] (2998) at void asac.d()(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2) waiters=0 in void asac.g(asae, long) for 215ms
+10-24 19:29:15.572   837   893 D StylusManager: Stylus InputDevice changed: 10 virtio_input_multi_touch_7
+10-24 19:29:15.588   336   368 I netd    : tetherGetStats() -> {[]} <0.34ms>
+10-24 19:29:15.590  1487  4821 I ModuleSetMgr: Pending container module APKs: []
+10-24 19:29:15.590  1487  4821 I ModuleSetMgr: Pending non-container module APKs: []
+10-24 19:29:15.602  1487  4822 W GmsTaskScheduler: ScheduledCheckinGmsTaskService is not available. This may cause the task to be lost.
+10-24 19:29:15.638  1487  4822 I Checkin : [EventLogChimeraService] Accumulating logs since 1792870140787
+10-24 19:29:15.671  1624  1691 I MediaProvider: Scanned external_primary due to REASON_DEMAND, found 0 items in 609ms, 0 inserts 0 updates 0 deletes
+10-24 19:29:15.676   837   893 D StylusManager: Stylus InputDevice changed: 9 virtio_input_multi_touch_6
+10-24 19:29:15.698   523   552 I AppBindingService: Stopping: com.google.android.apps.messaging/com.google.android.ims.binding.SystemBindingService u0
+10-24 19:29:15.726  1056  1056 D CarrierSvcBindHelper: onPackageModified: com.google.android.apps.maps
+10-24 19:29:15.733  1056  1056 D CarrierSvcBindHelper: No carrier app for: 0
+10-24 19:29:15.747  1632  1632 I GsaVoiceInteractionSrv: O received Intent { act=android.intent.action.PACKAGE_ADDED dat=package: flg=0x4000010 (has extras) }
+10-24 19:29:15.757   523   615 I RoleService: Granting default roles...
+10-24 19:29:15.764  4173  4291 I BugleRcsEngine: [58] brnl.h: RCS Configuration storage in Bugle is disabled by p/h flag, using ProvisioningEngineStateCacheUtil.getProvisioningConfigurationForGivenSimIfExist()
+10-24 19:29:15.773  4173  4291 I BugleTransport: RCS Configuration is empty. Enabled transport is Dual Reg [CONTEXT ratelimit_period="5 SECONDS" skipped=3 ]
+10-24 19:29:15.792   837   893 D StylusManager: Stylus InputDevice changed: 6 virtio_input_multi_touch_3
+10-24 19:29:15.825   523  1769 D WifiNl80211Manager: Scan result ready event
+10-24 19:29:15.842  1632  1632 I GsaVoiceInteractionSrv: O received Intent { act=android.intent.action.PACKAGE_ADDED dat=package: flg=0x4000010 (has extras) }
+10-24 19:29:15.863  4173  4289 I BugleRcsProvisioning: RcsProvisioningTrigger: SIM swap detected, restarting provisioning
+10-24 19:29:15.863  4173  4289 I BugleRcsProvisioning: RcsProvisioningTrigger: updateRcsAvailability : hint = SIM_SWAP
+10-24 19:29:15.864  4173  4289 I Bugle   : RcsAvailabilityUtilForProvisioningEngineV2: updateAvailabilityAsync, hint: SIM_SWAP
+10-24 19:29:15.864  4173  4289 I BugleRcsProvisioning: RcsAvailabilityUpdaterLocal: updateAvailabilityAsync: scheduling updateRcsAvailability call, hint: SIM_SWAP, enableWelcomePopupWithoutGoogleTos: false, reshowSuccessPopup: false
+10-24 19:29:15.864  4173  4289 W BugleRcsEngine: [57] brcu.d: [SR]: Single Registration is disabled. Skipping Single Registration capability check for subId: 1, OS.isAtLeastS:[true], enableSingleRegistrationProvisioning:[false]
+10-24 19:29:15.864  4173  4289 I BugleRcsEngine: [57] zzo.a: RcsAvailabilityLogWorkerScheduler is cancelled
+10-24 19:29:15.866  4173  4284 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of com.google.android.apps.messaging.rcsprovisioning.RcsProvisioningBroadcastReceiver@4882efb
+10-24 19:29:15.874  4173  4270 I BugleRcsEngine: [46] zzl.apply: Cancel All Provisioning work operation result is: SUCCESS, trigger is SIM_SWAP
+10-24 19:29:15.875  4173  4286 W BugleRcsEngine: [54] brcu.d: [SR]: Single Registration is disabled. Skipping Single Registration capability check for subId: 1, OS.isAtLeastS:[true], enableSingleRegistrationProvisioning:[false]
+10-24 19:29:15.875  4173  4286 I BugleRcsEngine: [54] zzn.apply: Skipping provisioning scheduling since RCS is disabled
+10-24 19:29:15.889  4173  4284 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of bdxy@209f345
+10-24 19:29:15.892  4173  4313 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of bdxy@209f345
+10-24 19:29:15.899  4173  4313 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of bdxy@209f345
+10-24 19:29:15.901  4173  4275 I BugleRcsProvisioning: RcsProvisioningTrigger: onGservicesUpdated
+10-24 19:29:15.901  4173  4275 I BugleRcsProvisioning: RcsProvisioningTrigger: updateRcsAvailability : hint = GSERVICE_UPDATE
+10-24 19:29:15.902  4173  4275 I Bugle   : RcsAvailabilityUtilForProvisioningEngineV2: updateAvailabilityAsync, hint: GSERVICE_UPDATE
+10-24 19:29:15.902  4173  4275 I BugleRcsProvisioning: RcsAvailabilityUpdaterLocal: updateAvailabilityAsync: scheduling updateRcsAvailability call, hint: GSERVICE_UPDATE, enableWelcomePopupWithoutGoogleTos: false, reshowSuccessPopup: false
+10-24 19:29:15.904  4173  4700 W BugleRcsEngine: [74] bpxc.w: Unable to send diagnostic log
+10-24 19:29:15.910  4173  4291 W BugleRcsEngine: [58] brcu.d: [SR]: Single Registration is disabled. Skipping Single Registration capability check for subId: 1, OS.isAtLeastS:[true], enableSingleRegistrationProvisioning:[false]
+10-24 19:29:15.911  4173  4291 I BugleRcsProvisioning: RcsAvailabilityUpdaterLocal: RcsAvailability configuration availability and enabled status: simId: redacted-pii:sim_id[chars:20,last3:897], SipConnectionType: DUAL_REG, isConfigurationAvailableAndEnabled: false
+10-24 19:29:15.911  4173  4291 I BugleRcsProvisioning: RcsAvailabilityUpdaterLocal: updateRcsAvailability, currentAvailability: 2, newAvailability: 2, hint: SIM_SWAP
+10-24 19:29:15.912  4173  4271 I BugleRcsProvisioning: RcsProvisioningTrigger: onRcsAvailabilityUpdate : availability is updated to RCS is disabled for this carrier by Google, lastAvailability is RCS is disabled for this carrier by Google, simId hash = 6245158458850570270, simId = redacted-pii:sim_id[chars:20,last3:897], isPev3Enabled = true
+10-24 19:29:15.922   523  1769 D WifiNative: Scan result ready event
+10-24 19:29:15.931   837   893 D StylusManager: Stylus InputDevice changed: 8 virtio_input_multi_touch_5
+10-24 19:29:15.946  4173  4289 W BugleRcsEngine: [57] brcu.d: [SR]: Single Registration is disabled. Skipping Single Registration capability check for subId: 1, OS.isAtLeastS:[true], enableSingleRegistrationProvisioning:[false]
+10-24 19:29:15.947  4173  4289 I BugleRcsProvisioning: RcsAvailabilityUpdaterLocal: RcsAvailability configuration availability and enabled status: simId: redacted-pii:sim_id[chars:20,last3:897], SipConnectionType: DUAL_REG, isConfigurationAvailableAndEnabled: false
+10-24 19:29:15.947  4173  4289 I BugleRcsProvisioning: RcsAvailabilityUpdaterLocal: updateRcsAvailability, currentAvailability: 2, newAvailability: 2, hint: GSERVICE_UPDATE
+10-24 19:29:15.948  4173  4271 I BugleRcsProvisioning: RcsProvisioningTrigger: onRcsAvailabilityUpdate : availability is updated to RCS is disabled for this carrier by Google, lastAvailability is RCS is disabled for this carrier by Google, simId hash = 6245158458850570270, simId = redacted-pii:sim_id[chars:20,last3:897], isPev3Enabled = true
+10-24 19:29:15.954  1437  2473 I HeterodyneSyncScheduler: Scheduling Phenotype for a PhenotypeSyncImmediately(6, com.google.android.gms.checkin.binary) one off with window [1, 2] in seconds [CONTEXT service_id=51 ]
+10-24 19:29:15.962  1056  1056 D CarrierSvcBindHelper: onPackageModified: com.google.android.contacts
+10-24 19:29:15.963  1056  1056 D CarrierSvcBindHelper: No carrier app for: 0
+10-24 19:29:15.965  1056  1387 D ImsResolver: maybeAddedImsService, packageName: com.google.android.apps.maps
+10-24 19:29:15.996  1057  4563 E WifiPickerTracker: Scan loop called even though app isn't visible anymore! mIsWifiEnabled=true mIsStartedState=true
+10-24 19:29:15.998   837   893 D StylusManager: Stylus InputDevice changed: 5 virtio_input_multi_touch_2
+10-24 19:29:16.016   837   893 D StylusManager: Stylus InputDevice changed: 4 virtio_input_multi_touch_1
+10-24 19:29:16.016  1056  1387 D ImsResolver: maybeAddedImsService, packageName: com.google.android.contacts
+10-24 19:29:16.020  4825  4825 I BugleRcsEngine: [2] SystemBindingService.onCreate: SystemBindingService onCreate
+10-24 19:29:16.022  4825  4871 I BugleRcsEngine: [61] bptx.run: SystemBindingService: Starting JibeService
+10-24 19:29:16.025   523  2495 D ConnectivityService: requestNetwork for uid/pid:10129/4825 activeRequest: null callbackRequest: 136 [NetworkRequest [ REQUEST id=137, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10129 RequestorUid: 10129 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+10-24 19:29:16.028  4825  4874 W BugleRcsEngine: [64] bpxc.w: Unable to send diagnostic log
+10-24 19:29:16.035   523   761 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=137, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10129 RequestorUid: 10129 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+10-24 19:29:16.037   523   761 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=137, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10129 RequestorUid: 10129 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+10-24 19:29:16.040   523   761 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=137, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10129 RequestorUid: 10129 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+10-24 19:29:16.042   523   761 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=137, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10129 RequestorUid: 10129 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+10-24 19:29:16.045   523   768 D ConnectivityService: NetReassign [137 : null → 100] [c 2] [a 5] [i 12]
+10-24 19:29:16.061  1487  1502 I PeopleGalProvider: Gal directories started.
+10-24 19:29:16.063  1487  1502 I PeopleGalProvider: Method 1 completed.
+10-24 19:29:16.064  1487  1502 I PeopleGalProvider: Method 1 finished successfully.
+10-24 19:29:16.069  1487  1502 I PeopleGalProvider: Gal directories started.
+10-24 19:29:16.071  1487  1502 I PeopleGalProvider: Method 1 completed.
+10-24 19:29:16.072  1487  1502 I PeopleGalProvider: Method 1 finished successfully.
+10-24 19:29:16.078  1487  1502 I PeopleGalProvider: Gal directories started.
+10-24 19:29:16.079  1487  1502 I PeopleGalProvider: Method 1 completed.
+10-24 19:29:16.079  1487  1502 I PeopleGalProvider: Method 1 finished successfully.
+10-24 19:29:16.085  1487  1502 I PeopleGalProvider: Gal directories started.
+10-24 19:29:16.087  1487  1502 I PeopleGalProvider: Method 1 completed.
+10-24 19:29:16.087  1487  1502 I PeopleGalProvider: Method 1 finished successfully.
+10-24 19:29:16.116   523  2514 W system_server: Long monitor contention with owner android.bg (552) at int com.android.server.am.ActivityManagerService.bindServiceInstance(android.app.IApplicationThread, android.os.IBinder, android.content.Intent, java.lang.String, android.app.IServiceConnection, long, java.lang.String, boolean, int, java.lang.String, android.app.IApplicationThread, java.lang.String, int)(ActivityManagerService.java:13404) waiters=1 in boolean com.android.server.am.ActivityManagerService.unbindService(android.app.IServiceConnection) for 206ms
+10-24 19:29:16.136  4825  4871 I BugleRcsEngine: [61] bsgz.b: EngineBroadcaster: Broadcasting provisioning intent rcs.intent.action.rcsSystemBinding to Bugle with extras redacted-pii:[null] from source SYSTEM_BINDING_SERVICE
+10-24 19:29:16.174  1487  1487 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.checkin.START pkg=com.google.android.gms }
+10-24 19:29:16.195  4173  4302 D BugleRcsEngine: log_saver already enabled
+10-24 19:29:16.201  1487  1502 I PeopleGalProvider: Gal directories started.
+10-24 19:29:16.202  1487  1502 I PeopleGalProvider: Method 1 completed.
+10-24 19:29:16.203  1487  1502 I PeopleGalProvider: Method 1 finished successfully.
+10-24 19:29:16.218  1487  1487 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.auth.cryptauth.cryptauthservice.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+10-24 19:29:16.238  1615  1615 I AiAiEcho: AppFetcherImpl onPackageChanged com.google.android.apps.messaging.
+10-24 19:29:16.269   523   625 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS
+10-24 19:29:16.288   523   940 I RemoteProvisionSysSvc: getRegistration(android.hardware.security.keymint.IRemotelyProvisionedComponent/default)
+10-24 19:29:16.289   853   962 I PermissionControllerServiceImpl: Updating user sensitive for uid 10155
+10-24 19:29:16.293   853   962 I PermissionControllerServiceImpl: Updating user sensitive for uid 10154
+10-24 19:29:16.301  1615  3237 I AiAiEcho: AppIndexer Package:[com.google.android.apps.messaging] UserProfile:[0] Enabled:[true].
+10-24 19:29:16.302  1615  3237 I AiAiEcho: AppFetcherImplV2 updateApps package:[com.google.android.apps.messaging], userId:[0], reason:[package is updated.].
+10-24 19:29:16.331  1101  2225 D EGL_emulation: app_time_stats: avg=862.27ms min=136.59ms max=2513.33ms count=4
+10-24 19:29:16.369   523   523 I RegistrationProxy: onServiceConnected: com.android.rkpdapp.service.RemoteProvisioningService
+10-24 19:29:16.378   523  1769 I RegistrationProxy: IGetRegistrationCallback.onSuccess
+10-24 19:29:16.387  4470  4540 I TestRunner: finished: pageOperations(com.csa.xreadpdf.ToolsTest)

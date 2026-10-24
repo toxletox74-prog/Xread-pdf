@@ -1,0 +1,306 @@
+10-24 19:29:12.493  4470  4540 I TestRunner: started: ocrDoesNotCrash(com.csa.xreadpdf.ToolsTest)
+10-24 19:29:12.497  1056  1387 D ImsResolver: maybeAddedImsService, packageName: com.csa.xreadpdf
+10-24 19:29:12.497  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.498  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.499  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.499  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.500  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.500  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.500  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.501  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.501   837   893 D StylusManager: Stylus InputDevice changed: 10 virtio_input_multi_touch_7
+10-24 19:29:12.501  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.502  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.502  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.502  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.502  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.503  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.504  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.504  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.505  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.505  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.506  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.506  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.507  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.507  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.507  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_ADDED
+10-24 19:29:12.511   837   893 D StylusManager: Stylus InputDevice changed: 9 virtio_input_multi_touch_6
+10-24 19:29:12.519  1487  3642 W Icing   : No valid account for uploading user actions
+10-24 19:29:12.532  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_ADDED
+10-24 19:29:12.532  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_ADDED
+10-24 19:29:12.533  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_ADDED
+10-24 19:29:12.533  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.533  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.533  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.533  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.533  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.534   837   893 D StylusManager: Stylus InputDevice changed: 6 virtio_input_multi_touch_3
+10-24 19:29:12.534  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.534  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.534  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.534  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.535  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.535  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.535  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.535  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.535  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.535  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.536  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.536  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.536  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.537  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.537  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.537  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.537  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.538  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.538  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.539  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.539  1032  1032 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 19:29:12.546   853  2651 I PermissionControllerServiceImpl: Updating user sensitive for uid 10131
+10-24 19:29:12.547   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:12.548   837   893 D StylusManager: Stylus InputDevice changed: 8 virtio_input_multi_touch_5
+10-24 19:29:12.554   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:12.558   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:12.562   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:12.563   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:12.567   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:12.567   837   893 D StylusManager: Stylus InputDevice changed: 5 virtio_input_multi_touch_2
+10-24 19:29:12.573   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:12.575   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:12.578   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:12.580  1437  1443 I .gms.persistent: Background young concurrent copying GC freed 55190(2441KB) AllocSpace objects, 4(168KB) LOS objects, 7% free, 33MB/36MB, paused 11.742ms,18us total 209.456ms
+10-24 19:29:12.581   837   893 D StylusManager: Stylus InputDevice changed: 4 virtio_input_multi_touch_1
+10-24 19:29:12.583   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:12.584   837   837 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 19:29:12.584   837   893 D StylusManager: Stylus InputDevice changed: 11 virtio_input_multi_touch_8
+10-24 19:29:12.589  1531  1531 I EmojiSuperpacksManager: EmojiSuperpacksManager.triggerSync():374 triggerSync() : isBundled = false
+10-24 19:29:12.590   523   625 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS
+10-24 19:29:12.593  1531  1531 I EmojiSuperpacksManager: EmojiSuperpacksManager.triggerSync():374 triggerSync() : isBundled = false
+10-24 19:29:12.593  1531  2276 I SP      : Registering emoji.2023020111, url: https://www.gstatic.com/android/keyboard/modelpack/emoji/20230201113008/superpacks_manifest.zip, constraints: m:*:*:*, flags: fg, requested: 2023020111, current: -1
+10-24 19:29:12.594  1531  1531 I InputMethodEntryManager: InputMethodEntryManager.startLoadingInputMethodEntrySettings():739 Start loading input method entry settings: [LanguageTagVariantTuple{languageTag=en-US, variant=qwerty}]
+10-24 19:29:12.595  1531  1531 I InputMethodEntryManager: InputMethodEntryManager.updateInputMethodEntrySettingsLoadingTask():826 update loading task with resetImplicitlyEnabledEntries is false
+10-24 19:29:12.596   853  2651 I PermissionControllerServiceImpl: Updating user sensitive for uid 10129
+10-24 19:29:12.598   853  2651 I PermissionControllerServiceImpl: Updating user sensitive for uid 10154
+10-24 19:29:12.598  1531  1531 I InputMethodEntryManager: InputMethodEntryManager$5.onFailure():869 Fail load entries [LanguageTagVariantTuple{languageTag=en-US, variant=qwerty}]
+10-24 19:29:12.598  1531  1531 I InputMethodEntryManager: InputMethodEntryManager.startLoadingInputMethodEntrySettings():739 Start loading input method entry settings: [LanguageTagVariantTuple{languageTag=en-US, variant=qwerty}]
+10-24 19:29:12.599  1531  1531 I InputMethodEntryManager: InputMethodEntryManager.updateInputMethodEntrySettingsLoadingTask():826 update loading task with resetImplicitlyEnabledEntries is false
+10-24 19:29:12.600  1531  1531 I InputMethodEntryManager: InputMethodEntryManager$5.onFailure():869 Fail load entries [LanguageTagVariantTuple{languageTag=en-US, variant=qwerty}]
+10-24 19:29:12.600  1531  1531 I InputMethodEntryManager: InputMethodEntryManager.startLoadingInputMethodEntrySettings():739 Start loading input method entry settings: [LanguageTagVariantTuple{languageTag=en-US, variant=qwerty}]
+10-24 19:29:12.601  1531  1531 I InputMethodEntryManager: InputMethodEntryManager.updateInputMethodEntrySettingsLoadingTask():826 update loading task with resetImplicitlyEnabledEntries is false
+10-24 19:29:12.602  1531  1531 I InputMethodEntryManager: InputMethodEntryManager$5.onFailure():869 Fail load entries [LanguageTagVariantTuple{languageTag=en-US, variant=qwerty}]
+10-24 19:29:12.602  1531  1531 I InputMethodEntryManager: InputMethodEntryManager.startLoadingInputMethodEntrySettings():739 Start loading input method entry settings: [LanguageTagVariantTuple{languageTag=en-US, variant=qwerty}]
+10-24 19:29:12.604  1531  1531 I InputMethodEntryManager: InputMethodEntryManager.updateInputMethodEntrySettingsLoadingTask():826 update loading task with resetImplicitlyEnabledEntries is false
+10-24 19:29:12.606  1531  1531 I InputMethodEntryManager: InputMethodEntryManager$5.onFailure():869 Fail load entries [LanguageTagVariantTuple{languageTag=en-US, variant=qwerty}]
+10-24 19:29:12.606  1531  1531 I InputMethodEntryManager: InputMethodEntryManager.startLoadingInputMethodEntrySettings():739 Start loading input method entry settings: [LanguageTagVariantTuple{languageTag=en-US, variant=qwerty}]
+10-24 19:29:12.607  1531  1531 I InputMethodEntryManager: InputMethodEntryManager.updateInputMethodEntrySettingsLoadingTask():826 update loading task with resetImplicitlyEnabledEntries is false
+10-24 19:29:12.608  1487  3642 I Icing   : Usage reports ok 0, Failed Usage reports 0, indexed 0, rejected 0
+10-24 19:29:12.609  1531  1531 I ClipboardDataHandler: ClipboardDataHandler.updateScreenshotsContentObserver():269 Disable the feature of handling screenshots in the clipboard.
+10-24 19:29:12.610  1531  1531 I InputMethodEntryManager: InputMethodEntryManager$5.onSuccess():845 Success load entries: [LanguageTagVariantTuple{languageTag=en-US, variant=qwerty}], resetImplicitlyEnabledEntries=false
+10-24 19:29:12.610  1531  1531 I DictionarySuperpacksManager: DictionarySuperpacksManager$1.onEnabledInputMethodEntriesChanged():61 onEnabledInputMethodEntriesChanged
+10-24 19:29:12.614  1531  1531 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:320
+10-24 19:29:12.621  1531  1531 I StyledKeyboardTheme: StyledKeyboardTheme.<init>():87 Pref: [], themeName: [silk:], darkMode: [false], cacheKey: [overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff1f0f7-ffb2c5ff-734dbefe1e6f4840c010420f35e14fb0]
+10-24 19:29:12.621  1531  1531 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:320
+10-24 19:29:12.622  1531  1531 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:320
+10-24 19:29:12.622  1531  1531 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:320
+10-24 19:29:12.622  1531  1531 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:320
+10-24 19:29:12.623  1531  1531 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:320
+10-24 19:29:12.623  1531  1531 I GoogleInputMethodService: GoogleInputMethodService.initializeKeyboardTheme():1343 Apply keyboard theme: theme_border_stylesheet_noshadow_gsans_pillkey_silkpopup_materiallight_phone_300_overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff1f0f7-ffb2c5ff-734dbefe1e6f4840c010420f35e14fb0_port
+10-24 19:29:12.630  1487  3642 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+10-24 19:29:12.633  1531  1531 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:320
+10-24 19:29:12.634  1531  1531 I InputMethodEntryManager: InputMethodEntryManager.startLoadingInputMethodEntrySettings():739 Start loading input method entry settings: [LanguageTagVariantTuple{languageTag=en-US, variant=qwerty}]
+10-24 19:29:12.634  1531  1531 I InputMethodEntryManager: InputMethodEntryManager.updateInputMethodEntrySettingsLoadingTask():826 update loading task with resetImplicitlyEnabledEntries is false
+10-24 19:29:12.635  1531  1531 I InputMethodEntryManager: InputMethodEntryManager$5.onSuccess():845 Success load entries: [LanguageTagVariantTuple{languageTag=en-US, variant=qwerty}], resetImplicitlyEnabledEntries=false
+10-24 19:29:12.635  1531  1531 I InputMethodEntryManager: InputMethodEntryManager.startLoadingInputMethodEntrySettings():739 Start loading input method entry settings: [LanguageTagVariantTuple{languageTag=en-US, variant=qwerty}]
+10-24 19:29:12.636  1531  1531 I InputMethodEntryManager: InputMethodEntryManager.updateInputMethodEntrySettingsLoadingTask():826 update loading task with resetImplicitlyEnabledEntries is false
+10-24 19:29:12.636  1531  1531 I InputMethodEntryManager: InputMethodEntryManager$5.onSuccess():845 Success load entries: [LanguageTagVariantTuple{languageTag=en-US, variant=qwerty}], resetImplicitlyEnabledEntries=false
+10-24 19:29:12.637  1531  1531 I InputMethodEntryManager: InputMethodEntryManager.startLoadingInputMethodEntrySettings():739 Start loading input method entry settings: [LanguageTagVariantTuple{languageTag=en-US, variant=qwerty}]
+10-24 19:29:12.639  1531  1531 I InputMethodEntryManager: InputMethodEntryManager.updateInputMethodEntrySettingsLoadingTask():826 update loading task with resetImplicitlyEnabledEntries is false
+10-24 19:29:12.639  1531  1531 I InputMethodEntryManager: InputMethodEntryManager$5.onSuccess():845 Success load entries: [LanguageTagVariantTuple{languageTag=en-US, variant=qwerty}], resetImplicitlyEnabledEntries=false
+10-24 19:29:12.640  1531  1531 I InputMethodEntryManager: InputMethodEntryManager.startLoadingInputMethodEntrySettings():739 Start loading input method entry settings: [LanguageTagVariantTuple{languageTag=en-US, variant=qwerty}]
+10-24 19:29:12.640  1531  1531 I InputMethodEntryManager: InputMethodEntryManager.updateInputMethodEntrySettingsLoadingTask():826 update loading task with resetImplicitlyEnabledEntries is false
+10-24 19:29:12.641  1531  1531 I InputMethodEntryManager: InputMethodEntryManager$5.onSuccess():845 Success load entries: [LanguageTagVariantTuple{languageTag=en-US, variant=qwerty}], resetImplicitlyEnabledEntries=false
+10-24 19:29:12.643   523   625 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS
+10-24 19:29:12.643  1531  1531 I SuperDelight: SuperDelightManager.initializeDelightSuperpacks():340 initializeDelightSuperpacks()
+10-24 19:29:12.644   837   893 D StylusManager: Stylus InputDevice changed: 14 virtio_input_multi_touch_11
+10-24 19:29:12.644  1531  1531 I SuperDelight: SuperDelightManager.getDelightMetadataUriAndVersion():1011 getDelightMetadataUriAndVersion(): Phenotype : 2023020919 : https://www.gstatic.com/android/keyboard/dictionarypack/Omei-normal/metadata.json
+10-24 19:29:12.646  1531  1531 I SuperDelight: SuperDelightAppsSuperpacksManager.initializeDelightAppsSuperpacks():92 initializeDelightAppsSuperpacks()
+10-24 19:29:12.652  1531  2268 I PhenotypeModule: PhenotypeModule.handlePhenotypeConfigurationUpdatesInternal():350 Latency of updating configurations from phenotype (experiment v4): 69
+10-24 19:29:12.652  1531  1604 I SuperDelight: SuperDelightManager.initializeDelightSuperpacks():340 initializeDelightSuperpacks()
+10-24 19:29:12.652   853  2651 I PermissionControllerServiceImpl: Updating user sensitive for uid 10131
+10-24 19:29:12.653  1531  1604 I SuperDelight: SuperDelightManager.getDelightMetadataUriAndVersion():1011 getDelightMetadataUriAndVersion(): Phenotype : 2023020919 : https://www.gstatic.com/android/keyboard/dictionarypack/Omei-normal/metadata.json
+10-24 19:29:12.655  1531  1531 I EmojiExtensionHelper: EmojiExtensionHelper.flagsUpdated():144 Received flag change: enable_emoji_tall_view{type=Boolean, finalValue=true, DEFAULT=false, PHENOTYPE=true}.
+10-24 19:29:12.655  1531  1531 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in eco
+10-24 19:29:12.655  1531  1531 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in eco
+10-24 19:29:12.656  1531  1604 I SuperDelight: SuperDelightAppsSuperpacksManager.initializeDelightAppsSuperpacks():92 initializeDelightAppsSuperpacks()
+10-24 19:29:12.660  1531  1531 I SpeechPackManager: SpeechPackManager.refreshManifest():352 refreshManifest()
+10-24 19:29:12.662  1531  1604 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214027 -> 0_resource_name_obfuscated : WaitTime = 1 ms : RunTime = 5 ms
+10-24 19:29:12.667  1531  1604 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214028 -> 0_resource_name_obfuscated : WaitTime = 10 ms : RunTime = 1 ms
+10-24 19:29:12.668  1531  1604 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in een
+10-24 19:29:12.671  1531  1604 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in een
+10-24 19:29:12.672   837   893 D StylusManager: Stylus InputDevice changed: 13 virtio_input_multi_touch_10
+10-24 19:29:12.676  1531  1604 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214034 -> 0_resource_name_obfuscated : WaitTime = 0 ms : RunTime = 1 ms
+10-24 19:29:12.679  1531  2276 I SP      : Registering emoji.2023020111, url: https://www.gstatic.com/android/keyboard/modelpack/emoji/20230201113008/superpacks_manifest.zip, constraints: m:*:*:*, flags: fg, requested: 2023020111, current: -1
+10-24 19:29:12.684   523   625 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS
+10-24 19:29:12.689   523   552 I AppBindingService: Stopping: com.google.android.apps.messaging/com.google.android.ims.binding.SystemBindingService u0
+10-24 19:29:12.698  4825  4851 W TimedProcessReaper: Scheduling killing of process to refresh configuration
+10-24 19:29:12.709  1531  1531 I SpeechPackManager: SpeechPackManager.registerManifest():451 registerManifest() : https://dl.google.com/android/voice/gboard/terse/superpacks-manifest-20210519.json
+10-24 19:29:12.710  1531  2268 I PhenotypeModule: PhenotypeModule.handlePhenotypeConfigurationUpdates():277 Latency of updating configurations from phenotype (ExperimentV4): 69
+10-24 19:29:12.715  1531  1604 I InputContextSharingModule: InputContextSharingModule.onCreate():44 onCreate()
+10-24 19:29:12.716  1531  1604 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in csi
+10-24 19:29:12.716  1531  1604 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in csi
+10-24 19:29:12.718   837   893 D StylusManager: Stylus InputDevice changed: 12 virtio_input_multi_touch_9
+10-24 19:29:12.720  1531  1602 W MetricsManager: MetricsManager.addProcessorImpl():614 Processor dzr@ebd1c64 already exists.
+10-24 19:29:12.723  1531  1604 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214033 -> 0_resource_name_obfuscated : WaitTime = 1 ms : RunTime = 5 ms
+10-24 19:29:12.724  1531  2276 I SP      : Requesting download of URL https://www.gstatic.com/android/keyboard/modelpack/emoji/20230201113008/superpacks_manifest.zip to emoji-2023020111.zip.fetched (constraints: m:b:u:l)
+10-24 19:29:12.726  1531  1531 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in eco.
+10-24 19:29:12.743   837   893 D StylusManager: Stylus InputDevice changed: 7 virtio_input_multi_touch_4
+10-24 19:29:12.744  1531  2276 W SP      : Manifest for delight is not available, version: 2023020919
+10-24 19:29:12.747  1531  2268 I PhenotypeModule: PhenotypeModule.lambda$fetchAndUpdate$2():220 fetchAndUpdate() : Success, hasFlags=true, fetchStatus=2026-10-24 19:29:11{reason=2, isFullFetch=true, success=true, isEmpty=false, isDelta=false, fetchedFlagsCount=922, deletedFlagsCount=0, updatedFlagsCount=0, totalTime=963}
+10-24 19:29:12.747  1531  2310 I SpeechPackManager: SpeechPackManager.lambda$registerManifest$4():461 registerManifest() : Fetching hash 1327534105
+10-24 19:29:12.762  1531  2276 I SP      : Registering content_cache.2022112214, url: https://www.gstatic.com/android/keyboard/modelpack/contentcache/202211221443/superpacks_manifest.json, constraints: W:*:*:*, flags: bg, requested: 2022112214, current: 2020101916
+10-24 19:29:12.766  1531  2276 I SP      : Registering emoticon_content_description.2022081613, url: https://www.gstatic.com/android/keyboard/emoticon_content_desc/202208161305/superpacks_manifest.json, constraints: W:*:*:*, flags: bg, requested: 2022081613, current: 2022081613
+10-24 19:29:12.771  1531  2276 I SuperpacksManagerImpl: SuperpacksManagerImpl$3$1.onFailure():577 emoji.registerManifest() cancelled
+10-24 19:29:12.776   853  2651 I PermissionControllerServiceImpl: Updating user sensitive for uid 10143
+10-24 19:29:12.777  1615  1615 I AiAiEcho: AppFetcherImpl onPackageChanged com.google.android.apps.messaging.
+10-24 19:29:12.777  1531  1604 I SuperDelight: SuperDelightManager.lambda$registerAndUpgradeSuperpacks$5():476 SuperDelightManager#registerAndUpgradeSuperpacks(delight): current 2022101700, required 2023020919
+10-24 19:29:12.778  4825  4825 I BugleRcsEngine: [2] SystemBindingService.onCreate: SystemBindingService onCreate
+10-24 19:29:12.778  1531  1604 I SuperDelight: SuperDelightManager.lambda$registerAndUpgradeSuperpacks$5():476 SuperDelightManager#registerAndUpgradeSuperpacks(delight): current 2022101700, required 2023020919
+10-24 19:29:12.779  1531  2276 I SP      : Registering content_cache.2022112214, url: https://www.gstatic.com/android/keyboard/modelpack/contentcache/202211221443/superpacks_manifest.json, constraints: W:*:*:*, flags: bg, requested: 2022112214, current: 2020101916
+10-24 19:29:12.788  1531  2276 I SP      : Registering transformer_concept.2023011913, url: https://www.gstatic.com/android/keyboard/modelpack/transformer_concept/2023011913/superpacks_manifest.json, constraints: *:*:*:*, flags: *, requested: 2023011913, current: -1
+10-24 19:29:12.788  1531  2276 I SP      : Registering dynamic_art.20220108, url: https://www.gstatic.com/android/keyboard/dynamic_art/20220108002302/manifest.json, constraints: *:*:*:*, flags: *, requested: 20220108, current: -1
+10-24 19:29:12.790  1531  2276 I SP      : Registering gboard-small-speech-packs.1327534105, url: https://dl.google.com/android/voice/gboard/terse/superpacks-manifest-20210519.json, constraints: m:b:*:*, flags: *, requested: 1327534105, current: 758538843
+10-24 19:29:12.792  1487  3642 I Icing   : Indexing done com.google.android.gms-apps
+10-24 19:29:12.801   523   532 I system_server: Background young concurrent copying GC freed 563002(19MB) AllocSpace objects, 43(1180KB) LOS objects, 38% free, 29MB/48MB, paused 3.718ms,47us total 195.243ms
+10-24 19:29:12.802   523  2510 D ConnectivityService: requestNetwork for uid/pid:10129/4825 activeRequest: null callbackRequest: 130 [NetworkRequest [ REQUEST id=131, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10129 RequestorUid: 10129 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+10-24 19:29:12.802   523   625 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS
+10-24 19:29:12.803  4825  4874 W BugleRcsEngine: [64] bpxc.w: Unable to send diagnostic log
+10-24 19:29:12.804  1615  3236 I AiAiEcho: AppIndexer Package:[com.google.android.apps.messaging] UserProfile:[0] Enabled:[true].
+10-24 19:29:12.804  1615  3236 I AiAiEcho: AppFetcherImplV2 updateApps package:[com.google.android.apps.messaging], userId:[0], reason:[package is updated.].
+10-24 19:29:12.811  4825  4873 I BugleRcsEngine: [63] bptx.run: SystemBindingService: Starting JibeService
+10-24 19:29:12.840   523   768 D ConnectivityService: NetReassign [131 : null → 100] [c 1] [a 30] [i 0]
+10-24 19:29:12.840   523   761 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=131, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10129 RequestorUid: 10129 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+10-24 19:29:12.840   523   761 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=131, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10129 RequestorUid: 10129 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+10-24 19:29:12.840   523   761 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=131, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10129 RequestorUid: 10129 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+10-24 19:29:12.840   523   761 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=131, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10129 RequestorUid: 10129 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]
+10-24 19:29:12.845  1531  2276 I SP      : Scheduling job with delay of 0s for {W:b:u:l, bg}, 1 candidates
+10-24 19:29:12.849  4825  4873 I BugleRcsEngine: [63] bsgz.b: EngineBroadcaster: Broadcasting provisioning intent rcs.intent.action.rcsSystemBinding to Bugle with extras redacted-pii:[null] from source SYSTEM_BINDING_SERVICE
+10-24 19:29:12.852  1531  2276 I SP      : Scheduling: download registered, 0 started, 0 paused, 1 scheduled, 1 pending: manifests:content_cache-2022112214 * {W:b:u:l, bg}
+10-24 19:29:12.863  1531  3585 I JobSchedulerImpl: JobSchedulerImpl.schedule():91 Schedule task: mdd_periodical_task_MDD.CHARGING.PERIODIC.TASK (id=-625184177). Success.
+10-24 19:29:12.866  1531  2276 I SP      : Registering delight.2023020919, url: https://www.gstatic.com/android/keyboard/dictionarypack/Omei-normal/metadata.json, constraints: m:*:*:*, flags: *, requested: 2023020919, current: 2022101700
+10-24 19:29:12.866  1531  2276 I SP      : Registering delight.2023020919, url: https://www.gstatic.com/android/keyboard/dictionarypack/Omei-normal/metadata.json, constraints: m:*:*:*, flags: *, requested: 2023020919, current: 2022101700
+10-24 19:29:12.867  1531  2276 I SuperpacksManagerImpl: SuperpacksManagerImpl$3$1.onFailure():577 content_cache.registerManifest() cancelled
+10-24 19:29:12.867  1531  2276 I SP      : Requesting download of URL https://www.gstatic.com/android/keyboard/modelpack/transformer_concept/2023011913/superpacks_manifest.json to transformer_concept-2023011913.fetched (constraints: m:b:u:l)
+10-24 19:29:12.868  1531  2276 I SP      : Requesting download of URL https://www.gstatic.com/android/keyboard/dynamic_art/20220108002302/manifest.json to dynamic_art-20220108.fetched (constraints: m:b:u:l)
+10-24 19:29:12.869   837   893 D StylusManager: Stylus InputDevice changed: 10 virtio_input_multi_touch_7
+10-24 19:29:12.870   837   893 D StylusManager: Stylus InputDevice changed: 9 virtio_input_multi_touch_6
+10-24 19:29:12.871   837   893 D StylusManager: Stylus InputDevice changed: 6 virtio_input_multi_touch_3
+10-24 19:29:12.871   837   893 D StylusManager: Stylus InputDevice changed: 8 virtio_input_multi_touch_5
+10-24 19:29:12.872   837   893 D StylusManager: Stylus InputDevice changed: 5 virtio_input_multi_touch_2
+10-24 19:29:12.873   837   893 D StylusManager: Stylus InputDevice changed: 4 virtio_input_multi_touch_1
+10-24 19:29:12.874  1531  3585 I JobSchedulerImpl: JobSchedulerImpl.schedule():91 Schedule task: mdd_periodical_task_MDD.MAINTENANCE.PERIODIC.GCM.TASK (id=-1115903610). Success.
+10-24 19:29:12.874   837   893 D StylusManager: Stylus InputDevice changed: 11 virtio_input_multi_touch_8
+10-24 19:29:12.875   837   893 D StylusManager: Stylus InputDevice changed: 14 virtio_input_multi_touch_11
+10-24 19:29:12.875   837   893 D StylusManager: Stylus InputDevice changed: 13 virtio_input_multi_touch_10
+10-24 19:29:12.876   837   893 D StylusManager: Stylus InputDevice changed: 12 virtio_input_multi_touch_9
+10-24 19:29:12.876   837   893 D StylusManager: Stylus InputDevice changed: 7 virtio_input_multi_touch_4
+10-24 19:29:12.882  1101  2225 D EGL_emulation: app_time_stats: avg=2533.28ms min=2533.28ms max=2533.28ms count=1
+10-24 19:29:12.891  1531  3585 I JobSchedulerImpl: JobSchedulerImpl.schedule():91 Schedule task: mdd_periodical_task_MDD.CELLULAR.CHARGING.PERIODIC.TASK (id=671901099). Success.
+10-24 19:29:12.899  1531  1531 I SpBackgroundTask: SuperpacksBackgroundJobService.onStartJob():23 onStartJob: android.app.job.JobParameters@81c4487
+10-24 19:29:12.900  1531  1531 I SP      : ====> Starting job {W:b:u:l, bg}
+10-24 19:29:12.904  1531  3585 I JobSchedulerImpl: JobSchedulerImpl.schedule():91 Schedule task: mdd_periodical_task_MDD.WIFI.CHARGING.PERIODIC.TASK (id=1350725024). Success.
+10-24 19:29:12.906  4470  4540 W DynamiteModule: Local module descriptor class for com.google.mlkit.dynamite.text.latin not found.
+10-24 19:29:12.909  1531  1602 I JobSchedulerImpl: JobSchedulerImpl.schedule():91 Schedule task: ExpressionDataPrunePeriodicTask (id=1111301416). Success.
+10-24 19:29:12.913  1531  1554 I putmethod.latin: Background young concurrent copying GC freed 78355(3781KB) AllocSpace objects, 221(4600KB) LOS objects, 20% free, 17MB/21MB, paused 62us,26us total 258.408ms
+10-24 19:29:12.921  4470  4889 D DecoupledTextDelegate: Start loading thin OCR module.
+10-24 19:29:12.921  1101  1121 W System  : A resource failed to call release.
+10-24 19:29:12.921  1101  1121 W System  : A resource failed to call release.
+10-24 19:29:12.921  1101  1121 W System  : A resource failed to call release.
+10-24 19:29:12.929  1531  1602 I PlayCore: UID: [10140]  PID: [1531] SplitInstallService : deferredInstall([tenoranimation_feature_split])
+10-24 19:29:12.931  1531  4890 I PlayCore: UID: [10140]  PID: [1531] SplitInstallService : Initiate binding to the service.
+10-24 19:29:12.935  1531  4890 I PlayCore: UID: [10140]  PID: [1531] SplitInstallService : Failed to bind to the service.
+10-24 19:29:12.936  1531  1531 W hle     : FeatureSplitObservationModule$requestDeferredInstall$2.onFailure():98 Failed in installing tenoranimation_feature_split.
+10-24 19:29:12.936  1531  1531 W hle     : lja: Failed to bind to the service.
+10-24 19:29:12.936  1531  1531 W hle     : 	at lit.b(PG:9)
+10-24 19:29:12.936  1531  1531 W hle     : 	at liq.run(PG:1)
+10-24 19:29:12.936  1531  1531 W hle     : 	at android.os.Handler.handleCallback(Handler.java:958)
+10-24 19:29:12.936  1531  1531 W hle     : 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-24 19:29:12.936  1531  1531 W hle     : 	at android.os.Looper.loopOnce(Looper.java:205)
+10-24 19:29:12.936  1531  1531 W hle     : 	at android.os.Looper.loop(Looper.java:294)
+10-24 19:29:12.936  1531  1531 W hle     : 	at android.os.HandlerThread.run(HandlerThread.java:67)
+10-24 19:29:12.937  1825  2128 I BlobLobber: Handling download id 2 (blob odws2_en:us_2019-09-12_270573492_release_signed)
+10-24 19:29:12.946  1437  4610 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x45000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+10-24 19:29:12.962  1531  2276 I SP      : Scheduling: job start ({W:b:u:l, bg}), 1 started, 0 paused, 0 scheduled, 1 pending: manifests:content_cache-2022112214 @ * {W:b:u:l, bg}
+10-24 19:29:12.962  1531  2276 I SP      : Requesting download of URL https://dl.google.com/android/voice/gboard/terse/superpacks-manifest-20210519.json to gboard-small-speech-packs-1327534105.fetched (constraints: m:b:u:l)
+10-24 19:29:12.962  1531  1604 I AbstractSyncResultCallback: AbstractSyncResultCallback.onFailure():36 onFailure(): delight.sync cancelled; expected if new request supersedes pending one.
+10-24 19:29:12.966  1531  3585 W MDD     : MDDManager Clearing MDD since FilesMetadata failed or needs migration.
+10-24 19:29:12.970  1531  2276 I SP      : Requesting download of URL https://www.gstatic.com/android/keyboard/modelpack/contentcache/202211221443/superpacks_manifest.json to content_cache-2022112214.fetched (constraints: W:b:u:l)
+10-24 19:29:12.971  1531  2276 I SuperpacksManagerImpl: SuperpacksManagerImpl$3$1.onFailure():577 delight.registerManifest() cancelled
+10-24 19:29:12.972  1531  2276 I SP      : Requesting download of URL https://www.gstatic.com/android/keyboard/dictionarypack/Omei-normal/metadata.json to delight-2023020919.fetched (constraints: m:b:u:l)
+10-24 19:29:12.981  1531  3585 I DownloadManager: DownloadManager.downloadInternal():385 Download for nebulae-lc-artifacts scheduled with params DownloadParams{allowMetered=false, requireCharging=false, foreground=false, immediately=false, priority=0}
+10-24 19:29:12.986  1531  1604 I SuperDelight: SuperDelightManager$2.onSuccess():635 delight sync success, adding to data file manager
+10-24 19:29:12.986  1531  1604 I DataFileManager: DataFileManager.addDataWithoutNotify():162 data en-US already exists
+10-24 19:29:12.993  1531  2276 I SP      : Syncing emoticon_content_description (2022081613) with slices: [7a635888cb828dfa2fc744b7b9b50f04], metadata: false
+10-24 19:29:12.997  1437  4610 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+10-24 19:29:13.008   336  4899 I resolv  : GetAddrInfoHandler::run: {100 100 100 983140 10140 0}
+10-24 19:29:13.010  1531  3585 I JobSchedulerImpl: JobSchedulerImpl.schedule():91 Schedule task: mdd_download_task_unmetered_battery (id=-1811300920). Success.
+10-24 19:29:13.010  1531  1531 I JobSchedulerImpl: JobSchedulerImpl$TaskRunnerJobService.onStartJob():204 onStartJob(): mdd_download_task_unmetered_battery.
+10-24 19:29:13.011  1531  1531 I MDDTaskScheduler: MDDTaskScheduler$Runner.onRunTask():41 task mdd_download_task_unmetered_battery started
+10-24 19:29:13.011  1531  1531 I DownloadManager: DownloadManager.startDownload():471 start download of nebulae-lc-artifacts
+10-24 19:29:13.013  1531  1531 I JobSchedulerImpl: JobSchedulerImpl$TaskRunnerJobService$Callback.onSuccess():379 Task: mdd_download_task_unmetered_battery successes.
+10-24 19:29:13.014  1437  3082 W ProviderHelper: Unknown dynamite feature vision.ocr
+10-24 19:29:13.018   336  4901 I resolv  : res_nmkquery: (QUERY, IN, A)
+10-24 19:29:13.018   336  4901 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7fac200cde10
+10-24 19:29:13.018   336  4901 I resolv  : doQuery: rcode=0, ancount=1, return value=64
+10-24 19:29:13.021  1531  1531 I BaseClearcutAdapter: BaseClearcutAdapter.lambda$queryAndUpdateUserCheckboxOptIn$1():266 Checkbox = false
+10-24 19:29:13.022   336  4900 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+10-24 19:29:13.022   336  4900 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7fab600c8bd0
+10-24 19:29:13.022   336  4900 I resolv  : doQuery: rcode=0, ancount=8, return value=377
+10-24 19:29:13.023  1531  4898 D TrafficStats: tagSocket(140) with statsTag=0xffffffff, statsUid=-1
+10-24 19:29:13.030  1531  4898 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/ConscryptEngineSocket;->setUseSessionTickets(Z)V (max-target-q,core-platform-api, reflection, denied)
+10-24 19:29:13.030  1531  4898 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setUseSessionTickets(Z)V (max-target-q,core-platform-api, reflection, denied)
+10-24 19:29:13.030  1531  4898 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setUseSessionTickets(Z)V (max-target-q, reflection, denied)
+10-24 19:29:13.030  1531  4898 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/ConscryptEngineSocket;->setHostname(Ljava/lang/String;)V (max-target-q,core-platform-api, reflection, denied)
+10-24 19:29:13.031  1531  4898 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setHostname(Ljava/lang/String;)V (max-target-q,core-platform-api, reflection, denied)
+10-24 19:29:13.031  1531  4898 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setHostname(Ljava/lang/String;)V (max-target-q, reflection, denied)
+10-24 19:29:13.031  1531  4898 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([B)V (max-target-q,core-platform-api, reflection, denied)
+10-24 19:29:13.031  1531  4898 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setAlpnProtocols([B)V (max-target-q, reflection, denied)
+10-24 19:29:13.033  1437  4812 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x45000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+10-24 19:29:13.076  4470  4889 W DynamiteModule: Local module descriptor class for com.google.android.gms.vision.ocr not found.
+10-24 19:29:13.084  1531  4898 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->getAlpnSelectedProtocol()[B (max-target-q,core-platform-api, reflection, denied)
+10-24 19:29:13.085  1531  4898 W putmethod.latin: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->getAlpnSelectedProtocol()[B (max-target-q, reflection, denied)
+10-24 19:29:13.096  4470  4889 I DynamiteModule: Considering local module com.google.android.gms.vision.ocr:0 and remote module com.google.android.gms.vision.ocr:0
+10-24 19:29:13.112  1437  4810 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+10-24 19:29:13.146  1531  2276 I SP      : Successfully got manifest for transformer_concept-manifest: manifests:transformer_concept-2023011913
+10-24 19:29:13.153  4470  4470 E MobileVisionBase: Error preloading model resource
+10-24 19:29:13.153  4470  4470 E MobileVisionBase: com.google.mlkit.common.MlKitException: Waiting for the text optional module to be downloaded. Please wait.
+10-24 19:29:13.153  4470  4470 E MobileVisionBase: 	at com.google.mlkit.vision.text.internal.zzd.zzb(com.google.android.gms:play-services-mlkit-text-recognition-common@@19.1.0:45)
+10-24 19:29:13.153  4470  4470 E MobileVisionBase: 	at com.google.mlkit.vision.text.internal.TextRecognizerTaskWithResource.load(com.google.android.gms:play-services-mlkit-text-recognition-common@@19.1.0:1)
+10-24 19:29:13.153  4470  4470 E MobileVisionBase: 	at com.google.mlkit.common.sdkinternal.ModelResource.zza(com.google.mlkit:common@@18.11.0:4)
+10-24 19:29:13.153  4470  4470 E MobileVisionBase: 	at com.google.mlkit.common.sdkinternal.zzn.run(Unknown Source:10)
+10-24 19:29:13.153  4470  4470 E MobileVisionBase: 	at com.google.mlkit.common.sdkinternal.zzt.run(com.google.mlkit:common@@18.11.0:2)
+10-24 19:29:13.153  4470  4470 E MobileVisionBase: 	at com.google.mlkit.common.sdkinternal.MlKitThreadPool.zze(com.google.mlkit:common@@18.11.0:4)
+10-24 19:29:13.153  4470  4470 E MobileVisionBase: 	at com.google.mlkit.common.sdkinternal.MlKitThreadPool.zzc(com.google.mlkit:common@@18.11.0:1)
+10-24 19:29:13.153  4470  4470 E MobileVisionBase: 	at com.google.mlkit.common.sdkinternal.zzi.run(Unknown Source:2)
+10-24 19:29:13.153  4470  4470 E MobileVisionBase: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 19:29:13.153  4470  4470 E MobileVisionBase: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 19:29:13.153  4470  4470 E MobileVisionBase: 	at com.google.mlkit.common.sdkinternal.MlKitThreadPool.zzd(com.google.mlkit:common@@18.11.0:2)
+10-24 19:29:13.153  4470  4470 E MobileVisionBase: 	at com.google.mlkit.common.sdkinternal.zzk.run(Unknown Source:2)
+10-24 19:29:13.153  4470  4470 E MobileVisionBase: 	at java.lang.Thread.run(Thread.java:1012)
+10-24 19:29:13.162  1531  2276 I SP      : Successfully got manifest for dynamic_art-manifest: manifests:dynamic_art-20220108
+10-24 19:29:13.166  1531  2276 I SP      : Sync for emoticon_content_description succeeded in 194 ms: no changes
+10-24 19:29:13.166  1531  2276 I SP      : Successfully got manifest for emoji-manifest: manifests:emoji-2023020111
+10-24 19:29:13.174  1531  2280 I ManagedDeviceCheckModule: ManagedDeviceCheckModule$1.onSuccess():64 notifyUnmanagedDeviceStatusChanged(): unmanagedDevice=false
+10-24 19:29:13.176  1531  2276 I SP      : <==== Finishing job {W:b:u:l, bg}, 276 ms. elapsed since start
+10-24 19:29:13.177  1531  2276 I SP      : Download stopped: manifests:content_cache-2022112214, succeeded, size: 797
+10-24 19:29:13.192  1531  2276 I SP      : GC for 'emoticon_content_description' (10) with ttl of 0 ms took 0 ms (0/0/0)
+10-24 19:29:13.193  1531  2276 I SP      : Successfully got manifest for gboard-small-speech-packs-manifest: manifests:gboard-small-speech-packs-1327534105
+10-24 19:29:13.205  1531  3585 I SpeechPackManager: SpeechPackManager$2.onSuccess():359 refreshManifest() : Refreshed URL = https://dl.google.com/android/voice/gboard/terse/superpacks-manifest-20210519.json
+10-24 19:29:13.233  1531  2276 I SP      : Syncing dynamic_art (20220108) with slices: [b1f6f47a53f7820be91b9fe247728980, 305f81355a729e382ea9f374dd286d9f], metadata: false
+10-24 19:29:13.233  1531  2276 I SP      : Syncing transformer_concept (2023011913) with slices: [2023011913_en], metadata: false
+10-24 19:29:13.251  1531  1602 E MDDMetricsProcessor: MDDMetricsProcessor.processDownloadSuccess():87 nebulae-lc-artifacts is not requested
+10-24 19:29:13.253  4470  4904 D DecoupledTextDelegate: Start loading thin OCR module.
+10-24 19:29:13.254  1437  1958 W ProviderHelper: Unknown dynamite feature vision.ocr
+10-24 19:29:13.257  4470  4904 W DynamiteModule: Local module descriptor class for com.google.android.gms.vision.ocr not found.
+10-24 19:29:13.257  4470  4904 I DynamiteModule: Considering local module com.google.android.gms.vision.ocr:0 and remote module com.google.android.gms.vision.ocr:0
+10-24 19:29:13.259  4470  4540 I XreadTest: OCR: null java.util.concurrent.ExecutionException: com.google.mlkit.common.MlKitException: Waiting for the text optional module to be downloaded. Please wait.
+10-24 19:29:13.259  4470  4540 I TestRunner: finished: ocrDoesNotCrash(com.csa.xreadpdf.ToolsTest)

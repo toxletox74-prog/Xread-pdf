@@ -1,0 +1,42 @@
+OK    ToolsTest.backupRestore
+OK    ToolsTest.ranges
+OK    ToolsTest.passwords
+OK    ToolsTest.stamps
+OK    ToolsTest.ocrTextLayer
+OK    ToolsTest.editorExportNewAnnotations
+OK    ToolsTest.forms
+OK    ToolsTest.textSearchAndOutline
+OK    ToolsTest.appStartsAndShowsLibrary
+OK    ToolsTest.compressAndImages
+OK    ToolsTest.ocrDoesNotCrash
+OK    ToolsTest.pageOperations
+OK    UiTest.libraryViewerToolsEditorSettings
+
+--- dernières étapes ---
+10-24 19:29:23.914  4470  4540 I XreadTest: UI: attend icône « Plus »
+10-24 19:29:24.019  4470  4540 I XreadTest: UI: attend texte « Toutes les pages »
+10-24 19:29:24.960  4470  4540 I XreadTest: UI: attend texte « Toutes les pages »
+10-24 19:29:25.002  4470  4540 I XreadTest: UI: menu › Sommaire et signets
+10-24 19:29:25.002  4470  4540 I XreadTest: UI: attend icône « Plus »
+10-24 19:29:25.025  4470  4540 I XreadTest: UI: attend texte « Sommaire et signets »
+10-24 19:29:25.956  4470  4540 I XreadTest: UI: attend texte « Sommaire »
+10-24 19:29:26.024  4470  4540 I XreadTest: UI: attend texte « Page 2 »
+10-24 19:29:26.483  4470  4540 I XreadTest: UI: menu › Texte de la page
+10-24 19:29:26.483  4470  4540 I XreadTest: UI: attend icône « Plus »
+10-24 19:29:26.505  4470  4540 I XreadTest: UI: attend texte « Texte de la page »
+10-24 19:29:27.333  4470  4540 I XreadTest: UI: attend texte « Tout copier »
+10-24 19:29:27.517  4470  4540 I XreadTest: UI: menu › Aller à la page…
+10-24 19:29:27.517  4470  4540 I XreadTest: UI: attend icône « Plus »
+10-24 19:29:27.593  4470  4540 I XreadTest: UI: attend texte « Aller à la page… »
+10-24 19:29:28.485  4470  4540 I XreadTest: UI: attend texte « Aller à la page »
+10-24 19:29:28.621  4470  4540 I XreadTest: UI: attend texte « Insérer une page blanche »
+10-24 19:29:30.149  4470  4540 I XreadTest: UI: attend texte « Après la page n° »
+10-24 19:29:30.591  4470  4540 I XreadTest: UI: attend texte « modifié »
+10-24 19:29:31.152  4470  4540 I XreadTest: UI: attend texte « 4 pages »
+10-24 19:29:31.617  4470  4540 I XreadTest: UI: attend texte « Formes »
+10-24 19:29:32.387  4470  4540 I XreadTest: UI: attend texte « APPROUVÉ »
+10-24 19:29:33.269  4470  4540 I XreadTest: UI: attend icône « Réglages »
+10-24 19:29:33.290  4470  4540 I XreadTest: UI: attend texte « Sauvegarder Mes PDF »
+10-24 19:29:33.711  4470  4540 I XreadTest: UI: attend texte « Mes documents »
+
+--- plantages ---

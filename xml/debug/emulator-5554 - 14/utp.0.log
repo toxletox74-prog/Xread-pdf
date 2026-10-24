@@ -1,0 +1,51 @@
+INFO: Constructing runner from config.
+INFO: Configuring Android Instrumentation driver: android_instrumentation_runtime {
+  instrumentation_info {
+    app_package: "com.csa.xreadpdf"
+    test_package: "com.csa.xreadpdf.test"
+    test_runner_class: "androidx.test.runner.AndroidJUnitRunner"
+  }
+  instrumentation_args {
+    args_map {
+      key: "additionalTestOutputDir"
+      value: "/sdcard/Android/media/com.csa.xreadpdf/additional_test_output"
+    }
+  }
+}
+am_instrument_timeout: 31536000
+
+INFO: Configuring AndroidTestApkInstallerPlugin: apks_to_install {
+  apk_paths: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/apk/debug/app-debug.apk"
+  install_options {
+  }
+  uninstall_after_test: true
+}
+apks_to_install {
+  apk_paths: "/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk"
+  install_options {
+  }
+  uninstall_after_test: true
+}
+
+INFO: No installables found in test fixture. Nothing to install.
+INFO: Installing [/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/apk/debug/app-debug.apk] on device emulator-5554.
+INFO: Installing [/home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk] on device emulator-5554.
+INFO: Start logcat streaming.
+INFO: Running Android Instrumentation driver.
+INFO: Copying files from device to host: /sdcard/Android/media/com.csa.xreadpdf/additional_test_output to /home/runner/work/Xread-pdf/Xread-pdf/android/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14
+INFO: Stop logcat streaming.
+INFO: Uninstalling com.csa.xreadpdf for device emulator-5554.
+INFO: Uninstalling com.csa.xreadpdf.test for device emulator-5554.
+INFO: Execute com.csa.xreadpdf.ToolsTest.backupRestore: PASSED
+INFO: Execute com.csa.xreadpdf.ToolsTest.ranges: PASSED
+INFO: Execute com.csa.xreadpdf.ToolsTest.passwords: PASSED
+INFO: Execute com.csa.xreadpdf.ToolsTest.stamps: PASSED
+INFO: Execute com.csa.xreadpdf.ToolsTest.ocrTextLayer: PASSED
+INFO: Execute com.csa.xreadpdf.ToolsTest.editorExportNewAnnotations: PASSED
+INFO: Execute com.csa.xreadpdf.ToolsTest.forms: PASSED
+INFO: Execute com.csa.xreadpdf.ToolsTest.textSearchAndOutline: PASSED
+INFO: Execute com.csa.xreadpdf.ToolsTest.appStartsAndShowsLibrary: PASSED
+INFO: Execute com.csa.xreadpdf.ToolsTest.compressAndImages: PASSED
+INFO: Execute com.csa.xreadpdf.ToolsTest.ocrDoesNotCrash: PASSED
+INFO: Execute com.csa.xreadpdf.ToolsTest.pageOperations: PASSED
+INFO: Execute com.csa.xreadpdf.UiTest.libraryViewerToolsEditorSettings: PASSED

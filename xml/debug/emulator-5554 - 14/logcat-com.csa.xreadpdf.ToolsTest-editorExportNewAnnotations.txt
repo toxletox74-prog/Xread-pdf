@@ -1,0 +1,156 @@
+10-24 19:28:57.170  4470  4540 I TestRunner: started: editorExportNewAnnotations(com.csa.xreadpdf.ToolsTest)
+10-24 19:28:57.200  1615  1874 I SP.AiAi : Scheduling: download stopped, 0 started, 0 paused, 1 scheduled, 4 pending: manifests:text-classifier-actions-1140547708 @ {W:b:u:l, bg}, manifests:text-classifier-langid-1941001461 @ {W:b:u:l, bg}, manifests:spelling_correction-22110320 * {W:b:I:l, bg}, kg_collections_table:collections_table_main_21980965fbd997111d89f86c16e9e090 @ {W:b:u:l, bg}
+10-24 19:28:57.210  1615  1874 I SP.AiAi : Requesting download of URL https://gstatic.com/matchmaker/kg_collections_table/21051103/collections_table_main_21980965fbd997111d89f86c16e9e090.zip to collections_table_main_21980965fbd997111d89f86c16e9e090.zip.fetched (constraints: W:b:u:l)
+10-24 19:28:57.216  1615  1771 I SP.AiAi : Syncing actions-ranking-table (211005) with slices: [table_5f787033cc44fc7a8804e0030b2bf848], metadata: false
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: Failed to apply ContentProviderOperation(type=insert uri=content://media/internal/file values={instance_id=null, compilation=null, disc_number=null, duration=10170, is_ringtone=1, album_artist=null, resolution=null, orientation=null, artist=<unknown>, author=null, height=null, is_drm=0, is_audiobook=0, date_modified=1720722121, writer=null, composer=null, _modifier=3, is_recording=0, datetaken=null, mime_type=audio/ogg, is_notification=0, bitrate=192000, cd_track_number=null, xmp=[], year=null, _data=/product/media/audio/ringtones/Perseus.ogg, _size=236343, album=ringtones, genre=null, is_alarm=0, title=Perseus, track=null, width=null, is_music=0, document_id=null, is_podcast=0, capture_framerate=null, num_tracks=1, original_document_id=null, media_type=2} exceptionAllowed)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: files._data (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.util.DatabaseUtils.executeInsert(DatabaseUtils.java:456)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.util.SQLiteQueryBuilder.insert(SQLiteQueryBuilder.java:611)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.util.SQLiteQueryBuilder.lambda$insert$1(SQLiteQueryBuilder.java:575)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.util.SQLiteQueryBuilder.$r8$lambda$z6PmNgi8nEawad46M5nyYc14aRM(SQLiteQueryBuilder.java:0)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.util.SQLiteQueryBuilder$$ExternalSyntheticLambda4.apply(R8$$SyntheticClass:0)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.DatabaseHelper.runWithTransaction(DatabaseHelper.java:850)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.util.SQLiteQueryBuilder.insert(SQLiteQueryBuilder.java:574)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.lambda$insertAllowingUpsert$20(MediaProvider.java:4846)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.$r8$lambda$A8_bSAcDGkyGiCcvRo57xoMQkf8(MediaProvider.java:0)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider$$ExternalSyntheticLambda39.apply(R8$$SyntheticClass:0)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.DatabaseHelper.runWithTransaction(DatabaseHelper.java:850)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.insertAllowingUpsert(MediaProvider.java:4836)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.insertFile(MediaProvider.java:4818)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.insertInternal(MediaProvider.java:5287)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.insert(MediaProvider.java:4980)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at android.content.ContentProviderOperation.applyInternal(ContentProviderOperation.java:375)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at android.content.ContentProviderOperation.apply(ContentProviderOperation.java:347)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at android.content.ContentProvider.applyBatch(ContentProvider.java:2653)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.applyBatch(MediaProvider.java:5339)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at android.content.ContentProvider.applyBatch(ContentProvider.java:2644)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at android.content.ContentResolver.applyBatch(ContentResolver.java:2246)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.applyPending(ModernMediaScanner.java:938)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.maybeApplyPending(ModernMediaScanner.java:928)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.visitFile(ModernMediaScanner.java:834)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.visitFile(ModernMediaScanner.java:319)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at java.nio.file.Files.walkFileTree(Files.java:2670)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at java.nio.file.Files.walkFileTree(Files.java:2742)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.walkFileTree(ModernMediaScanner.java:435)
+10-24 19:28:57.222  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.runInternal(ModernMediaScanner.java:398)
+10-24 19:28:57.229  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.run(ModernMediaScanner.java:387)
+10-24 19:28:57.229  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner.scanDirectory(ModernMediaScanner.java:246)
+10-24 19:28:57.229  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.scanDirectory(MediaProvider.java:1939)
+10-24 19:28:57.229  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaService.onScanVolume(MediaService.java:204)
+10-24 19:28:57.229  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaService.onScanVolume(MediaService.java:172)
+10-24 19:28:57.229  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaService.onHandleWork(MediaService.java:95)
+10-24 19:28:57.229  1624  2357 W ModernMediaScanner: 	at androidx.core.app.JobIntentService$CommandProcessor.doInBackground(JobIntentService.java:396)
+10-24 19:28:57.229  1624  2357 W ModernMediaScanner: 	at androidx.core.app.JobIntentService$CommandProcessor.doInBackground(JobIntentService.java:387)
+10-24 19:28:57.229  1624  2357 W ModernMediaScanner: 	at android.os.AsyncTask$3.call(AsyncTask.java:394)
+10-24 19:28:57.229  1624  2357 W ModernMediaScanner: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-24 19:28:57.229  1624  2357 W ModernMediaScanner: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 19:28:57.229  1624  2357 W ModernMediaScanner: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 19:28:57.229  1624  2357 W ModernMediaScanner: 	at java.lang.Thread.run(Thread.java:1012)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: Failed to apply ContentProviderOperation(type=insert uri=content://media/internal/file values={instance_id=null, compilation=null, disc_number=null, duration=3498, is_ringtone=1, album_artist=null, resolution=null, orientation=null, artist=<unknown>, author=null, height=null, is_drm=0, is_audiobook=0, date_modified=1720722121, writer=null, composer=null, _modifier=3, is_recording=0, datetaken=null, mime_type=audio/ogg, is_notification=0, bitrate=80000, cd_track_number=null, xmp=[], year=null, _data=/product/media/audio/ringtones/CanisMajor.ogg, _size=31133, album=ringtones, genre=null, is_alarm=0, title=Canis Major, track=null, width=null, is_music=0, document_id=null, is_podcast=0, capture_framerate=null, num_tracks=1, original_document_id=null, media_type=2} exceptionAllowed)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: files._data (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.util.DatabaseUtils.executeInsert(DatabaseUtils.java:456)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.util.SQLiteQueryBuilder.insert(SQLiteQueryBuilder.java:611)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.util.SQLiteQueryBuilder.lambda$insert$1(SQLiteQueryBuilder.java:575)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.util.SQLiteQueryBuilder.$r8$lambda$z6PmNgi8nEawad46M5nyYc14aRM(SQLiteQueryBuilder.java:0)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.util.SQLiteQueryBuilder$$ExternalSyntheticLambda4.apply(R8$$SyntheticClass:0)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.DatabaseHelper.runWithTransaction(DatabaseHelper.java:850)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.util.SQLiteQueryBuilder.insert(SQLiteQueryBuilder.java:574)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.lambda$insertAllowingUpsert$20(MediaProvider.java:4846)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.$r8$lambda$A8_bSAcDGkyGiCcvRo57xoMQkf8(MediaProvider.java:0)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider$$ExternalSyntheticLambda39.apply(R8$$SyntheticClass:0)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.DatabaseHelper.runWithTransaction(DatabaseHelper.java:850)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.insertAllowingUpsert(MediaProvider.java:4836)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.insertFile(MediaProvider.java:4818)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.insertInternal(MediaProvider.java:5287)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.insert(MediaProvider.java:4980)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at android.content.ContentProviderOperation.applyInternal(ContentProviderOperation.java:375)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at android.content.ContentProviderOperation.apply(ContentProviderOperation.java:347)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at android.content.ContentProvider.applyBatch(ContentProvider.java:2653)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.applyBatch(MediaProvider.java:5339)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at android.content.ContentProvider.applyBatch(ContentProvider.java:2644)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at android.content.ContentResolver.applyBatch(ContentResolver.java:2246)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.applyPending(ModernMediaScanner.java:938)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.maybeApplyPending(ModernMediaScanner.java:928)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.visitFile(ModernMediaScanner.java:834)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.visitFile(ModernMediaScanner.java:319)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at java.nio.file.Files.walkFileTree(Files.java:2670)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at java.nio.file.Files.walkFileTree(Files.java:2742)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.walkFileTree(ModernMediaScanner.java:435)
+10-24 19:28:57.230  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.runInternal(ModernMediaScanner.java:398)
+10-24 19:28:57.231  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.run(ModernMediaScanner.java:387)
+10-24 19:28:57.231  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner.scanDirectory(ModernMediaScanner.java:246)
+10-24 19:28:57.231  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.scanDirectory(MediaProvider.java:1939)
+10-24 19:28:57.231  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaService.onScanVolume(MediaService.java:204)
+10-24 19:28:57.231  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaService.onScanVolume(MediaService.java:172)
+10-24 19:28:57.231  1624  2357 W ModernMediaScanner: 	at com.android.providers.media.MediaService.onHandleWork(MediaService.java:95)
+10-24 19:28:57.231  1624  2357 W ModernMediaScanner: 	at androidx.core.app.JobIntentService$CommandProcessor.doInBackground(JobIntentService.java:396)
+10-24 19:28:57.231  1624  2357 W ModernMediaScanner: 	at androidx.core.app.JobIntentService$CommandProcessor.doInBackground(JobIntentService.java:387)
+10-24 19:28:57.231  1624  2357 W ModernMediaScanner: 	at android.os.AsyncTask$3.call(AsyncTask.java:394)
+10-24 19:28:57.231  1624  2357 W ModernMediaScanner: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-24 19:28:57.231  1624  2357 W ModernMediaScanner: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 19:28:57.231  1624  2357 W ModernMediaScanner: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 19:28:57.231  1624  2357 W ModernMediaScanner: 	at java.lang.Thread.run(Thread.java:1012)
+10-24 19:28:57.244  1615  1771 I SP.AiAi : Scheduling job with delay of 0s for {W:b:I:l, bg}, 1 candidates
+10-24 19:28:57.249  1615  1771 I SP.AiAi : Scheduling: download registered, 1 started, 0 paused, 1 scheduled, 5 pending: manifests:text-classifier-actions-1140547708 @ {W:b:u:l, bg}, manifests:text-classifier-langid-1941001461 @ {W:b:u:l, bg}, manifests:spelling_correction-22110320 * {W:b:I:l, bg}, kg_collections_table:collections_table_main_21980965fbd997111d89f86c16e9e090 @ {W:b:u:l, bg}, actions-ranking-table:table_5f787033cc44fc7a8804e0030b2bf848 @ * {W:b:u:l, bg}
+10-24 19:28:57.251  1615  1771 I SP.AiAi : Syncing text-classifier-annotator (272525175) with slices: [tc_model_a3d2c1298643d7cc3b5703308fd5b2d0], metadata: false
+10-24 19:28:57.269  1615  1874 I SP.AiAi : Requesting download of URL https://gstatic.com/matchmaker/kg_actions_ranking_table/211005/table_5f787033cc44fc7a8804e0030b2bf848.zip to table_5f787033cc44fc7a8804e0030b2bf848.zip.fetched (constraints: W:b:u:l)
+10-24 19:28:57.272  1819  2014 I HttpGrpcBindableService: Downloading requested for URL 'https://gstatic.com/matchmaker/kg_collections_table/21051103/collections_table_main_21980965fbd997111d89f86c16e9e090.zip'
+10-24 19:28:57.274  1615  1771 I SP.AiAi : Scheduling job with delay of 0s for {W:b:I:l, bg}, 1 candidates
+10-24 19:28:57.277  1615  1771 I SP.AiAi : Scheduling: download registered, 1 started, 0 paused, 1 scheduled, 6 pending: manifests:text-classifier-actions-1140547708 @ {W:b:u:l, bg}, manifests:text-classifier-langid-1941001461 @ {W:b:u:l, bg}, manifests:spelling_correction-22110320 * {W:b:I:l, bg}, kg_collections_table:collections_table_main_21980965fbd997111d89f86c16e9e090 @ {W:b:u:l, bg}, actions-ranking-table:table_5f787033cc44fc7a8804e0030b2bf848 @ {W:b:u:l, bg}, text-classifier-annotator:tc_model_a3d2c1298643d7cc3b5703308fd5b2d0 @ * {W:b:u:l, bg}
+10-24 19:28:57.278  1615  1874 I SP.AiAi : Requesting download of URL https://gstatic.com/matchmaker/tclib_models/annotator/v803/en/tc_model_a3d2c1298643d7cc3b5703308fd5b2d0.zip to tc_model_a3d2c1298643d7cc3b5703308fd5b2d0.zip.fetched (constraints: W:b:u:l)
+10-24 19:28:57.287  4470  4540 W PdfBox-Android: Using fallback font LiberationSans for Helvetica-Bold
+10-24 19:28:57.297  1819  2014 I HttpGrpcBindableService: Responding with header information for URL 'https://gstatic.com/matchmaker/kg_collections_table/21051103/collections_table_main_21980965fbd997111d89f86c16e9e090.zip'
+10-24 19:28:57.298  1819  3230 I HttpGrpcBindableService: [pfd-write] DOWNLOAD COMPLETE: Downloaded 613 bytes from URL [https://gstatic.com/matchmaker/kg_collections_table/21051103/collections_table_main_21980965fbd997111d89f86c16e9e090.zip].
+10-24 19:28:57.302  1437  4350 I Nearby  : [MBleClient] Start ble scanning from NearbyDirect:BluetoothAdapterWrapper, context tag = nearby_messages [CONTEXT service_id=49 ]
+10-24 19:28:57.302  1437  4350 D BluetoothAdapter: isLeEnabled(): ON
+10-24 19:28:57.305  1032  1053 D BtGatt.GattService: stopScan() - queue size =2
+10-24 19:28:57.307  1032  1053 D ActivityAttributionService: notifyActivityAttributionInfo UID=1002 packageName=com.google.android.bluetooth deviceAddress=no_active_device_address
+10-24 19:28:57.307  1032  1053 I bt_btif : packages/modules/Bluetooth/system/btif/src/bluetooth.cc:829 get_profile_interface: get_profile_interface: id = activity_attribution
+10-24 19:28:57.308  1032  1258 D BtGatt.ScanManager: handling stopping scan  [ScanClient scanModeApp 2 scanModeUsed 2 [appScanStats com.google.uid.shared:10131]]
+10-24 19:28:57.308  1032  1258 D BtGatt.ScanManager: stop gattClientScanNative
+10-24 19:28:57.309  1032  1258 I bt_stack: [INFO:le_scanning_manager.cc(168)] Scan in shim layer stopped
+10-24 19:28:57.309  1032  1196 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:193 unregister_client: Client unregistered
+10-24 19:28:57.309  1032  1196 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:197 unregister_client: Cancelled address rotation alarm
+10-24 19:28:57.310  1032  1258 I bt_stack: [INFO:le_scanning_manager.cc(204)] ScanFilterParamSetup in shim layer
+10-24 19:28:57.311  1032  1217 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=2, status=0, action=0, availableSpace=0
+10-24 19:28:57.312  1032  1217 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 19:28:57.312  1032  1258 I bt_stack: [INFO:le_scanning_manager.cc(204)] ScanFilterParamSetup in shim layer
+10-24 19:28:57.313  1032  1217 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=2, status=0, action=0, availableSpace=0
+10-24 19:28:57.313  1032  1217 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 19:28:57.313  1032  1258 I bt_stack: [INFO:le_scanning_manager.cc(204)] ScanFilterParamSetup in shim layer
+10-24 19:28:57.314  1032  1217 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=2, status=0, action=0, availableSpace=0
+10-24 19:28:57.314  1032  1217 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 19:28:57.315  1032  1258 I bt_stack: [INFO:le_scanning_manager.cc(204)] ScanFilterParamSetup in shim layer
+10-24 19:28:57.315  1032  1217 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=2, status=0, action=0, availableSpace=0
+10-24 19:28:57.316  1032  1217 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 19:28:57.316  1032  1258 I bt_stack: [INFO:le_scanning_manager.cc(204)] ScanFilterParamSetup in shim layer
+10-24 19:28:57.317  1032  1217 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=2, status=0, action=0, availableSpace=0
+10-24 19:28:57.317  1032  1217 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 19:28:57.317  1032  1258 D BtGatt.ScanManager: configureRegularScanParams() - queue=1
+10-24 19:28:57.317  1032  1258 D BtGatt.ScanManager: configureRegularScanParams() - queue empty, scan stopped
+10-24 19:28:57.319  1032  1053 D BtGatt.GattService: unregisterScanner() - scannerId=2
+10-24 19:28:57.320  1032  1053 I bt_stack: [INFO:le_scanning_manager.cc(162)] Unregister in shim layer, scanner_id:2
+10-24 19:28:57.321  1437  4350 I Nearby  : [MBleClient] M hardware scan: 1 clients, scanMode= OPPORTUNISTIC, filters size = 5 [CONTEXT service_id=49 ]
+10-24 19:28:57.321  1437  4350 D BluetoothAdapter: isLeEnabled(): ON
+10-24 19:28:57.322  1032  1053 D BtGatt.GattService: registerScanner() - UUID=ee78e062-4207-470f-9aad-030819b1f029
+10-24 19:28:57.323  1032  1053 I bt_stack: [INFO:le_scanning_manager.cc(155)] RegisterScanner in shim layer
+10-24 19:28:57.323  1032  1217 D BtGatt.GattService: onScannerRegistered() - UUID=ee78e062-4207-470f-9aad-030819b1f029, scannerId=2, status=0
+10-24 19:28:57.323  1437  2702 D BluetoothLeScanner: onScannerRegistered() - status=0 scannerId=2 mScannerId=0
+10-24 19:28:57.324  1032  1053 D BtGatt.GattService: start scan with filters
+10-24 19:28:57.325  1032  1053 D BtGatt.GattService: enforcePrivilegedPermissionIfNeeded([BluetoothLeScanFilter [mDeviceName=null, mDeviceAddress=null, mUuid=null, mUuidMask=null, mServiceSolicitationUuid=null, mServiceSolicitationUuidMask=null, mServiceDataUuid=null, mServiceData=null, mServiceDataMask=null, mManufacturerId=224, mManufacturerData=[0, 0, 0], mManufacturerDataMask=[0, 0, -1], mAdvertisingDataType=-1, mAdvertisingData=null, mAdvertisingDataMask=null, mTransportBlockFilter=null], BluetoothLeScanFilter [mDeviceName=null, mDeviceAddress=null, mUuid=0000fef3-0000-1000-8000-00805f9b34fb, mUuidMask=null, mServiceSolicitationUuid=null, mServiceSolicitationUuidMask=null, mServiceDataUuid=null, mServiceData=null, mServiceDataMask=null, mManufacturerId=-1, mManufacturerData=null, mManufacturerDataMask=null, mAdvertisingDataType=-1, mAdvertisingData=null, mAdvertisingDataMask=null, mTransportBlockFilter=null], BluetoothLeScanFilter [mDeviceName=null, mDeviceAddress=null, mUuid=0000feaa-0000-1000-8000-00805f9b34fb, mUuidMask=null, mServiceSolicitationUuid=null, mServiceSolicitationUuidMask=null, mServiceDataUuid=null, mServiceData=null, mServiceDataMask=null, mManufacturerId=-1, mManufacturerData=null, mManufacturerDataMask=null, mAdvertisingDataType=-1, mAdvertisingData=null, mAdvertisingDataMask=null, mTransportBlockFilter=null], BluetoothLeScanFilter [mDeviceName=null, mDeviceAddress=null, mUuid=0000fea0-0000-1000-8000-00805f9b34fb, mUuidMask=null, mServiceSolicitationUuid=null, mServiceSolicitationUuidMask=null, mServiceDataUuid=null, mServiceData=null, mServiceDataMask=null, mManufacturerId=-1, mManufacturerData=null, mManufacturerDataMask=null, mAdvertisingDataType=-1, mAdvertisingData=null, mAdvertisingDataMask=null, mTransportBlockFilter=null], BluetoothLeScanFilter [mDeviceName=null, mDeviceAddress=null, mUuid=null, mUuidMask=null, mServiceSolicitationUuid=null, mServiceSolicitationUuidMask=null, mServiceDataUuid=null, mServiceData=null, mServiceDataMask=null, mManufacturerId=76, mManufacturerData=[2, 21], mManufacturerDataMask=[-1, -1], mAdvertisingDataType=-1, mAdvertisingData=null, mAdvertisingDataMask=null, mTransportBlockFilter=null]])
+10-24 19:28:57.327  1032  1053 D BtGatt.ScanManager: startScan()  [ScanClient scanModeApp -1 scanModeUsed -1 [appScanStats com.google.uid.shared:10131]]
+10-24 19:28:57.327  1032  1053 D ActivityAttributionService: notifyActivityAttributionInfo UID=1002 packageName=com.google.android.bluetooth deviceAddress=no_active_device_address
+10-24 19:28:57.327  1032  1053 I bt_btif : packages/modules/Bluetooth/system/btif/src/bluetooth.cc:829 get_profile_interface: get_profile_interface: id = activity_attribution
+10-24 19:28:57.328  1032  1258 D BtGatt.ScanManager: handling starting scan
+10-24 19:28:57.331  1615  1989 I AstreaHttpConnection: Started download from url='https://gstatic.com/matchmaker/kg_collections_table/21051103/collections_table_main_21980965fbd997111d89f86c16e9e090.zip'
+10-24 19:28:57.332  1615  1874 I SP.AiAi : Download stopped: manifests:text-classifier-actions-1140547708, succeeded, size: 408
+10-24 19:28:57.335  1615  1989 I AstreaHttpConnection: Download completed for url [https://gstatic.com/matchmaker/kg_collections_table/21051103/collections_table_main_21980965fbd997111d89f86c16e9e090.zip].
+10-24 19:28:57.343  4470  4540 I TestRunner: finished: editorExportNewAnnotations(com.csa.xreadpdf.ToolsTest)

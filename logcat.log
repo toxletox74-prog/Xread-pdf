@@ -1,0 +1,40 @@
+--------- beginning of main
+10-24 19:29:13.259  4470  4540 I XreadTest: OCR: null java.util.concurrent.ExecutionException: com.google.mlkit.common.MlKitException: Waiting for the text optional module to be downloaded. Please wait.
+10-24 19:29:17.345  4470  4540 I XreadTest: UI: attend texte « Contrat »
+10-24 19:29:17.604  4470  4540 I XreadTest: UI: attend texte « 3 pages »
+10-24 19:29:18.464  4470  4540 I XreadTest: UI: attend icône « Rechercher »
+10-24 19:29:19.346  4470  4540 I XreadTest: UI: attend texte « Résultat 1 / 1 »
+10-24 19:29:21.276  4470  4540 I XreadTest: UI: attend icône « Retirer le signet »
+10-24 19:29:21.393  4470  4540 I XreadTest: UI: menu › Page par page
+10-24 19:29:21.393  4470  4540 I XreadTest: UI: attend icône « Plus »
+10-24 19:29:21.419  4470  4540 I XreadTest: UI: attend texte « Page par page »
+10-24 19:29:22.771  4470  4540 I XreadTest: UI: attend texte « 2 / 3 »
+10-24 19:29:22.776  4470  4540 I XreadTest: UI: menu › Mode nuit
+10-24 19:29:22.776  4470  4540 I XreadTest: UI: attend icône « Plus »
+10-24 19:29:22.806  4470  4540 I XreadTest: UI: attend texte « Mode nuit »
+10-24 19:29:23.913  4470  4540 I XreadTest: UI: menu › Toutes les pages
+10-24 19:29:23.914  4470  4540 I XreadTest: UI: attend icône « Plus »
+10-24 19:29:24.019  4470  4540 I XreadTest: UI: attend texte « Toutes les pages »
+10-24 19:29:24.960  4470  4540 I XreadTest: UI: attend texte « Toutes les pages »
+10-24 19:29:25.002  4470  4540 I XreadTest: UI: menu › Sommaire et signets
+10-24 19:29:25.002  4470  4540 I XreadTest: UI: attend icône « Plus »
+10-24 19:29:25.025  4470  4540 I XreadTest: UI: attend texte « Sommaire et signets »
+10-24 19:29:25.956  4470  4540 I XreadTest: UI: attend texte « Sommaire »
+10-24 19:29:26.024  4470  4540 I XreadTest: UI: attend texte « Page 2 »
+10-24 19:29:26.483  4470  4540 I XreadTest: UI: menu › Texte de la page
+10-24 19:29:26.483  4470  4540 I XreadTest: UI: attend icône « Plus »
+10-24 19:29:26.505  4470  4540 I XreadTest: UI: attend texte « Texte de la page »
+10-24 19:29:27.333  4470  4540 I XreadTest: UI: attend texte « Tout copier »
+10-24 19:29:27.517  4470  4540 I XreadTest: UI: menu › Aller à la page…
+10-24 19:29:27.517  4470  4540 I XreadTest: UI: attend icône « Plus »
+10-24 19:29:27.593  4470  4540 I XreadTest: UI: attend texte « Aller à la page… »
+10-24 19:29:28.485  4470  4540 I XreadTest: UI: attend texte « Aller à la page »
+10-24 19:29:28.621  4470  4540 I XreadTest: UI: attend texte « Insérer une page blanche »
+10-24 19:29:30.149  4470  4540 I XreadTest: UI: attend texte « Après la page n° »
+10-24 19:29:30.591  4470  4540 I XreadTest: UI: attend texte « modifié »
+10-24 19:29:31.152  4470  4540 I XreadTest: UI: attend texte « 4 pages »
+10-24 19:29:31.617  4470  4540 I XreadTest: UI: attend texte « Formes »
+10-24 19:29:32.387  4470  4540 I XreadTest: UI: attend texte « APPROUVÉ »
+10-24 19:29:33.269  4470  4540 I XreadTest: UI: attend icône « Réglages »
+10-24 19:29:33.290  4470  4540 I XreadTest: UI: attend texte « Sauvegarder Mes PDF »
+10-24 19:29:33.711  4470  4540 I XreadTest: UI: attend texte « Mes documents »

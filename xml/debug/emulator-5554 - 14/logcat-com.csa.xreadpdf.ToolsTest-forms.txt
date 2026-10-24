@@ -1,0 +1,16 @@
+10-24 19:28:57.344  4470  4540 I TestRunner: started: forms(com.csa.xreadpdf.ToolsTest)
+10-24 19:28:57.353  1615  1874 I SP.AiAi : Scheduling job with delay of 0s for {W:b:I:l, bg}, 1 candidates
+10-24 19:28:57.391  1615  1771 I SP.AiAi : Successfully got manifest for text-classifier-actions-manifest: manifests:text-classifier-actions-1140547708
+10-24 19:28:57.395  1615  3255 I AiAiTextClassifier: [ResourceDownloaderImpl]: downloadResource(): Successfully loaded embedded superpacks manifest for 'text-classifier-actions' (download version 1140547708), starting to download superpack.
+10-24 19:28:57.408  1819  2014 I HttpGrpcBindableService: Downloading requested for URL 'https://gstatic.com/matchmaker/kg_actions_ranking_table/211005/table_5f787033cc44fc7a8804e0030b2bf848.zip'
+10-24 19:28:57.415  1615  1874 I SP.AiAi : Scheduling: download stopped, 0 started, 0 paused, 1 scheduled, 5 pending: manifests:text-classifier-langid-1941001461 @ {W:b:u:l, bg}, manifests:spelling_correction-22110320 * {W:b:I:l, bg}, kg_collections_table:collections_table_main_21980965fbd997111d89f86c16e9e090 @ {W:b:u:l, bg}, actions-ranking-table:table_5f787033cc44fc7a8804e0030b2bf848 @ {W:b:u:l, bg}, text-classifier-annotator:tc_model_a3d2c1298643d7cc3b5703308fd5b2d0 @ {W:b:u:l, bg}
+10-24 19:28:57.418  1615  1874 I SP.AiAi : Download stopped: manifests:text-classifier-langid-1941001461, succeeded, size: 399
+10-24 19:28:57.436  1819  2014 I HttpGrpcBindableService: Responding with header information for URL 'https://gstatic.com/matchmaker/kg_actions_ranking_table/211005/table_5f787033cc44fc7a8804e0030b2bf848.zip'
+10-24 19:28:57.438  1819  3230 I HttpGrpcBindableService: [pfd-write] DOWNLOAD COMPLETE: Downloaded 309 bytes from URL [https://gstatic.com/matchmaker/kg_actions_ranking_table/211005/table_5f787033cc44fc7a8804e0030b2bf848.zip].
+10-24 19:28:57.439  1615  1989 I AstreaHttpConnection: Started download from url='https://gstatic.com/matchmaker/kg_actions_ranking_table/211005/table_5f787033cc44fc7a8804e0030b2bf848.zip'
+10-24 19:28:57.439  1615  1989 I AstreaHttpConnection: Download completed for url [https://gstatic.com/matchmaker/kg_actions_ranking_table/211005/table_5f787033cc44fc7a8804e0030b2bf848.zip].
+10-24 19:28:57.461  1615  1771 I SP.AiAi : Successfully got manifest for text-classifier-langid-manifest: manifests:text-classifier-langid-1941001461
+10-24 19:28:57.465  1615  1874 I SP.AiAi : Scheduling job with delay of 0s for {W:b:I:l, bg}, 1 candidates
+10-24 19:28:57.469  1819  2014 I HttpGrpcBindableService: Downloading requested for URL 'https://gstatic.com/matchmaker/tclib_models/annotator/v803/en/tc_model_a3d2c1298643d7cc3b5703308fd5b2d0.zip'
+10-24 19:28:57.477  1615  3255 I AiAiTextClassifier: [ResourceDownloaderImpl]: downloadResource(): Successfully loaded embedded superpacks manifest for 'text-classifier-langid' (download version 1941001461), starting to download superpack.
+10-24 19:28:57.486  4470  4540 I TestRunner: finished: forms(com.csa.xreadpdf.ToolsTest)

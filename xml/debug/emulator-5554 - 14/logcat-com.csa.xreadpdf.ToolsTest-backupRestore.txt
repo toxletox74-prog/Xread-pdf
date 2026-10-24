@@ -1,0 +1,164 @@
+10-24 19:28:54.536  4470  4540 I TestRunner: started: backupRestore(com.csa.xreadpdf.ToolsTest)
+10-24 19:28:54.540  1615  1615 I SP.AiAi : ====> Starting job {m:b:u:l, bg}
+10-24 19:28:54.554  1615  1874 I SP.AiAi : Scheduling job with delay of 0s for {W:b:I:l, bg}, 1 candidates
+10-24 19:28:54.563  1615  1874 I SP.AiAi : Scheduling job with delay of 0s for {W:b:u:l, bg}, 5 candidates
+10-24 19:28:54.568  1615  1615 I SP.AiAi : ====> Starting job {W:b:u:l, bg}
+10-24 19:28:54.573  1615  1874 I SP.AiAi : Scheduling: download stopped, 0 started, 0 paused, 7 scheduled, 7 pending: manifests:webref-2-en-us-19071200 * {m:b:u:l, bg}, manifests:kg_collections_table-21051103 * {W:b:u:l, bg}, manifests:actions-ranking-table-211005 * {W:b:u:l, bg}, manifests:text-classifier-annotator-272525175 * {W:b:u:l, bg}, manifests:text-classifier-actions-1140547708 * {W:b:u:l, bg}, manifests:text-classifier-langid-1941001461 * {W:b:u:l, bg}, manifests:spelling_correction-22110320 * {W:b:I:l, bg}
+10-24 19:28:54.714  1487  3603 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+10-24 19:28:54.721  1487  3603 I Icing   : Indexing done com.google.android.gms-apps
+10-24 19:28:54.797  1487  3603 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+10-24 19:28:54.799  1487  3603 I Icing   : Indexing done com.google.android.gms-apps
+10-24 19:28:54.800  1437  2647 W SemanticLocation: [Settings] Failed to getPlaceIndexCacheEncryptionKey [CONTEXT service_id=173 ]
+10-24 19:28:54.800  1437  2647 W SemanticLocation: java.util.concurrent.TimeoutException: Waited 5000 milliseconds (plus 296573 nanoseconds delay) for dlnx@70cb24a[status=PENDING, info=[function=[bzrs@df6a5bb]]]
+10-24 19:28:54.800  1437  2647 W SemanticLocation: 	at dlnv.get(:com.google.android.gms@231818047@23.18.18 (190800-535401451):30)
+10-24 19:28:54.800  1437  2647 W SemanticLocation: 	at bzta.z(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+10-24 19:28:54.800  1437  2647 W SemanticLocation: 	at cadn.s(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-24 19:28:54.800  1437  2647 W SemanticLocation: 	at cadn.i(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 19:28:54.800  1437  2647 W SemanticLocation: 	at com.google.android.gms.semanticlocation.service.SemanticLocationChimeraService.i(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 19:28:54.800  1437  2647 W SemanticLocation: 	at cacs.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):140)
+10-24 19:28:54.800  1437  2647 W SemanticLocation: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+10-24 19:28:54.800  1437  2647 W SemanticLocation: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-24 19:28:54.800  1437  2647 W SemanticLocation: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-24 19:28:54.800  1437  2647 W SemanticLocation: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-24 19:28:54.800  1437  2647 W SemanticLocation: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 19:28:54.800  1437  2647 W SemanticLocation: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 19:28:54.800  1437  2647 W SemanticLocation: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 19:28:54.800  1437  2647 W SemanticLocation: 	at java.lang.Thread.run(Thread.java:1012)
+10-24 19:28:54.800  1437  3974 W .gms.persistent: Long monitor contention with owner lowpool[7] (2647) at byte[] bzta.z()(:com.google.android.gms@231818047@23.18.18 (190800-535401451):11) waiters=0 in dlqt bzrs.a(java.lang.Object) for 5.051s
+10-24 19:28:54.855  4470  4540 D PdfBox-Android: Type 4 GSUB lookup table is not supported and will be ignored
+10-24 19:28:54.855  4470  4540 D PdfBox-Android: Type 4 GSUB lookup table is not supported and will be ignored
+10-24 19:28:54.855  4470  4540 D PdfBox-Android: Type 6 GSUB lookup table is not supported and will be ignored
+10-24 19:28:54.855  4470  4540 D PdfBox-Android: Type 4 GSUB lookup table is not supported and will be ignored
+10-24 19:28:54.855  4470  4540 D PdfBox-Android: Type 4 GSUB lookup table is not supported and will be ignored
+10-24 19:28:54.872   336   368 I netd    : tetherGetStats() -> {[]} <0.35ms>
+10-24 19:28:54.880   336   368 I netd    : bandwidthSetGlobalAlert(2097152) <0.11ms>
+10-24 19:28:54.903  1437  2647 W SemanticLocation: Failed to load ttl file, clearing index [CONTEXT service_id=173 ]
+10-24 19:28:54.943  4470  4540 W PdfBox-Android: Using fallback font LiberationSans for base font Times-Bold
+10-24 19:28:54.977  1437  2647 I SemanticLocation: [MDD] ModelBundleMetadata: File not found [CONTEXT service_id=173 ]
+10-24 19:28:54.977  1437  2647 I SemanticLocation: java.io.FileNotFoundException: /data/user/0/com.google.android.gms/files/default_model_bundle_metadata.pb: open failed: ENOENT (No such file or directory)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at libcore.io.IoBridge.open(IoBridge.java:574)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at java.io.FileInputStream.<init>(FileInputStream.java:160)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at android.app.ContextImpl.openFileInput(ContextImpl.java:745)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at bzxt.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at bzxd.d(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at bzxd.<init>(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at cadn.j(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at cadn.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):36)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at cadn.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at com.google.android.gms.semanticlocation.service.SemanticLocationChimeraService.k(:com.google.android.gms@231818047@23.18.18 (190800-535401451):9)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at com.google.android.gms.semanticlocation.service.SemanticLocationChimeraService.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):17)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at cacs.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):68)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):8)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at java.lang.Thread.run(Thread.java:1012)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at libcore.io.Linux.open(Native Method)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:8063)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	at libcore.io.IoBridge.open(IoBridge.java:560)
+10-24 19:28:54.977  1437  2647 I SemanticLocation: 	... 22 more
+10-24 19:28:54.987  1437  2647 I SemanticLocation: [MDD] ModelBundleMetadata: File not found [CONTEXT service_id=173 ]
+10-24 19:28:54.987  1437  2647 I SemanticLocation: java.io.FileNotFoundException: /data/user/0/com.google.android.gms/files/model_bundle_metadata.pb: open failed: ENOENT (No such file or directory)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at libcore.io.IoBridge.open(IoBridge.java:574)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at java.io.FileInputStream.<init>(FileInputStream.java:160)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at android.app.ContextImpl.openFileInput(ContextImpl.java:745)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at bzxt.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at bzxd.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):9)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at bzxd.<init>(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at cadn.j(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at cadn.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):36)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at cadn.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at com.google.android.gms.semanticlocation.service.SemanticLocationChimeraService.k(:com.google.android.gms@231818047@23.18.18 (190800-535401451):9)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at com.google.android.gms.semanticlocation.service.SemanticLocationChimeraService.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):17)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at cacs.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):68)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):8)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at java.lang.Thread.run(Thread.java:1012)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at libcore.io.Linux.open(Native Method)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:8063)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	at libcore.io.IoBridge.open(IoBridge.java:560)
+10-24 19:28:54.987  1437  2647 I SemanticLocation: 	... 22 more
+10-24 19:28:55.000  4470  4540 W PdfBox-Android: Using fallback font Roboto-Regular for base font Times-Italic
+10-24 19:28:55.014  1487  3124 I GmsDebugLogger: [53] +tflite_dynamite:-1
+10-24 19:28:55.027  1437  2647 I SemanticLocation: [MDD] ModelBundleMetadata: File not found [CONTEXT service_id=173 ]
+10-24 19:28:55.027  1437  2647 I SemanticLocation: java.io.FileNotFoundException: /data/user/0/com.google.android.gms/files/model_bundle_metadata.pb: open failed: ENOENT (No such file or directory)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: 	at libcore.io.IoBridge.open(IoBridge.java:574)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: 	at java.io.FileInputStream.<init>(FileInputStream.java:160)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: 	at android.app.ContextImpl.openFileInput(ContextImpl.java:745)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: 	at bzxt.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: 	at bzxd.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):9)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: 	at cadb.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):8)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: 	at java.lang.Thread.run(Thread.java:1012)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: 	at libcore.io.Linux.open(Native Method)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: 	at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:8063)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: 	at libcore.io.IoBridge.open(IoBridge.java:560)
+10-24 19:28:55.027  1437  2647 I SemanticLocation: 	... 14 more
+10-24 19:28:55.044  4470  4540 W PdfBox-Android: Using fallback font LiberationSans for base font Times-BoldItalic
+10-24 19:28:55.123  4470  4540 W PdfBox-Android: Using fallback font LiberationSans for base font Helvetica-Bold
+10-24 19:28:55.164  4470  4540 W PdfBox-Android: Using fallback font Roboto-Regular for base font Helvetica-Oblique
+10-24 19:28:55.210  4470  4540 W PdfBox-Android: Using fallback font LiberationSans for base font Helvetica-BoldOblique
+10-24 19:28:55.229  1615  1874 I SP.AiAi : Scheduling job with delay of 0s for {W:b:I:l, bg}, 1 candidates
+10-24 19:28:55.231  1615  1874 I SP.AiAi : Scheduling job with delay of 0s for {W:b:u:l, bg}, 5 candidates
+10-24 19:28:55.235  1615  1874 I SP.AiAi : Scheduling: job start ({m:b:u:l, bg}), 1 started, 0 paused, 6 scheduled, 7 pending: manifests:webref-2-en-us-19071200 @ * {m:b:u:l, bg}, manifests:kg_collections_table-21051103 * {W:b:u:l, bg}, manifests:actions-ranking-table-211005 * {W:b:u:l, bg}, manifests:text-classifier-annotator-272525175 * {W:b:u:l, bg}, manifests:text-classifier-actions-1140547708 * {W:b:u:l, bg}, manifests:text-classifier-langid-1941001461 * {W:b:u:l, bg}, manifests:spelling_correction-22110320 * {W:b:I:l, bg}
+10-24 19:28:55.236  1615  1874 I SP.AiAi : Scheduling job with delay of 0s for {W:b:I:l, bg}, 1 candidates
+10-24 19:28:55.248  1615  1874 I SP.AiAi : Scheduling: job start ({W:b:u:l, bg}), 5 started, 0 paused, 1 scheduled, 7 pending: manifests:webref-2-en-us-19071200 @ {m:b:u:l, bg}, manifests:kg_collections_table-21051103 @ * {W:b:u:l, bg}, manifests:actions-ranking-table-211005 @ * {W:b:u:l, bg}, manifests:text-classifier-annotator-272525175 @ * {W:b:u:l, bg}, manifests:text-classifier-actions-1140547708 @ * {W:b:u:l, bg}, manifests:text-classifier-langid-1941001461 @ * {W:b:u:l, bg}, manifests:spelling_correction-22110320 * {W:b:I:l, bg}
+10-24 19:28:55.252  1615  1874 I SP.AiAi : Requesting download of URL https://gstatic.com/webref-ondevice/aiai/19071200_pir/2/en-us/superpacks_manifest.zip to webref-2-en-us-19071200.zip.fetched (constraints: m:b:u:l)
+10-24 19:28:55.258  1615  1874 I SP.AiAi : Requesting download of URL https://www.gstatic.com/matchmaker/kg_collections_table/21051103/superpacks_manifest.zip to kg_collections_table-21051103.zip.fetched (constraints: W:b:u:l)
+10-24 19:28:55.263  1615  1874 I SP.AiAi : Requesting download of URL https://gstatic.com/matchmaker/kg_actions_ranking_table/211005/superpacks_manifest.zip to actions-ranking-table-211005.zip.fetched (constraints: W:b:u:l)
+10-24 19:28:55.265  1615  1874 I SP.AiAi : Requesting download of URL https://gstatic.com/matchmaker/tclib_models/annotator/v803/en/superpacks_manifest.zip to text-classifier-annotator-272525175.zip.fetched (constraints: W:b:u:l)
+10-24 19:28:55.269  1615  1874 I SP.AiAi : Requesting download of URL https://gstatic.com/matchmaker/tclib_models/actions/v104/en-us/superpacks_manifest.zip to text-classifier-actions-1140547708.zip.fetched (constraints: W:b:u:l)
+10-24 19:28:55.270  1615  1874 I SP.AiAi : Requesting download of URL https://gstatic.com/matchmaker/tclib_models/langid/v1/superpacks_manifest.zip to text-classifier-langid-1941001461.zip.fetched (constraints: W:b:u:l)
+10-24 19:28:55.290  1819  2014 I HttpGrpcBindableService: Downloading requested for URL 'https://gstatic.com/webref-ondevice/aiai/19071200_pir/2/en-us/superpacks_manifest.zip'
+10-24 19:28:55.293   336  4546 I resolv  : GetAddrInfoHandler::run: {100 100 100 983140 10121 0}
+10-24 19:28:55.293   336  4547 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+10-24 19:28:55.299   336  4548 I resolv  : res_nmkquery: (QUERY, IN, A)
+10-24 19:28:55.310   336  4547 I resolv  : res_nsend: used send_dg 68 terrno: 0
+10-24 19:28:55.310   336  4547 I resolv  : doQuery: rcode=0, ancount=1, return value=68
+10-24 19:28:55.344   336  4548 I resolv  : res_nsend: used send_dg 56 terrno: 0
+10-24 19:28:55.344   336  4548 I resolv  : doQuery: rcode=0, ancount=1, return value=56
+10-24 19:28:55.345  1819  2014 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+10-24 19:28:55.353  1819  2014 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/ConscryptEngineSocket;->setUseSessionTickets(Z)V (max-target-q,core-platform-api, reflection, denied)
+10-24 19:28:55.353  1819  2014 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setUseSessionTickets(Z)V (max-target-q,core-platform-api, reflection, denied)
+10-24 19:28:55.353  1819  2014 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setUseSessionTickets(Z)V (max-target-q, reflection, denied)
+10-24 19:28:55.353  1819  2014 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/ConscryptEngineSocket;->setHostname(Ljava/lang/String;)V (max-target-q,core-platform-api, reflection, denied)
+10-24 19:28:55.353  1819  2014 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setHostname(Ljava/lang/String;)V (max-target-q,core-platform-api, reflection, denied)
+10-24 19:28:55.354  1819  2014 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setHostname(Ljava/lang/String;)V (max-target-q, reflection, denied)
+10-24 19:28:55.354  1819  2014 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([B)V (max-target-q,core-platform-api, reflection, denied)
+10-24 19:28:55.354  1819  2014 W .android.as.oss: Accessing hidden method Lcom/android/org/conscrypt/AbstractConscryptSocket;->setAlpnProtocols([B)V (max-target-q, reflection, denied)
+10-24 19:28:55.433  4470  4540 W PdfBox-Android: Using fallback font Roboto-Regular for base font Symbol
+10-24 19:28:55.461  4470  4540 W PdfBox-Android: Using fallback font Roboto-Regular for base font ZapfDingbats
+10-24 19:28:55.514  4470  4540 I TestRunner: finished: backupRestore(com.csa.xreadpdf.ToolsTest)

@@ -1,0 +1,10 @@
+10-24 19:28:57.488  4470  4540 I TestRunner: started: textSearchAndOutline(com.csa.xreadpdf.ToolsTest)
+10-24 19:28:57.501  1819  2014 I HttpGrpcBindableService: Responding with header information for URL 'https://gstatic.com/matchmaker/tclib_models/annotator/v803/en/tc_model_a3d2c1298643d7cc3b5703308fd5b2d0.zip'
+10-24 19:28:57.503  1615  1989 I AstreaHttpConnection: Started download from url='https://gstatic.com/matchmaker/tclib_models/annotator/v803/en/tc_model_a3d2c1298643d7cc3b5703308fd5b2d0.zip'
+10-24 19:28:57.543  1615  1874 I SP.AiAi : Scheduling: download stopped, 0 started, 0 paused, 1 scheduled, 4 pending: manifests:spelling_correction-22110320 * {W:b:I:l, bg}, kg_collections_table:collections_table_main_21980965fbd997111d89f86c16e9e090 @ {W:b:u:l, bg}, actions-ranking-table:table_5f787033cc44fc7a8804e0030b2bf848 @ {W:b:u:l, bg}, text-classifier-annotator:tc_model_a3d2c1298643d7cc3b5703308fd5b2d0 @ {W:b:u:l, bg}
+10-24 19:28:57.544  1615  1771 I SP.AiAi : Syncing text-classifier-actions (1140547708) with slices: [tc_model_e202592534082c01f9642f709a627dd9], metadata: false
+10-24 19:28:57.557  1615  1874 I SP.AiAi : Download stopped: kg_collections_table:collections_table_main_21980965fbd997111d89f86c16e9e090, succeeded, size: 613
+10-24 19:28:57.593  1615  1874 I SP.AiAi : Scheduling job with delay of 0s for {W:b:I:l, bg}, 1 candidates
+10-24 19:28:57.602  1819  3230 I HttpGrpcBindableService: [pfd-write] DOWNLOAD COMPLETE: Downloaded 350999 bytes from URL [https://gstatic.com/matchmaker/tclib_models/annotator/v803/en/tc_model_a3d2c1298643d7cc3b5703308fd5b2d0.zip].
+10-24 19:28:57.603  1615  1989 I AstreaHttpConnection: Download completed for url [https://gstatic.com/matchmaker/tclib_models/annotator/v803/en/tc_model_a3d2c1298643d7cc3b5703308fd5b2d0.zip].
+10-24 19:28:57.633  4470  4540 I TestRunner: finished: textSearchAndOutline(com.csa.xreadpdf.ToolsTest)
