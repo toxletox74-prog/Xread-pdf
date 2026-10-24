@@ -413,29 +413,9 @@ object PdfTools {
                         page.close()
                         val result = Tasks.await(recognizer.process(InputImage.fromBitmap(bmp, 0)))
                         bmp.recycle()
-                        val pdPage = doc.getPage(i)
-                        val d = display(pdPage)
-                        val kx = d.w / ptsW / scale
-                        val ky = d.h / ptsH / scale
-                        PDPageContentStream(doc, pdPage, PDPageContentStream.AppendMode.APPEND, true, true).use { cs ->
-                            cs.transform(d.toUser)
-                            cs.beginText()
-                            cs.setRenderingMode(RenderingMode.NEITHER)
-                            for (block in result.textBlocks) for (line in block.lines) for (el in line.elements) {
-                                val box = el.boundingBox ?: continue
-                                val word = encodable(el.text, helv, "")
-                                if (word.isBlank()) continue
-                                val h = box.height() * ky
-                                val w = box.width() * kx
-                                val size = (h * 0.85f).coerceAtLeast(1f)
-                                val natural = helv.getStringWidth(word) / 1000f * size
-                                cs.setFont(helv, size)
-                                cs.setHorizontalScaling((100f * w / natural.coerceAtLeast(0.1f)).coerceIn(10f, 400f))
-                                cs.setTextMatrix(Matrix.getTranslateInstance(box.left * kx, d.h - box.bottom * ky + h * 0.18f))
-                                cs.showText(word)
-                            }
-                            cs.endText()
-                        }
+                        val words = result.textBlocks.flatMap { b -> b.lines.flatMap { l -> l.elements } }
+                            .mapNotNull { el -> el.boundingBox?.let { el.text to it } }
+                        addTextLayer(doc, i, words, ptsW * scale, ptsH * scale)
                         treated++
                     }
                     doc.save(dest)
@@ -445,6 +425,36 @@ object PdfTools {
             recognizer.close()
         }
         return treated
+    }
+
+    /**
+     * Ajoute un calque de texte invisible (cherchable, copiable) sur la page [pageIndex].
+     * [words] : mots et leur boîte, en pixels d'une image de [imgW]×[imgH] couvrant la page affichée.
+     */
+    fun addTextLayer(doc: PDDocument, pageIndex: Int, words: List<Pair<String, android.graphics.Rect>>, imgW: Float, imgH: Float) {
+        if (words.isEmpty()) return
+        val pdPage = doc.getPage(pageIndex)
+        val d = display(pdPage)
+        val kx = d.w / imgW
+        val ky = d.h / imgH
+        PDPageContentStream(doc, pdPage, PDPageContentStream.AppendMode.APPEND, true, true).use { cs ->
+            cs.transform(d.toUser)
+            cs.beginText()
+            cs.setRenderingMode(RenderingMode.NEITHER)
+            for ((text, box) in words) {
+                val word = encodable(text, helv, "")
+                if (word.isBlank()) continue
+                val h = box.height() * ky
+                val w = box.width() * kx
+                val size = (h * 0.85f).coerceAtLeast(1f)
+                val natural = helv.getStringWidth(word) / 1000f * size
+                cs.setFont(helv, size)
+                cs.setHorizontalScaling((100f * w / natural.coerceAtLeast(0.1f)).coerceIn(10f, 400f))
+                cs.setTextMatrix(Matrix.getTranslateInstance(box.left * kx, d.h - box.bottom * ky + h * 0.18f))
+                cs.showText(word)
+            }
+            cs.endText()
+        }
     }
 
     // ------------------------------------------------------------------ Images → PDF

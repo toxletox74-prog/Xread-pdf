@@ -276,6 +276,28 @@ class ToolsTest {
         assertTrue(json == null || json!!.startsWith("{"))
     }
 
+    @Test fun ocrTextLayer() {
+        // Calque de texte invisible tel que posé après la reconnaissance (sans ML Kit)
+        PDDocument().use { doc ->
+            doc.addPage(PDPage(PDRectangle.A4))
+            val words = listOf(
+                "FACTURE" to android.graphics.Rect(124, 250, 520, 320),
+                "électricité" to android.graphics.Rect(560, 250, 980, 320),
+                "128€" to android.graphics.Rect(124, 400, 300, 460),
+            )
+            PdfTools.addTextLayer(doc, 0, words, 1240f, 1754f)
+            doc.save(f("layer.pdf"))
+        }
+        val t = PdfTools.pageTexts(ctx, f("layer.pdf"))
+        assertTrue(t[0].text, t[0].text.contains("FACTURE") && t[0].text.contains("électricité"))
+        val hit = PdfTools.search(t, "facture").single()
+        val r = hit.rects.first()
+        // 124 px sur 1240 → 10 % de 595 pt ≈ 59,5 pt ; haut 250 px sur 1754 → ≈ 120 pt
+        assertTrue("x=${r.left}", r.left in 50f..70f)
+        assertTrue("y=${r.top}..${r.bottom}", r.bottom in 115f..160f)
+        rendersOk(f("layer.pdf"))
+    }
+
     @Test fun ocrDoesNotCrash() {
         // Dépend des services Google Play de l'émulateur : on vérifie seulement l'absence de plantage inattendu.
         val img = f("scan.pdf")
